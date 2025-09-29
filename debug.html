@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Sankarashield</title>
+    <style>
+        body {
+            background: #0a0e1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .log {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        body.hacker-mode .matrix-rain {
+            opacity: 0.4;
+        }
+        .matrix-column {
+            position: absolute;
+            top: -100%;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ff41;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            animation: matrixFall linear infinite;
+            text-shadow: 0 0 8px #00ff41;
+        }
+        @keyframes matrixFall {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+        body.hacker-mode {
+            background: #000;
+            color: #00ff41;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Debug Sankarashield</h1>
+
+    <div id="matrixRain" class="matrix-rain"></div>
+
+    <button onclick="testDeveloperMode()">Test Developer Mode</button>
+    <button onclick="testTerminal()">Test Terminal</button>
+    <button onclick="checkElements()">Check Elements</button>
+
+    <div id="log" class="log"></div>
+
+    <script>
+        let hackerMode = false;
+
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            logDiv.textContent += new Date().toLocaleTimeString() + ': ' + message + '\n';
+            console.log(message);
+        }
+
+        function testDeveloperMode() {
+            log('Testing Developer Mode...');
+            hackerMode = !hackerMode;
+            document.body.classList.toggle('hacker-mode');
+
+            if (hackerMode) {
+                log('Activating Matrix Rain');
+                createMatrixRain();
+            } else {
+                log('Clearing Matrix Rain');
+                clearMatrixRain();
+            }
+        }
+
+        function createMatrixRain() {
+            const matrixRain = document.getElementById('matrixRain');
+            if (!matrixRain) {
+                log('ERROR: matrixRain element not found!');
+                return;
+            }
+
+            const columns = Math.floor(window.innerWidth / 20);
+            log(`Creating ${columns} columns`);
+
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = i * 20 + 'px';
+                column.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                column.style.animationDelay = Math.random() * 5 + 's';
+
+                const chars = '01';
+                let text = '';
+                for (let j = 0; j < 50; j++) {
+                    text += chars[Math.floor(Math.random() * chars.length)] + '\n';
+                }
+                column.textContent = text;
+
+                matrixRain.appendChild(column);
+            }
+            log('Matrix Rain created successfully');
+        }
+
+        function clearMatrixRain() {
+            const matrixRain = document.getElementById('matrixRain');
+            if (matrixRain) {
+                matrixRain.innerHTML = '';
+                log('Matrix Rain cleared');
+            }
+        }
+
+        function testTerminal() {
+            log('Testing Terminal...');
+            alert('Terminal test - this should work!');
+        }
+
+        function checkElements() {
+            log('Checking DOM elements...');
+
+            const matrixRain = document.getElementById('matrixRain');
+            log(`matrixRain element: ${matrixRain ? 'FOUND' : 'NOT FOUND'}`);
+
+            const body = document.body;
+            log(`body element: ${body ? 'FOUND' : 'NOT FOUND'}`);
+            log(`body classes: ${body.className}`);
+
+            log('Check complete');
+        }
+
+        // Initialize
+        log('Debug page loaded');
+        log('Testing basic functionality...');
+    </script>
+</body>
+</html>

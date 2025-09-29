@@ -8,7 +8,7 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 # Security Headers
-Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Frame-Options "DENY"
 Header always set X-Content-Type-Options "nosniff"
 Header always set X-XSS-Protection "1; mode=block"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
@@ -23,7 +23,7 @@ Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'nonce
 # Additional XSS Protection Headers
 Header always set X-XSS-Protection "1; mode=block"
 Header always set X-Content-Type-Options "nosniff"
-Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Frame-Options "DENY"
 
 # Feature Policy for Additional Security
 Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), speaker=()"
