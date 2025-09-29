@@ -1,0 +1,119 @@
+# ===================================
+# SANKARASHIELD SECURITY CONFIGURATION
+# ===================================
+
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Security Headers
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Strict Transport Security (HSTS)
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Enhanced Content Security Policy
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'nonce-xyz123abc' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'nonce-abc456def'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+
+# Additional XSS Protection Headers
+Header always set X-XSS-Protection "1; mode=block"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Feature Policy for Additional Security
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), speaker=()"
+
+# Prevent Directory Browsing
+Options -Indexes
+
+# Disable Server Signature
+ServerSignature Off
+
+# Protect sensitive files
+<FilesMatch "^\.(?:htaccess|htpasswd|ini|log|sh|sql|sqlite|bak|config|conf)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block common exploits
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule ^(.*)$ index.html [F,L]
+
+# Block SQL injection attempts
+RewriteCond %{QUERY_STRING} union.*select.*\( [NC,OR]
+RewriteCond %{QUERY_STRING} union.*all.*select [NC]
+RewriteRule ^(.*)$ index.html [F,L]
+
+# Enhanced XSS Protection
+RewriteCond %{QUERY_STRING} \<script\> [NC,OR]
+RewriteCond %{QUERY_STRING} \<iframe\> [NC,OR]
+RewriteCond %{QUERY_STRING} javascript: [NC,OR]
+RewriteCond %{QUERY_STRING} vbscript: [NC,OR]
+RewriteCond %{QUERY_STRING} onload= [NC,OR]
+RewriteCond %{QUERY_STRING} onmouseover= [NC,OR]
+RewriteCond %{QUERY_STRING} onfocus= [NC,OR]
+RewriteCond %{QUERY_STRING} onerror= [NC,OR]
+RewriteCond %{QUERY_STRING} onclick= [NC,OR]
+RewriteCond %{QUERY_STRING} onsubmit= [NC,OR]
+RewriteCond %{QUERY_STRING} onchange= [NC,OR]
+RewriteCond %{QUERY_STRING} document\.cookie [NC,OR]
+RewriteCond %{QUERY_STRING} document\.write [NC,OR]
+RewriteCond %{QUERY_STRING} \.innerHTML [NC,OR]
+RewriteCond %{QUERY_STRING} eval\( [NC,OR]
+RewriteCond %{QUERY_STRING} String\.fromCharCode [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# Disable XML-RPC
+<Files xmlrpc.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Rate Limiting (requires mod_ratelimit)
+<IfModule mod_ratelimit.c>
+    SetOutputFilter RATE_LIMIT
+    SetEnv rate-limit 400
+</IfModule>
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache Control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Prevent hotlinking
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yourdomain\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|svg|webp)$ - [F,L]
+
+# Block bad bots
+RewriteCond %{HTTP_USER_AGENT} (ahrefs|semrush|mj12bot|dotbot) [NC]
+RewriteRule .* - [F,L]
+
+# Limit file upload size (10MB)
+LimitRequestBody 10485760
+
+# Protect against clickjacking
+Header always append X-Frame-Options DENY
+
+# Enable HTTPOnly and Secure flags for cookies
+Header always edit Set-Cookie (.*) "$1; HTTPOnly; Secure; SameSite=Strict"

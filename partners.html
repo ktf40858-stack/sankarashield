@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - Sankarashield</title>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0a0e1a;
+            --secondary-dark: #1a1f2e;
+            --electric-blue: #3b82f6;
+            --bright-cyan: #06b6d4;
+            --neon-purple: #8b5cf6;
+            --soft-white: #f8fafc;
+            --gray-400: #9ca3af;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: var(--primary-dark);
+            color: var(--soft-white);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(10, 14, 26, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--soft-white);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--electric-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--electric-blue), var(--bright-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-400);
+        }
+
+        .partners-section {
+            margin-bottom: 4rem;
+        }
+
+        .partners-section h2 {
+            font-size: 2rem;
+            color: var(--electric-blue);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .partner-card {
+            background: rgba(26, 31, 46, 0.5);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .partner-logo {
+            height: 80px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-logo img {
+            max-height: 60px;
+            max-width: 180px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+        }
+
+        .partner-card h3 {
+            color: var(--bright-cyan);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .partner-card p {
+            color: var(--gray-400);
+            margin-bottom: 1rem;
+        }
+
+        .partner-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, var(--electric-blue), var(--bright-cyan));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .benefits-section {
+            background: rgba(26, 31, 46, 0.3);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 4rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            color: var(--bright-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+            border-radius: 15px;
+            margin-top: 4rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--electric-blue), var(--bright-cyan));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .certification-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(26, 31, 46, 0.3);
+            border-radius: 15px;
+        }
+
+        .cert-badge {
+            padding: 1rem;
+            background: rgba(10, 14, 26, 0.5);
+            border-radius: 10px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        footer {
+            background: rgba(10, 14, 26, 0.95);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Sankarashield</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Our Partners</h1>
+            <p class="subtitle">Collaborating with Industry Leaders to Deliver Excellence</p>
+        </div>
+
+        <div class="partners-section">
+            <h2>Strategic Technology Partners</h2>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="cisco-black-logo-hd-png-701751694708581xqutvctmyl.png" alt="Cisco">
+                    </div>
+                    <h3>Cisco</h3>
+                    <p>As a Cisco Select Partner, we deliver enterprise-grade networking solutions including routers, switches, and security appliances.</p>
+                    <div class="partner-badge">Select Partner</div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="fortinet.png" alt="Fortinet" style="filter: none;">
+                    </div>
+                    <h3>Fortinet</h3>
+                    <p>Authorized Fortinet distributor providing FortiGate firewalls and comprehensive Security Fabric solutions.</p>
+                    <div class="partner-badge">Authorized Distributor</div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="Palo Alto Networks_idMI_itknr_1.png" alt="Palo Alto Networks" style="filter: none;">
+                    </div>
+                    <h3>Palo Alto Networks</h3>
+                    <p>Delivering next-generation firewall solutions with advanced threat prevention and cloud security capabilities.</p>
+                    <div class="partner-badge">Solution Provider</div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="juniper.png" alt="Juniper Networks" style="filter: none;">
+                    </div>
+                    <h3>Juniper Networks</h3>
+                    <p>Providing high-performance networking infrastructure with AI-driven enterprise solutions.</p>
+                    <div class="partner-badge">Partner</div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <h3 style="margin: 0;">Ubiquiti</h3>
+                    </div>
+                    <h3>Ubiquiti Networks</h3>
+                    <p>Delivering scalable wireless solutions and enterprise networking equipment for modern businesses.</p>
+                    <div class="partner-badge">Reseller</div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <h3 style="margin: 0;">MikroTik</h3>
+                    </div>
+                    <h3>MikroTik</h3>
+                    <p>Cost-effective routing and wireless solutions for small to medium enterprises.</p>
+                    <div class="partner-badge">Certified Partner</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-section">
+            <h2 style="text-align: center; color: var(--electric-blue); margin-bottom: 2rem;">Partnership Benefits</h2>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Direct Access</h3>
+                    <p>Direct procurement channels ensure competitive pricing and faster delivery</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Technical Support</h3>
+                    <p>Priority access to vendor technical support and engineering resources</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Training & Certification</h3>
+                    <p>Continuous training programs keep our team certified on latest technologies</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Early Access</h3>
+                    <p>Beta programs and early access to new products and features</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Joint Solutions</h3>
+                    <p>Collaborative development of customized solutions for complex requirements</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Best Practices</h3>
+                    <p>Access to industry best practices and implementation methodologies</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="certification-badges">
+            <div class="cert-badge">
+                <h4 style="color: var(--bright-cyan);">Cisco CCNA</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem;">Certified Network Associate</p>
+            </div>
+            <div class="cert-badge">
+                <h4 style="color: var(--bright-cyan);">Fortinet NSE</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem;">Network Security Expert</p>
+            </div>
+            <div class="cert-badge">
+                <h4 style="color: var(--bright-cyan);">PCNSA</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem;">Palo Alto Certified</p>
+            </div>
+            <div class="cert-badge">
+                <h4 style="color: var(--bright-cyan);">JNCIA</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem;">Juniper Certified</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: var(--electric-blue); margin-bottom: 1rem;">Become a Partner</h2>
+            <p style="color: var(--gray-400); margin-bottom: 1rem;">Join our growing ecosystem of technology partners and resellers</p>
+            <p style="color: var(--gray-400);">Together, we can deliver comprehensive security solutions that protect businesses worldwide.</p>
+            <a href="contact.html" class="cta-button">Partner With Us</a>
+        </div>
+
+        <div style="margin-top: 4rem; padding: 2rem; background: rgba(26, 31, 46, 0.3); border-radius: 15px;">
+            <h3 style="color: var(--electric-blue); margin-bottom: 1rem;">Why Our Partnerships Matter</h3>
+            <p style="color: var(--gray-400); line-height: 1.8;">Our strategic partnerships enable us to provide you with:</p>
+            <ul style="color: var(--gray-400); margin-top: 1rem; list-style-position: inside;">
+                <li style="margin-bottom: 0.5rem;">✓ Access to the latest security technologies and innovations</li>
+                <li style="margin-bottom: 0.5rem;">✓ Competitive pricing through direct vendor relationships</li>
+                <li style="margin-bottom: 0.5rem;">✓ Comprehensive support backed by vendor expertise</li>
+                <li style="margin-bottom: 0.5rem;">✓ Seamless integration of multi-vendor solutions</li>
+                <li style="margin-bottom: 0.5rem;">✓ Regular updates and security patches</li>
+                <li style="margin-bottom: 0.5rem;">✓ Extended warranties and service level agreements</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sankarashield. All rights reserved. | <a href="privacy.html" style="color: var(--electric-blue);">Privacy Policy</a> | <a href="terms.html" style="color: var(--electric-blue);">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

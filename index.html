@@ -1,0 +1,4919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankarashield - Cybersecurity & Network Solutions</title>
+
+    <!-- Security Headers via Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+    <!-- Enhanced Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-xyz123abc' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'nonce-abc456def'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Meta tags PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Sankarashield">
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+    <!-- Couleur thème -->
+    <meta name="theme-color" content="#3b82f6">
+
+    <!-- DOMPurify for XSS Protection -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js"
+            integrity="sha384-7T8nQ8s+4J8jr+KKMM2Y3wOOBaOELSq1lJDwF9B8hVhBz8jLo8+3qXe3q3qT6"
+            crossorigin="anonymous"></script>
+
+    <!-- Three.js for 3D Globe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+            integrity="sha384-RPWZ3tLhRIhXCPJVPMUO2rrQh7/7PQ0bLEFT/T0sR+t+U3NeN7vO3QkT6BWFL0UH"
+            crossorigin="anonymous"></script>
+
+    <style nonce="abc456def">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0a0e1a;
+            --secondary-dark: #1a1f2e;
+            --accent-dark: #242b3d;
+            --electric-blue: #3b82f6;
+            --bright-cyan: #06b6d4;
+            --neon-purple: #8b5cf6;
+            --neon-green: #00ff88;
+            --matrix-green: #00ff41;
+            --logo-green: #1FA463;
+            --soft-white: #f8fafc;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: var(--primary-dark);
+            color: var(--soft-white);
+            line-height: 1.6;
+        }
+
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: var(--primary-dark);
+            overflow: hidden;
+        }
+
+        /* Animated cyber grid background */
+        .animated-background::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background-image:
+                -webkit-linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.05) 75%, rgba(59, 130, 246, 0.05) 76%, transparent 77%, transparent),
+                -webkit-linear-gradient(90deg, transparent 24%, rgba(6, 182, 212, 0.05) 25%, rgba(6, 182, 212, 0.05) 26%, transparent 27%, transparent 74%, rgba(6, 182, 212, 0.05) 75%, rgba(6, 182, 212, 0.05) 76%, transparent 77%, transparent);
+            background-image:
+                linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.05) 75%, rgba(59, 130, 246, 0.05) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(6, 182, 212, 0.05) 25%, rgba(6, 182, 212, 0.05) 26%, transparent 27%, transparent 74%, rgba(6, 182, 212, 0.05) 75%, rgba(6, 182, 212, 0.05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            -webkit-animation: gridMove 20s linear infinite;
+            animation: gridMove 20s linear infinite;
+            -webkit-transform: perspective(300px) rotateX(60deg);
+            -moz-transform: perspective(300px) rotateX(60deg);
+            transform: perspective(300px) rotateX(60deg);
+        }
+
+        @-webkit-keyframes gridMove {
+            0% { -webkit-transform: perspective(300px) rotateX(60deg) translateY(0); }
+            100% { -webkit-transform: perspective(300px) rotateX(60deg) translateY(50px); }
+        }
+        @keyframes gridMove {
+            0% { transform: perspective(300px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(300px) rotateX(60deg) translateY(50px); }
+        }
+
+        /* Floating particles */
+        .bg-gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            -webkit-animation: gradientShift 15s ease-in-out infinite;
+            animation: gradientShift 15s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes gradientShift {
+            0%, 100% { opacity: 0.7; -webkit-transform: scale(1); }
+            50% { opacity: 1; -webkit-transform: scale(1.1); }
+        }
+        @keyframes gradientShift {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 2px;
+            background: rgba(36, 43, 61, 0.6);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 4px;
+            opacity: 0.7;
+            -webkit-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+        }
+
+        .language-selector:hover {
+            opacity: 1;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--gray-400);
+            padding: 6px 10px;
+            border-radius: 16px;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .lang-btn.active {
+            background: var(--electric-blue);
+            color: var(--soft-white);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(10, 14, 26, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+        }
+
+        nav {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--logo-green);
+            text-decoration: none;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-weight: 500;
+            -webkit-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--soft-white);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--electric-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-400);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-container {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-primary {
+            background: var(--gradient-primary);
+            color: var(--soft-white);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--soft-white);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-primary:hover, .cta-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+        .reactor-container {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem 0;
+            position: relative;
+            margin: 3rem 0;
+        }
+
+        /* Background removed - using only blue world map */
+        .reactor-container::before {
+            display: none;
+        }
+
+        @keyframes worldPulse {
+            0%, 100% {
+                opacity: 0.6;
+                filter: brightness(1.5) contrast(1.2);
+            }
+            50% {
+                opacity: 0.9;
+                filter: brightness(1.8) contrast(1.4);
+            }
+        }
+
+        @keyframes worldGlow {
+            0%, 100% {
+                opacity: 0.8;
+                filter: brightness(1.1) contrast(1.3) drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
+            }
+            50% {
+                opacity: 1;
+                filter: brightness(1.3) contrast(1.5) drop-shadow(0 0 30px rgba(6, 182, 212, 0.5));
+            }
+        }
+
+        /* Continental connection lines */
+        .world-connections {
+            position: absolute;
+            width: 900px;
+            height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+            overflow: visible;
+            opacity: 0.8;
+        }
+
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(59, 130, 246, 0.3) 20%,
+                rgba(6, 182, 212, 0.4) 50%,
+                rgba(59, 130, 246, 0.3) 80%,
+                transparent 100%);
+            transform-origin: left center;
+            animation: connectionFlow 4s linear infinite;
+        }
+
+        @keyframes connectionFlow {
+            0% {
+                opacity: 0.2;
+                filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.3));
+            }
+            50% {
+                opacity: 0.6;
+                filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
+            }
+            100% {
+                opacity: 0.2;
+                filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.3));
+            }
+        }
+
+        /* Continental nodes */
+        .continent-node {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, var(--electric-blue) 0%, rgba(59, 130, 246, 0.4) 100%);
+            border: 2px solid rgba(59, 130, 246, 0.6);
+            border-radius: 50%;
+            box-shadow:
+                0 0 20px rgba(59, 130, 246, 0.5),
+                inset 0 0 10px rgba(6, 182, 212, 0.3);
+            z-index: 1;
+            animation: nodePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes nodePulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow:
+                    0 0 20px rgba(59, 130, 246, 0.5),
+                    inset 0 0 10px rgba(6, 182, 212, 0.3);
+            }
+            50% {
+                transform: scale(1.2);
+                box-shadow:
+                    0 0 30px rgba(59, 130, 246, 0.8),
+                    inset 0 0 15px rgba(6, 182, 212, 0.5);
+            }
+        }
+
+        .continent-label {
+            position: absolute;
+            font-size: 0.65rem;
+            color: rgba(59, 130, 246, 0.7);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Data packets traveling between continents */
+        .data-packet {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--bright-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--bright-cyan),
+                        0 0 20px rgba(6, 182, 212, 0.5);
+            animation: packetTravel 3s linear infinite;
+        }
+
+        @keyframes packetTravel {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(200px);
+                opacity: 0;
+            }
+        }
+
+        /* Glowing grid effect */
+        .world-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image:
+                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            animation: gridFade 10s ease-in-out infinite;
+        }
+
+        @keyframes gridFade {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Continent outlines */
+        .continents-svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 1;
+            display: none; /* Hide SVG continents since we're using the image */
+        }
+
+        .continent-outline {
+            fill: none;
+            stroke: rgba(59, 130, 246, 0.6);
+            stroke-width: 2;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+            filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6))
+                    drop-shadow(0 0 30px rgba(6, 182, 212, 0.3));
+            animation: continentGlow 4s ease-in-out infinite,
+                       drawPath 3s ease-in-out infinite;
+        }
+
+        .continent-fill {
+            fill: url(#continentGradient);
+            opacity: 0.15;
+            animation: continentPulse 6s ease-in-out infinite;
+            filter: blur(0.5px);
+        }
+
+        @keyframes continentGlow {
+            0%, 100% {
+                stroke: rgba(59, 130, 246, 0.6);
+                filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6))
+                        drop-shadow(0 0 30px rgba(6, 182, 212, 0.3));
+            }
+            50% {
+                stroke: rgba(6, 182, 212, 0.8);
+                filter: drop-shadow(0 0 25px rgba(6, 182, 212, 0.8))
+                        drop-shadow(0 0 40px rgba(59, 130, 246, 0.5));
+            }
+        }
+
+        @keyframes continentPulse {
+            0%, 100% {
+                opacity: 0.08;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.2;
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes drawPath {
+            0% {
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dashoffset: 100;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Command Center Button - Above Chatbot */
+        .command-center-btn {
+            position: fixed;
+            bottom: 120px;  /* Positioned above chatbot */
+            right: 30px;
+            z-index: 999;
+            background: linear-gradient(135deg, var(--electric-blue), var(--bright-cyan));
+            border: none;
+            border-radius: 30px;
+            padding: 15px 25px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(59, 130, 246, 0.9);
+        }
+
+        .command-center-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6);
+            background: rgba(6, 182, 212, 0.9);
+        }
+
+        .cmd-icon {
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
+        }
+
+        /* Terminal Interactive Styles - Hidden by default */
+        .terminal-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(10, 14, 26, 0.98);
+            border: 2px solid var(--electric-blue);
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 0 50px rgba(59, 130, 246, 0.5),
+                        inset 0 0 20px rgba(6, 182, 212, 0.1);
+            overflow: hidden;
+            z-index: 1002;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .terminal-container.active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        /* Terminal Overlay Background */
+        .terminal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            -webkit-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+        }
+
+        .terminal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .terminal-header {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-dot.red { background: #ff5f56; }
+        .terminal-dot.yellow { background: #ffbd2e; }
+        .terminal-dot.green { background: #27c93f; }
+
+        .terminal-title {
+            margin-left: auto;
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+
+        .terminal-output {
+            min-height: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            color: var(--neon-green);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .terminal-line {
+            margin: 5px 0;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .terminal-input-wrapper {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terminal-prompt {
+            color: var(--electric-blue);
+            font-weight: bold;
+        }
+
+        .terminal-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--soft-white);
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--neon-green);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* 3D Globe Container - Professional Look */
+        .globe-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin: 3rem 0;
+            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .world-map-2d {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            padding: 20px;
+        }
+
+        .world-map-2d svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .continent {
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .continent:hover {
+            fill: rgba(59, 130, 246, 0.5) !important;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.8));
+        }
+
+        .connection-lines line {
+            animation: dash 20s linear infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -100;
+            }
+        }
+
+        .pulse-node {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 0.8;
+                r: 5;
+            }
+            50% {
+                opacity: 1;
+                r: 8;
+            }
+        }
+
+        .continent-labels {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .continent-label {
+            position: absolute;
+            color: var(--soft-white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transform: translate(-50%, -50%);
+        }
+
+        .label-status {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        #threejs-globe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .threat-stats {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(10, 14, 26, 0.9);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 250px;
+            backdrop-filter: blur(10px);
+        }
+
+        .threat-stats-bottom {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(10, 14, 26, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-row {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .threat-stats-bottom .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .threat-stats-bottom .stat-item span:first-child {
+            display: block;
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .threat-stats-bottom .stat-value {
+            color: var(--electric-blue);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .stat-item {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            color: var(--gray-400);
+        }
+
+        .stat-value {
+            color: var(--bright-cyan);
+            font-weight: bold;
+        }
+
+        .threat-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .threat-high { background: #ff4444; }
+        .threat-medium { background: #ffaa00; }
+        .threat-low { background: #00ff88; }
+
+        /* Hacker Mode Styles */
+        .hacker-mode-toggle {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(36, 43, 61, 0.9);
+            border: 2px solid var(--electric-blue);
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hacker-mode-toggle:hover {
+            background: var(--electric-blue);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+        }
+
+        body.hacker-mode {
+            background: #000;
+            color: var(--matrix-green);
+        }
+
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        body.hacker-mode .matrix-rain {
+            opacity: 0.3;
+        }
+
+        .matrix-column {
+            position: absolute;
+            top: -100%;
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            color: var(--matrix-green);
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            animation: matrixFall linear infinite;
+            text-shadow: 0 0 5px var(--matrix-green);
+        }
+
+        @keyframes matrixFall {
+            to {
+                transform: translateY(200vh);
+            }
+        }
+
+        body.hacker-mode * {
+            transition: color 0.5s ease, border-color 0.5s ease;
+        }
+
+        body.hacker-mode .electric-blue {
+            color: var(--matrix-green) !important;
+        }
+
+        body.hacker-mode header {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid var(--matrix-green);
+        }
+
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        body.hacker-mode .glitch::before,
+        body.hacker-mode .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body.hacker-mode .glitch::before {
+            animation: glitch-1 0.5s infinite;
+            color: #00ffff;
+            z-index: -1;
+        }
+
+        body.hacker-mode .glitch::after {
+            animation: glitch-2 0.5s infinite;
+            color: #ff00ff;
+            z-index: -2;
+        }
+
+        @keyframes glitch-1 {
+            0%, 100% { clip: rect(0, 900px, 0, 0); }
+            25% { clip: rect(random(100)px, 900px, random(100)px, 0); }
+            50% { clip: rect(random(100)px, 900px, random(100)px, 0); }
+            75% { clip: rect(random(100)px, 900px, random(100)px, 0); }
+        }
+
+        /* World map styles removed - keeping clean reactor design */
+        /*
+        .world-map-container {
+            position: absolute;
+            width: 1200px;
+            height: 600px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.9;
+            z-index: 0;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .world-map-container::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('world.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: invert(1) brightness(0.3) contrast(1.5) sepia(1) saturate(3) hue-rotate(190deg);
+            mix-blend-mode: screen;
+            opacity: 0.7;
+            box-shadow: 0 0 80px rgba(59, 130, 246, 0.3),
+                        0 0 120px rgba(6, 182, 212, 0.2);
+            mask-image: radial-gradient(ellipse at center,
+                rgba(0,0,0,0.9) 0%,
+                rgba(0,0,0,0.7) 40%,
+                rgba(0,0,0,0.4) 70%,
+                rgba(0,0,0,0) 100%);
+            -webkit-mask-image: radial-gradient(ellipse at center,
+                rgba(0,0,0,0.9) 0%,
+                rgba(0,0,0,0.7) 40%,
+                rgba(0,0,0,0.4) 70%,
+                rgba(0,0,0,0) 100%);
+        }
+
+        .world-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center,
+                rgba(10, 14, 26, 0) 0%,
+                rgba(10, 14, 26, 0.3) 30%,
+                rgba(10, 14, 26, 0.7) 60%,
+                rgba(10, 14, 26, 0.95) 100%);
+            mix-blend-mode: multiply;
+            pointer-events: none;
+        }
+        */
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Continent data styles removed - clean reactor only */
+
+        .reactor-status {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .status-text {
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .status-indicator {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--bright-cyan);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--bright-cyan);
+            border-radius: 50%;
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .reactor-core {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            perspective: 1000px;
+        }
+
+        /* 3D Global Security Network */
+        #globalNetworkCanvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .reactor-ring {
+            position: absolute;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+        }
+
+        .ring-1 {
+            width: 380px;
+            height: 380px;
+            animation: reactorSpin 20s linear infinite;
+        }
+
+        .ring-2 {
+            width: 340px;
+            height: 340px;
+            animation: reactorSpin 15s linear infinite reverse;
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .ring-3 {
+            width: 300px;
+            height: 300px;
+            animation: reactorSpin 10s linear infinite;
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .data-point {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--bright-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--bright-cyan);
+        }
+
+        .data-stream {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--electric-blue), transparent);
+            animation: dataFlow 2s linear infinite;
+        }
+
+        @keyframes dataFlow {
+            0% { transform: translateY(-100px); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100px); opacity: 0; }
+        }
+
+        .reactor-core::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border: 3px solid var(--electric-blue);
+            border-radius: 50%;
+            border-top-color: var(--bright-cyan);
+            border-right-color: transparent;
+            animation: reactorSpin 3s linear infinite;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 20px var(--electric-blue));
+        }
+
+        .reactor-core::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid var(--bright-cyan);
+            border-radius: 50%;
+            border-bottom-color: var(--neon-purple);
+            border-left-color: transparent;
+            animation: reactorSpin 2s linear infinite reverse;
+            opacity: 0.6;
+            filter: drop-shadow(0 0 15px var(--bright-cyan));
+        }
+
+        @keyframes reactorSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            33% {
+                transform: translate(10px, -10px);
+            }
+            66% {
+                transform: translate(-10px, 10px);
+            }
+        }
+
+        .core-center {
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(6, 182, 212, 0.2) 50%, rgba(139, 92, 246, 0.1) 100%);
+            border: 3px solid var(--electric-blue);
+            border-radius: 50%;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 2;
+            position: relative;
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+        }
+
+        .core-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--electric-blue);
+            border-radius: 50%;
+            animation: corePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes corePulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .core-center:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+        }
+
+        .core-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+            filter: drop-shadow(0 0 10px var(--electric-blue));
+        }
+
+        .core-label {
+            font-size: 0.7rem;
+            color: var(--bright-cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .core-stats {
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .core-metric {
+            font-size: 0.8rem;
+            color: var(--neon-green);
+            font-family: 'Courier New', monospace;
+        }
+
+        .reactor-connections {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .connection-node {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        .connection-node:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .node-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .connection-node span {
+            color: var(--gray-400);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: var(--neon-purple);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--soft-white);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-section {
+            padding: 4rem 2rem;
+            background: rgba(26, 31, 46, 0.5);
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--gray-400);
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--soft-white);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: var(--gray-400);
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature-point {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+        }
+
+        .feature-point h4 {
+            color: var(--soft-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-point p {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .security-dashboard {
+            background: rgba(36, 43, 61, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .dashboard-header {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .status-live {
+            color: var(--neon-green);
+        }
+
+        .dashboard-metrics {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .metric-card {
+            background: rgba(10, 14, 26, 0.5);
+            border-radius: 8px;
+            padding: 1rem;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--electric-blue);
+        }
+
+        .metric-label {
+            color: var(--gray-400);
+            font-size: 0.8rem;
+        }
+
+        .metric-trend {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--electric-blue);
+        }
+
+        .metric-trend.blocked {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .partner-card {
+            background: rgba(36, 43, 61, 0.4);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--electric-blue);
+        }
+
+        .partner-logo h3 {
+            font-size: 1.5rem;
+            color: var(--soft-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .partner-specialty {
+            color: var(--electric-blue);
+            font-size: 0.9rem;
+        }
+
+        .partner-card p {
+            color: var(--gray-400);
+            margin: 1rem 0;
+        }
+
+        .partner-products {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .product-tag {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--electric-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .product-showcase {
+            margin-top: 4rem;
+            padding: 3rem 0;
+            background: rgba(26, 31, 46, 0.3);
+            border-radius: 20px;
+        }
+
+        .product-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-category {
+            background: rgba(36, 43, 61, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-category:hover {
+            border-color: var(--electric-blue);
+            transform: translateY(-4px);
+        }
+
+        .category-header {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-secondary);
+            border-radius: 10px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-header h4 {
+            color: var(--soft-white);
+            font-size: 1.2rem;
+        }
+
+        .product-list {
+            list-style: none;
+            color: var(--gray-400);
+        }
+
+        .product-list li {
+            padding: 0.25rem 0;
+        }
+
+        .product-brand {
+            color: var(--electric-blue);
+            font-weight: 500;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: rgba(36, 43, 61, 0.4);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--electric-blue);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-secondary);
+            border-radius: 16px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--soft-white);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--gray-400);
+        }
+
+        .service-features {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .feature-tag {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--neon-purple);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .service-cta {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .service-link {
+            background: none;
+            border: none;
+            color: var(--electric-blue);
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: rgba(36, 43, 61, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            color: var(--soft-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(10, 14, 26, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: var(--soft-white);
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 14, 26, 0.9);
+        }
+
+        .modal-content {
+            background: var(--secondary-dark);
+            margin: 2% auto;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: var(--soft-white);
+            margin: 0;
+        }
+
+        .modal-close {
+            color: var(--gray-400);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 2rem;
+            color: var(--gray-400);
+        }
+
+        .modal-footer {
+            padding: 1rem 2rem 2rem;
+            text-align: center;
+        }
+
+        /* AI Security Assistant - Jarvis Style */
+        .ai-assistant-launcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: var(--soft-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1400;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            background: rgba(26, 31, 46, 0.8);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+        }
+
+        .footer-text {
+            color: var(--gray-500);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--soft-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .stats-container {
+                gap: 2rem;
+            }
+
+            .world-map-container {
+                width: 600px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .product-categories {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Navigation */
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 26, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0.5rem;
+                border-top: 1px solid rgba(59, 130, 246, 0.2);
+                z-index: 1000;
+            }
+
+            .nav-menu.active {
+                display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 0.75rem 1rem;
+                border-radius: 8px;
+                transition: background 0.3s ease;
+            }
+
+            .nav-menu a:hover {
+                background: rgba(59, 130, 246, 0.1);
+            }
+
+            /* Hero Section */
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+
+            .cta-container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Reactor Container */
+            .reactor-core {
+                width: 250px;
+                height: 250px;
+            }
+
+            .reactor-core::before {
+                width: 160px;
+                height: 160px;
+            }
+
+            .reactor-core::after {
+                width: 120px;
+                height: 120px;
+            }
+
+            .core-center {
+                width: 80px;
+                height: 80px;
+            }
+
+            .core-icon {
+                font-size: 1.5rem;
+            }
+
+            .reactor-connections {
+                gap: 1.5rem;
+            }
+
+            /* Stats Section */
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+
+            /* About Section */
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            /* Partners & Services */
+            .partners-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-categories {
+                grid-template-columns: 1fr;
+            }
+
+            /* Form */
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            /* Modal */
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+            }
+
+            /* Footer */
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            /* Language Selector */
+            .language-selector {
+                top: 70px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Hero */
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            /* Stats */
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* Reactor */
+            .reactor-core {
+                width: 200px;
+                height: 200px;
+            }
+
+            .world-map-container {
+                width: 100%;
+                max-width: 350px;
+                height: 200px;
+            }
+
+            .continent-data {
+                font-size: 0.6rem;
+                padding: 4px 8px;
+            }
+
+            .reactor-core::before {
+                width: 130px;
+                height: 130px;
+            }
+
+            .reactor-core::after {
+                width: 100px;
+                height: 100px;
+            }
+
+            .core-center {
+                width: 60px;
+                height: 60px;
+            }
+
+            .core-icon {
+                font-size: 1.2rem;
+            }
+
+            .core-label {
+                font-size: 0.5rem;
+            }
+
+            .reactor-connections {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            /* Section Headers */
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.9rem;
+            }
+
+            /* Partner Cards */
+            .partner-card,
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer-links {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 380px;
+            height: 500px;
+            background: var(--secondary-dark);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            display: none;
+            flex-direction: column;
+            z-index: 1500;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .chatbot-header {
+            background: var(--gradient-primary);
+            padding: 1rem;
+            border-radius: 20px 20px 0 0;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .chat-message {
+            padding: 0.75rem 1rem;
+            border-radius: 15px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .chat-message.user {
+            background: var(--electric-blue);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .chat-message.bot {
+            background: rgba(36, 43, 61, 0.8);
+            color: var(--soft-white);
+            align-self: flex-start;
+        }
+
+        .chatbot-input-container {
+            padding: 1rem;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            background: rgba(10, 14, 26, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 25px;
+            padding: 0.75rem 1rem;
+            color: var(--soft-white);
+            font-family: inherit;
+        }
+
+        .chatbot-send {
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-typing {
+            display: none;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--electric-blue);
+            border-radius: 50%;
+            animation: typing 1.4s ease-in-out infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Brand logos styling */
+        .brand-logo {
+            height: 40px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Horizontal scroll prevention */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .animated-background {
+                overflow: hidden;
+            }
+
+            .chatbot-container {
+                width: calc(100% - 20px);
+                right: 10px;
+                left: 10px;
+                height: 450px;
+            }
+        }
+
+        /* AI Assistant Container Styles */
+        .ai-assistant-container {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 400px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(10, 14, 26, 0.98) 0%, rgba(20, 25, 40, 0.98) 100%);
+            border: 2px solid var(--accent-color);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(59, 130, 246, 0.3), inset 0 0 30px rgba(59, 130, 246, 0.1);
+            z-index: 10001;
+            backdrop-filter: blur(10px);
+        }
+
+        .ai-assistant-container.active {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .ai-assistant-header {
+            padding: 15px 20px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.2) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ai-status {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-indicator {
+            width: 10px;
+            height: 10px;
+            background: var(--success-color);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 10px var(--success-color);
+        }
+
+        .ai-status h3 {
+            margin: 0;
+            color: var(--soft-white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .ai-close {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--soft-white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .ai-close:hover {
+            background: rgba(255, 59, 48, 0.2);
+            border-color: rgba(255, 59, 48, 0.5);
+        }
+
+        .ai-visualization {
+            height: 100px;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #aiWaveform {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ai-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ai-message {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 10px;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ai-message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            flex-shrink: 0;
+        }
+
+        .ai-message.user .message-avatar {
+            background: linear-gradient(135deg, #4A5568, #2D3748);
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 15px;
+            color: var(--soft-white);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .ai-message.user .message-content {
+            background: rgba(74, 85, 104, 0.2);
+            border-color: rgba(74, 85, 104, 0.5);
+        }
+
+        .ai-input-container {
+            padding: 15px;
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .ai-input-wrapper {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ai-input-wrapper input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 25px;
+            padding: 12px 20px;
+            color: var(--soft-white);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .ai-input-wrapper input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .ai-input-wrapper input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .ai-input-wrapper button {
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ai-input-wrapper button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .ai-suggestions {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .suggestion-chip {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 15px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .suggestion-chip:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive AI Assistant */
+        @media (max-width: 768px) {
+            .ai-assistant-container {
+                width: calc(100% - 20px);
+                right: 10px;
+                left: 10px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-background">
+        <div class="bg-gradient"></div>
+    </div>
+
+    <!-- Matrix Rain Effect for Hacker Mode -->
+    <div class="matrix-rain" id="matrixRain"></div>
+
+    <!-- Developer Mode Toggle Button -->
+    <button class="hacker-mode-toggle" id="hackerModeBtn" onclick="toggleHackerMode()">
+        <span id="hackerModeText">👨‍💻 Developer Mode</span>
+    </button>
+
+    <!-- Cyber Console Button -->
+    <button class="command-center-btn" id="commandCenterBtn" onclick="toggleTerminal()">
+        <span class="cmd-icon">⚡</span>
+        <span class="cmd-text">Cyber Console</span>
+    </button>
+
+    <!-- Terminal Overlay -->
+    <div class="terminal-overlay" id="terminalOverlay" onclick="closeTerminal()"></div>
+
+    <!-- Floating Terminal -->
+    <div class="terminal-container" id="terminalContainer">
+        <div class="terminal-header">
+            <div class="terminal-dot red" onclick="closeTerminal()"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+            <div class="terminal-title">SankaraShield Cyber Console v2.0</div>
+        </div>
+        <div class="terminal-output" id="terminalOutput">
+            <div class="terminal-line">Welcome to SankaraShield Cyber Console</div>
+            <div class="terminal-line">Type 'help' for available commands</div>
+            <div class="terminal-line">─────────────────────────────────────────</div>
+        </div>
+        <div class="terminal-input-wrapper">
+            <span class="terminal-prompt">sankarashield@secure:~$</span>
+            <input type="text" class="terminal-input" id="terminalInput">
+            <span class="terminal-cursor"></span>
+        </div>
+    </div>
+
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="Logo.png" alt="Sankarashield Logo">
+                </div>
+                Sankarashield
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span>☰</span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Next-Gen Network Infrastructure Solutions</div>
+            <h1>Secure your digital infrastructure with professional equipment</h1>
+            <p>Leading provider of enterprise networking and cybersecurity solutions. From Cisco routers to Palo Alto firewalls, we deliver, configure and maintain world-class infrastructure for your business.</p>
+            
+            <div class="cta-container">
+                <a href="#contact" class="cta-primary">
+                    <span>Get Quote</span>
+                    <span>→</span>
+                </a>
+                <a href="#services" class="cta-secondary">
+                    <span>View Solutions</span>
+                </a>
+            </div>
+
+            <div class="reactor-container">
+                <!-- All backgrounds removed - only artifact remains -->
+
+                <!-- SVG continents removed -->
+                <svg class="continents-svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style="display: none;">
+                    <defs>
+                        <linearGradient id="continentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:rgb(59, 130, 246);stop-opacity:0.3" />
+                            <stop offset="50%" style="stop-color:rgb(6, 182, 212);stop-opacity:0.2" />
+                            <stop offset="100%" style="stop-color:rgb(139, 92, 246);stop-opacity:0.1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- North America with Canada, USA, Mexico, Greenland -->
+                    <g transform="translate(100, 80)">
+                        <path class="continent-fill" d="M 80,5 Q 95,3 110,8 L 125,10 L 140,8 L 155,12 L 165,18 L 160,25 L 155,30 L 150,35 L 145,42 L 140,48 L 135,55 L 125,62 L 115,68 L 105,72 L 95,75 L 85,78 L 75,80 L 65,78 L 55,75 L 45,70 L 35,65 L 30,58 L 25,50 L 22,42 L 20,35 L 22,28 L 25,22 L 30,18 L 38,15 L 45,12 L 55,10 L 65,8 L 75,6 Z M 5,15 Q 8,10 15,8 L 25,10 L 30,15 L 28,22 L 20,25 L 12,22 L 8,18 Z M 160,5 L 165,8 L 162,12 L 158,10 Z"/>
+                        <path class="continent-outline" d="M 80,5 Q 95,3 110,8 L 125,10 L 140,8 L 155,12 L 165,18 L 160,25 L 155,30 L 150,35 L 145,42 L 140,48 L 135,55 L 125,62 L 115,68 L 105,72 L 95,75 L 85,78 L 75,80 L 65,78 L 55,75 L 45,70 L 35,65 L 30,58 L 25,50 L 22,42 L 20,35 L 22,28 L 25,22 L 30,18 L 38,15 L 45,12 L 55,10 L 65,8 L 75,6 Z M 5,15 Q 8,10 15,8 L 25,10 L 30,15 L 28,22 L 20,25 L 12,22 L 8,18 Z M 160,5 L 165,8 L 162,12 L 158,10 Z"/>
+                    </g>
+
+                    <!-- Central America bridge -->
+                    <g transform="translate(210, 155)">
+                        <path class="continent-fill" d="M 5,5 Q 8,3 12,5 L 15,8 L 18,12 L 20,18 L 22,25 L 20,30 L 18,28 L 15,25 L 12,20 L 10,15 L 8,10 Z"/>
+                        <path class="continent-outline" d="M 5,5 Q 8,3 12,5 L 15,8 L 18,12 L 20,18 L 22,25 L 20,30 L 18,28 L 15,25 L 12,20 L 10,15 L 8,10 Z"/>
+                    </g>
+
+                    <!-- South America with realistic shape -->
+                    <g transform="translate(220, 180)">
+                        <path class="continent-fill" d="M 30,5 Q 40,3 48,8 L 55,12 L 60,18 L 58,25 L 55,32 L 52,40 L 50,48 L 48,58 L 45,68 L 42,78 L 38,88 L 35,98 L 30,108 L 25,118 L 20,125 L 15,130 L 10,128 L 8,120 L 10,110 L 12,100 L 14,90 L 16,80 L 18,70 L 20,60 L 22,50 L 24,40 L 26,30 L 28,20 L 30,12 Z"/>
+                        <path class="continent-outline" d="M 30,5 Q 40,3 48,8 L 55,12 L 60,18 L 58,25 L 55,32 L 52,40 L 50,48 L 48,58 L 45,68 L 42,78 L 38,88 L 35,98 L 30,108 L 25,118 L 20,125 L 15,130 L 10,128 L 8,120 L 10,110 L 12,100 L 14,90 L 16,80 L 18,70 L 20,60 L 22,50 L 24,40 L 26,30 L 28,20 L 30,12 Z"/>
+                    </g>
+
+                    <!-- Europe with UK, Scandinavia, Mediterranean -->
+                    <g transform="translate(440, 80)">
+                        <path class="continent-fill" d="M 15,35 L 20,32 L 28,30 L 35,28 L 42,26 L 50,25 L 58,24 L 65,26 L 70,28 L 68,32 L 65,35 L 60,38 L 55,40 L 48,42 L 40,40 L 32,38 L 25,37 L 18,36 Z M 5,28 L 8,25 L 12,27 L 10,30 L 6,29 Z M 35,20 Q 38,18 42,19 L 45,22 L 43,25 L 38,24 L 35,22 Z M 50,18 L 55,15 L 60,16 L 62,20 L 58,22 L 52,21 Z M 45,45 L 48,48 L 45,50 L 42,47 Z"/>
+                        <path class="continent-outline" d="M 15,35 L 20,32 L 28,30 L 35,28 L 42,26 L 50,25 L 58,24 L 65,26 L 70,28 L 68,32 L 65,35 L 60,38 L 55,40 L 48,42 L 40,40 L 32,38 L 25,37 L 18,36 Z M 5,28 L 8,25 L 12,27 L 10,30 L 6,29 Z M 35,20 Q 38,18 42,19 L 45,22 L 43,25 L 38,24 L 35,22 Z M 50,18 L 55,15 L 60,16 L 62,20 L 58,22 L 52,21 Z M 45,45 L 48,48 L 45,50 L 42,47 Z"/>
+                    </g>
+
+                    <!-- Africa with realistic shape and Madagascar -->
+                    <g transform="translate(460, 140)">
+                        <path class="continent-fill" d="M 25,5 Q 35,3 42,8 L 48,12 L 52,18 L 50,25 L 48,32 L 46,40 L 45,48 L 44,58 L 42,68 L 40,78 L 38,88 L 35,98 L 32,108 L 28,115 L 22,120 L 15,118 L 10,112 L 8,105 L 6,95 L 5,85 L 4,75 L 5,65 L 6,55 L 8,45 L 10,35 L 12,25 L 15,15 L 20,8 Z M 55,85 L 58,88 L 56,95 L 52,92 L 53,87 Z"/>
+                        <path class="continent-outline" d="M 25,5 Q 35,3 42,8 L 48,12 L 52,18 L 50,25 L 48,32 L 46,40 L 45,48 L 44,58 L 42,68 L 40,78 L 38,88 L 35,98 L 32,108 L 28,115 L 22,120 L 15,118 L 10,112 L 8,105 L 6,95 L 5,85 L 4,75 L 5,65 L 6,55 L 8,45 L 10,35 L 12,25 L 15,15 L 20,8 Z M 55,85 L 58,88 L 56,95 L 52,92 L 53,87 Z"/>
+                    </g>
+
+                    <!-- Asia with Russia, China, India, Southeast Asia, Japan -->
+                    <g transform="translate(530, 60)">
+                        <path class="continent-fill" d="M 20,45 L 35,42 L 50,40 L 70,38 L 90,36 L 110,35 L 130,36 L 150,38 L 170,40 L 185,42 L 200,45 L 210,48 L 205,55 L 195,60 L 180,65 L 165,68 L 150,70 L 135,72 L 120,73 L 105,72 L 90,70 L 75,68 L 60,65 L 45,62 L 30,58 L 20,52 L 18,48 Z M 15,35 L 25,30 L 40,28 L 55,26 L 70,25 L 85,24 L 100,25 L 115,26 L 130,28 L 140,30 L 130,35 L 110,36 L 90,36 L 70,37 L 50,38 L 30,40 L 20,42 Z M 160,75 L 165,78 L 162,82 L 158,80 Z M 170,85 L 175,88 L 172,92 L 168,90 Z M 155,95 Q 160,98 165,102 L 162,105 L 155,102 L 152,98 Z"/>
+                        <path class="continent-outline" d="M 20,45 L 35,42 L 50,40 L 70,38 L 90,36 L 110,35 L 130,36 L 150,38 L 170,40 L 185,42 L 200,45 L 210,48 L 205,55 L 195,60 L 180,65 L 165,68 L 150,70 L 135,72 L 120,73 L 105,72 L 90,70 L 75,68 L 60,65 L 45,62 L 30,58 L 20,52 L 18,48 Z M 15,35 L 25,30 L 40,28 L 55,26 L 70,25 L 85,24 L 100,25 L 115,26 L 130,28 L 140,30 L 130,35 L 110,36 L 90,36 L 70,37 L 50,38 L 30,40 L 20,42 Z M 160,75 L 165,78 L 162,82 L 158,80 Z M 170,85 L 175,88 L 172,92 L 168,90 Z M 155,95 Q 160,98 165,102 L 162,105 L 155,102 L 152,98 Z"/>
+                    </g>
+
+                    <!-- Oceania with Australia and islands -->
+                    <g transform="translate(750, 280)">
+                        <path class="continent-fill" d="M 10,20 L 25,15 L 40,12 L 55,10 L 70,12 L 80,15 L 85,20 L 82,28 L 78,35 L 72,40 L 65,43 L 55,45 L 45,44 L 35,42 L 25,38 L 18,32 L 12,26 Z M 90,25 L 95,23 L 98,27 L 94,30 L 91,28 Z M 85,35 L 88,34 L 90,37 L 87,38 Z M 95,40 L 98,39 L 100,42 L 97,43 Z M 75,5 L 78,4 L 80,7 L 77,8 Z"/>
+                        <path class="continent-outline" d="M 10,20 L 25,15 L 40,12 L 55,10 L 70,12 L 80,15 L 85,20 L 82,28 L 78,35 L 72,40 L 65,43 L 55,45 L 45,44 L 35,42 L 25,38 L 18,32 L 12,26 Z M 90,25 L 95,23 L 98,27 L 94,30 L 91,28 Z M 85,35 L 88,34 L 90,37 L 87,38 Z M 95,40 L 98,39 L 100,42 L 97,43 Z M 75,5 L 78,4 L 80,7 L 77,8 Z"/>
+                    </g>
+                </svg>
+
+                <!-- World connections removed for cleaner look -->
+
+                <div class="reactor-status">
+                    <span class="status-text">NETWORK CORE STATUS</span>
+                    <span class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>ACTIVE</span>
+                    </span>
+                </div>
+
+
+                <div class="reactor-core">
+                    <canvas id="globalNetworkCanvas"></canvas>
+                    <div class="reactor-ring ring-1"></div>
+                    <div class="reactor-ring ring-2"></div>
+                    <div class="reactor-ring ring-3"></div>
+                    <div class="data-stream" style="left: 50%; top: 0;"></div>
+                    <div class="data-stream" style="left: 50%; bottom: 0; animation-delay: 1s;"></div>
+                    <div class="data-stream" style="left: 0; top: 50%; transform: rotate(90deg); animation-delay: 0.5s;"></div>
+                    <div class="data-stream" style="right: 0; top: 50%; transform: rotate(90deg); animation-delay: 1.5s;"></div>
+                    <div class="core-center" style="z-index: 10;">
+                        <div class="core-pulse"></div>
+                        <div class="core-stats">
+                            <div class="core-metric" id="coreLoad">LOAD: 47%</div>
+                        </div>
+                        <div class="core-icon">🛡️</div>
+                        <div class="core-label">NETWORK CORE</div>
+                        <div class="core-metric" id="coreStatus" style="font-size: 0.6rem; margin-top: 5px;">OPTIMAL</div>
+                    </div>
+                    <div class="data-point" style="top: 20%; left: 15%; animation: float 3s ease-in-out infinite;"></div>
+                    <div class="data-point" style="top: 80%; right: 20%; animation: float 3s ease-in-out infinite 0.5s;"></div>
+                    <div class="data-point" style="bottom: 30%; left: 25%; animation: float 3s ease-in-out infinite 1s;"></div>
+                </div>
+                
+                <div class="reactor-connections">
+                    <div class="connection-node">
+                        <div class="node-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="8" width="20" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="6" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="18" cy="12" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span>Routers</span>
+                    </div>
+                    <div class="connection-node">
+                        <div class="node-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <rect x="5" y="9" width="2" height="1.5" fill="currentColor"/>
+                                <rect x="8" y="9" width="2" height="1.5" fill="currentColor"/>
+                                <rect x="11" y="9" width="2" height="1.5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span>Switches</span>
+                    </div>
+                    <div class="connection-node">
+                        <div class="node-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="7" width="20" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="7" cy="12" r="1" fill="#ef4444"/>
+                                <circle cx="12" cy="12" r="1" fill="#22c55e"/>
+                                <circle cx="17" cy="12" r="1" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <span>Firewalls</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 3D Globe removed - now integrated in Network Core above -->
+        </div>
+    </section>
+
+    <section class="section stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Active Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Network Uptime</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Technical Support</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="section-header">
+            <div class="section-badge">Who We Are</div>
+            <h2 class="section-title">Your trusted network infrastructure partner</h2>
+            <p class="section-subtitle">With over a decade of experience in enterprise networking, Sankarashield delivers, configures, and maintains professional-grade infrastructure solutions from industry-leading manufacturers.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Our Mission</h3>
+                <p>To provide enterprise-grade networking and security solutions that ensure reliable, scalable, and secure digital infrastructure for businesses of all sizes.</p>
+                
+                <div class="features-list">
+                    <div class="feature-point">
+                        <span class="feature-icon">🔧</span>
+                        <div>
+                            <h4>Technical Expertise</h4>
+                            <p>Certified engineers with expertise in Cisco, Fortinet, Palo Alto, and Juniper technologies</p>
+                        </div>
+                    </div>
+                    <div class="feature-point">
+                        <span class="feature-icon">📦</span>
+                        <div>
+                            <h4>Complete Solutions</h4>
+                            <p>From procurement to deployment and ongoing maintenance</p>
+                        </div>
+                    </div>
+                    <div class="feature-point">
+                        <span class="feature-icon">🏆</span>
+                        <div>
+                            <h4>Quality Assurance</h4>
+                            <p>Only authentic equipment from authorized distributors with full manufacturer warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security-dashboard">
+                <div class="dashboard-header">
+                    <span>Network Operations Center</span>
+                    <span class="status-live">● LIVE</span>
+                </div>
+                <div class="dashboard-metrics">
+                    <div class="metric-card">
+                        <div>
+                            <div class="metric-value" id="activeDevices">847</div>
+                            <div class="metric-label">Active Devices</div>
+                        </div>
+                        <div class="metric-trend" id="devicesTrend">↗ +12%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div>
+                            <div class="metric-value" id="managedSites">156</div>
+                            <div class="metric-label">Managed Sites</div>
+                        </div>
+                        <div class="metric-trend blocked" id="siteStatus">✓ SECURE</div>
+                    </div>
+                    <div class="metric-card">
+                        <div>
+                            <div class="metric-value" id="activeAlerts">23</div>
+                            <div class="metric-label">Active Alerts</div>
+                        </div>
+                        <div class="metric-trend" id="alertStatus">🔄 MONITORING</div>
+                    </div>
+                    <div class="metric-card">
+                        <div>
+                            <div class="metric-value" id="bandwidth">2.4 Gbps</div>
+                            <div class="metric-label">Network Throughput</div>
+                        </div>
+                        <div class="metric-trend" id="bandwidthTrend">⚡ OPTIMAL</div>
+                    </div>
+                    <div class="metric-card">
+                        <div>
+                            <div class="metric-value" id="uptime">99.98%</div>
+                            <div class="metric-label">System Uptime</div>
+                        </div>
+                        <div class="metric-trend" id="uptimeTrend">✅ EXCELLENT</div>
+                    </div>
+                    <div class="metric-card">
+                        <div>
+                            <div class="metric-value" id="threats">0</div>
+                            <div class="metric-label">Threats Blocked</div>
+                        </div>
+                        <div class="metric-trend blocked" id="threatStatus">🛡️ PROTECTED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="partners">
+        <div class="section-header">
+            <div class="section-badge">Authorized Partners</div>
+            <h2 class="section-title">Industry-leading technology partners</h2>
+            <p class="section-subtitle">We are certified partners and authorized resellers for the world's most trusted networking and security brands.</p>
+        </div>
+
+        <div class="partners-grid">
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="cisco-black-logo-hd-png-701751694708581xqutvctmyl.png" alt="Cisco" style="height: 50px; margin-bottom: 10px; filter: invert(1);">
+                    <div class="partner-specialty">Network Infrastructure Leader</div>
+                </div>
+                <p>Complete networking solutions from enterprise routers to advanced security appliances for mission-critical infrastructure.</p>
+                <div class="partner-products">
+                    <span class="product-tag">ISR 1000 Series</span>
+                    <span class="product-tag">Catalyst 9200</span>
+                    <span class="product-tag">Firepower 2100</span>
+                </div>
+            </div>
+            
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="fortinet.png" alt="Fortinet" style="height: 50px; margin-bottom: 10px;">
+                    <div class="partner-specialty">Cybersecurity Platform</div>
+                </div>
+                <p>Unified threat management and next-generation firewall solutions with AI-powered threat detection and automated response.</p>
+                <div class="partner-products">
+                    <span class="product-tag">FortiGate 40F-400F</span>
+                    <span class="product-tag">FortiSwitch</span>
+                    <span class="product-tag">FortiAnalyzer</span>
+                </div>
+            </div>
+            
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="Palo Alto Networks_idMI_itknr_1.png" alt="Palo Alto Networks" style="height: 50px; margin-bottom: 10px;">
+                    <div class="partner-specialty">Next-Gen Security</div>
+                </div>
+                <p>Advanced threat prevention with machine learning-based security and comprehensive visibility across networks.</p>
+                <div class="partner-products">
+                    <span class="product-tag">PA-400 Series</span>
+                    <span class="product-tag">Prisma Cloud</span>
+                    <span class="product-tag">Cortex XDR</span>
+                </div>
+            </div>
+            
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="juniper.png" alt="Juniper Networks" style="height: 50px; margin-bottom: 10px;">
+                    <div class="partner-specialty">High-Performance Networking</div>
+                </div>
+                <p>Enterprise-grade routing, switching, and security solutions designed for mission-critical environments.</p>
+                <div class="partner-products">
+                    <span class="product-tag">MX104 Router</span>
+                    <span class="product-tag">EX4300 Switch</span>
+                    <span class="product-tag">SRX Series</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-showcase">
+            <div class="section-header">
+                <h3>Our Product Portfolio</h3>
+                <p>Professional networking and security equipment for every business requirement</p>
+            </div>
+            
+            <div class="product-categories">
+                <div class="product-category" data-product="routers">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="8" width="20" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="6" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="18" cy="12" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h4>Enterprise Routers</h4>
+                    </div>
+                    <ul class="product-list">
+                        <li><span class="product-brand" style="color: #00bceb;">Cisco</span> ISR 1000 Series</li>
+                        <li><span class="product-brand" style="color: #06b6d4;">Juniper</span> MX104</li>
+                        <li><span class="product-brand" style="color: #0559c9;">Ubiquiti</span> EdgeRouter X</li>
+                        <li><span class="product-brand" style="color: #c73228;">MikroTik</span> hEX S</li>
+                    </ul>
+                </div>
+                
+                <div class="product-category" data-product="switches">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <rect x="5" y="9" width="2" height="1.5" fill="currentColor"/>
+                                <rect x="8" y="9" width="2" height="1.5" fill="currentColor"/>
+                                <rect x="11" y="9" width="2" height="1.5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h4>Managed Switches</h4>
+                    </div>
+                    <ul class="product-list">
+                        <li><span class="product-brand" style="color: #00bceb;">Cisco</span> Catalyst 9200 Series</li>
+                        <li><span class="product-brand" style="color: #ff8300;">HPE Aruba</span> CX 6300 Series</li>
+                        <li><span class="product-brand" style="color: #06b6d4;">Juniper</span> EX4300 Series</li>
+                        <li><span class="product-brand" style="color: #0559c9;">Ubiquiti</span> UniFi Switch Pro</li>
+                    </ul>
+                </div>
+                
+                <div class="product-category" data-product="firewalls">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="7" width="20" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="7" cy="12" r="1" fill="#ef4444"/>
+                                <circle cx="12" cy="12" r="1" fill="#22c55e"/>
+                                <circle cx="17" cy="12" r="1" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <h4>Security Firewalls</h4>
+                    </div>
+                    <ul class="product-list">
+                        <li><span class="product-brand" style="color: #f97316;">Palo Alto</span> PA-400 Series</li>
+                        <li><span class="product-brand" style="color: #ef4444;">Fortinet</span> FortiGate 100F-400F</li>
+                        <li><span class="product-brand" style="color: #ff8200;">SonicWall</span> TZ Series</li>
+                        <li><span class="product-brand" style="color: #0080ff;">Sophos</span> XGS Series</li>
+                    </ul>
+                </div>
+                
+                <div class="product-category" data-product="wireless">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="8" y="12" width="8" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="15" r="1" fill="#22c55e"/>
+                                <path d="M12 12V10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4>Wireless Access Points</h4>
+                    </div>
+                    <ul class="product-list">
+                        <li><span class="product-brand" style="color: #00bceb;">Cisco</span> Catalyst 9100 APs</li>
+                        <li><span class="product-brand" style="color: #0559c9;">Ubiquiti</span> UniFi U6 Enterprise</li>
+                        <li><span class="product-brand" style="color: #ff8300;">Aruba</span> 500 Series APs</li>
+                        <li><span class="product-brand" style="color: #53565a;">Ruckus</span> R750 Access Point</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-header">
+            <div class="section-badge">Our Services</div>
+            <h2 class="section-title">Complete infrastructure solutions</h2>
+            <p class="section-subtitle">From initial design to ongoing support, we provide end-to-end networking and security services.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Network Design & Architecture</h3>
+                <p>Custom network design and architecture planning for optimal performance, scalability, and security.</p>
+                <div class="service-features">
+                    <div class="feature-tag">Site Survey</div>
+                    <div class="feature-tag">Topology Design</div>
+                    <div class="feature-tag">Capacity Planning</div>
+                </div>
+                <div class="service-cta">
+                    <button class="service-link service-modal-btn" data-service="design">Learn More →</button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📦</div>
+                <h3>Equipment Procurement</h3>
+                <p>Sourcing and supply of authentic networking equipment from authorized distributors with full warranty.</p>
+                <div class="service-features">
+                    <div class="feature-tag">Authentic Products</div>
+                    <div class="feature-tag">Competitive Pricing</div>
+                    <div class="feature-tag">Fast Delivery</div>
+                </div>
+                <div class="service-cta">
+                    <button class="service-link service-modal-btn" data-service="procurement">Learn More →</button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Installation & Configuration</h3>
+                <p>Professional installation, configuration, and optimization of networking and security equipment.</p>
+                <div class="service-features">
+                    <div class="feature-tag">On-site Setup</div>
+                    <div class="feature-tag">Configuration</div>
+                    <div class="feature-tag">Testing & Validation</div>
+                </div>
+                <div class="service-cta">
+                    <button class="service-link service-modal-btn" data-service="installation">Learn More →</button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Security Implementation</h3>
+                <p>Deployment and configuration of firewalls, VPNs, and security policies to protect your network.</p>
+                <div class="service-features">
+                    <div class="feature-tag">Firewall Setup</div>
+                    <div class="feature-tag">VPN Configuration</div>
+                    <div class="feature-tag">Security Policies</div>
+                </div>
+                <div class="service-cta">
+                    <button class="service-link service-modal-btn" data-service="security">Learn More →</button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Network Monitoring</h3>
+                <p>Continuous monitoring and management of your network infrastructure with proactive maintenance.</p>
+                <div class="service-features">
+                    <div class="feature-tag">24/7 Monitoring</div>
+                    <div class="feature-tag">Performance Analytics</div>
+                    <div class="feature-tag">Automated Alerts</div>
+                </div>
+                <div class="service-cta">
+                    <button class="service-link service-modal-btn" data-service="monitoring">Learn More →</button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>Technical Support</h3>
+                <p>Ongoing technical support, maintenance, and troubleshooting for your network infrastructure.</p>
+                <div class="service-features">
+                    <div class="feature-tag">Remote Support</div>
+                    <div class="feature-tag">On-site Service</div>
+                    <div class="feature-tag">Preventive Maintenance</div>
+                </div>
+                <div class="service-cta">
+                    <button class="service-link service-modal-btn" data-service="support">Learn More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="section-header">
+            <div class="section-badge">Get in Touch</div>
+            <h2 class="section-title">Ready to upgrade your network?</h2>
+            <p class="section-subtitle">Contact our technical team for a consultation and customized quote for your infrastructure needs.</p>
+            <p style="text-align: center; color: var(--logo-green); font-size: 1.2rem; margin-top: 1rem;">
+                📧 Email: sankara01@proton.me
+            </p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </div>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="design">Network Design</option>
+                        <option value="procurement">Equipment Procurement</option>
+                        <option value="installation">Installation & Setup</option>
+                        <option value="security">Security Implementation</option>
+                        <option value="monitoring">Network Monitoring</option>
+                        <option value="support">Technical Support</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group full-width">
+                <label for="message">Project Requirements</label>
+                <textarea id="message" name="message" placeholder="Describe your networking requirements, budget, and timeline..."></textarea>
+            </div>
+            
+            <button type="submit" class="cta-primary" style="width: 100%; justify-content: center;">
+                <span>Send Request</span>
+                <span>→</span>
+            </button>
+        </form>
+    </section>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Service Details</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be loaded dynamically -->
+            </div>
+            <div class="modal-footer">
+                <button class="cta-primary" onclick="openContactForm()">Get Quote for This Service</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Security Assistant - Jarvis Style -->
+    <button id="aiAssistantLauncher" class="ai-assistant-launcher">
+        <img src="pngegg.png" alt="Invictus AI" style="width: 40px; height: 40px; position: relative; z-index: 2; filter: brightness(0) invert(1);">
+    </button>
+
+    <div class="ai-assistant-container" id="aiAssistantContainer">
+        <div class="ai-assistant-header">
+            <div class="ai-status">
+                <span class="ai-indicator"></span>
+                <h3>Invictus AI</h3>
+            </div>
+            <button class="ai-close" id="aiAssistantClose">×</button>
+        </div>
+        <div class="ai-visualization">
+            <canvas id="aiWaveform"></canvas>
+        </div>
+        <div class="ai-messages" id="aiMessages">
+            <div class="ai-message assistant">
+                <div class="message-avatar"><img src="pngegg.png" alt="Invictus AI" style="width: 25px; height: 25px; filter: brightness(0) invert(1);"></div>
+                <div class="message-content">
+                    Hello! I'm Sankarashield's virtual assistant. I can help you with:
+                    <ul style="margin: 10px 0;">
+                        <li>📋 Information about our services</li>
+                        <li>💰 Quote requests</li>
+                        <li>📞 Contact details</li>
+                        <li>🛠️ Technical support</li>
+                        <li>📦 Available products</li>
+                    </ul>
+                    How can I help you today? (Je parle aussi français!)
+                </div>
+            </div>
+        </div>
+        <div class="ai-input-container">
+            <div class="ai-input-wrapper">
+                <input type="text" class="ai-input" id="aiInput" placeholder="Ask your question... / Posez votre question...">
+                <button class="ai-send" id="aiSend">
+                    <span>→</span>
+                </button>
+            </div>
+            <div class="ai-suggestions">
+                <button class="suggestion-chip" onclick="askAI('Check system security')">System Status</button>
+                <button class="suggestion-chip" onclick="askAI('Scan for threats')">Threat Scan</button>
+                <button class="suggestion-chip" onclick="askAI('Firewall status')">Firewall</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="partners.html">Partners</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <p class="footer-text">© 2025 Sankarashield. All rights reserved. Your trusted network infrastructure partner.</p>
+    </footer>
+
+    <script nonce="xyz123abc">
+        // ========== SECURITY FUNCTIONS ==========
+
+        // Enhanced XSS Protection Functions
+        function sanitizeAndInsert(element, content, allowHTML = false) {
+            if (!element || content === null || content === undefined) return;
+
+            // Convert content to string if it's not already
+            const stringContent = String(content);
+
+            if (allowHTML && typeof DOMPurify !== 'undefined') {
+                // Use DOMPurify for safe HTML rendering
+                element.innerHTML = DOMPurify.sanitize(stringContent, {
+                    ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'p', 'br', 'ul', 'ol', 'li', 'span', 'div'],
+                    ALLOWED_ATTR: ['class', 'id'],
+                    KEEP_CONTENT: true
+                });
+            } else {
+                // Safe text insertion without HTML
+                element.textContent = stringContent;
+            }
+        }
+
+        // Input validation function
+        function validateInput(input, type = 'text') {
+            const patterns = {
+                text: /^[a-zA-Z0-9\s\-_.,:;!?()]{0,500}$/,
+                email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                command: /^[a-zA-Z0-9\s\-_.]{0,100}$/,
+                ip: /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/,
+                url: /^https?:\/\/[^\s<>"']+$/
+            };
+
+            if (!patterns[type]) return false;
+            return patterns[type].test(String(input));
+        }
+
+        // HTML escaping function
+        function escapeHTML(str) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#x27;',
+                '/': '&#x2F;'
+            };
+            return String(str).replace(/[&<>"'/]/g, (m) => map[m]);
+        }
+
+        // Safe createElement with text content
+        function createSafeElement(tagName, textContent = '', className = '') {
+            const element = document.createElement(tagName);
+            if (textContent) element.textContent = textContent;
+            if (className) element.className = className;
+            return element;
+        }
+
+        // Security logging function
+        function logSecurityEvent(event, details = '') {
+            console.warn(`[SECURITY] ${event}: ${details}`);
+            // In production, send to security monitoring system
+        }
+
+        // Load configuration from JSON file
+        let siteConfig = {};
+
+        // Function to load config
+        async function loadConfig() {
+            try {
+                const response = await fetch('config.json');
+                siteConfig = await response.json();
+                console.log('Configuration loaded successfully');
+
+                // Initialize chatbot with config data
+                if (aiAssistant) {
+                    aiAssistant.updateConfig(siteConfig);
+                }
+            } catch (error) {
+                console.error('Error loading configuration:', error);
+                // Use default values if config fails to load
+            }
+        }
+
+        // Load config on page load
+        loadConfig();
+
+        // Service and product details
+        const serviceDetails = {
+            design: {
+                title: "Network Design & Architecture",
+                content: `
+                    <h3>Comprehensive Network Planning</h3>
+                    <p>Our network design service provides end-to-end planning for your IT infrastructure. We analyze your business requirements to create a robust, scalable network architecture.</p>
+                    
+                    <h4>What's Included:</h4>
+                    <ul>
+                        <li>Network topology design and optimization</li>
+                        <li>Bandwidth analysis and capacity planning</li>
+                        <li>Security architecture integration</li>
+                        <li>Redundancy and failover planning</li>
+                        <li>Performance optimization strategies</li>
+                    </ul>
+
+                    <h4>Technical Specifications:</h4>
+                    <ul>
+                        <li>Layer 2/3 network design</li>
+                        <li>VLAN segmentation and subnetting</li>
+                        <li>Routing protocol selection (OSPF, BGP, EIGRP)</li>
+                        <li>High availability and redundancy design</li>
+                        <li>QoS policy development</li>
+                    </ul>
+                `
+            },
+            procurement: {
+                title: "Equipment Procurement",
+                content: `
+                    <h3>Authentic Equipment Sourcing</h3>
+                    <p>We provide genuine networking and security equipment from authorized distributors, ensuring authenticity and warranty coverage.</p>
+                    
+                    <h4>Our Vendor Network:</h4>
+                    <ul>
+                        <li>Authorized Cisco Gold Partner</li>
+                        <li>Fortinet Authorized Distributor</li>
+                        <li>Palo Alto Networks Partner</li>
+                        <li>Juniper Networks Certified Partner</li>
+                    </ul>
+
+                    <h4>Quality Assurance:</h4>
+                    <ul>
+                        <li>100% authentic products with serial verification</li>
+                        <li>Full manufacturer warranty coverage</li>
+                        <li>Chain of custody documentation</li>
+                        <li>Pre-delivery testing and configuration</li>
+                    </ul>
+                `
+            },
+            installation: {
+                title: "Installation & Configuration",
+                content: `
+                    <h3>Professional Installation Services</h3>
+                    <p>Our certified engineers provide complete installation, configuration, and optimization services for all networking equipment.</p>
+                    
+                    <h4>Installation Services:</h4>
+                    <ul>
+                        <li>Rack mounting and cable management</li>
+                        <li>Network configuration and testing</li>
+                        <li>Security policy implementation</li>
+                        <li>Performance tuning and optimization</li>
+                    </ul>
+
+                    <h4>Certifications:</h4>
+                    <ul>
+                        <li>Cisco CCNP/CCIE certified engineers</li>
+                        <li>Fortinet NSE certified professionals</li>
+                        <li>Palo Alto PCNSE certified experts</li>
+                    </ul>
+                `
+            },
+            security: {
+                title: "Security Implementation",
+                content: `
+                    <h3>Comprehensive Security Solutions</h3>
+                    <p>Our security implementation services provide multi-layered protection for your network infrastructure.</p>
+                    
+                    <h4>Security Services:</h4>
+                    <ul>
+                        <li>Next-generation firewall deployment</li>
+                        <li>VPN and remote access solutions</li>
+                        <li>Network access control (NAC)</li>
+                        <li>Security policy development</li>
+                    </ul>
+
+                    <h4>Compliance Standards:</h4>
+                    <ul>
+                        <li>PCI DSS compliance implementation</li>
+                        <li>HIPAA security requirements</li>
+                        <li>SOC 2 Type II compliance</li>
+                        <li>NIST Cybersecurity Framework</li>
+                    </ul>
+                `
+            },
+            monitoring: {
+                title: "Network Monitoring",
+                content: `
+                    <h3>24/7 Network Monitoring</h3>
+                    <p>Our comprehensive monitoring service provides round-the-clock surveillance of your network infrastructure.</p>
+                    
+                    <h4>Monitoring Capabilities:</h4>
+                    <ul>
+                        <li>Real-time network performance monitoring</li>
+                        <li>Bandwidth utilization tracking</li>
+                        <li>Device health monitoring</li>
+                        <li>Security event correlation</li>
+                    </ul>
+
+                    <h4>Advanced Analytics:</h4>
+                    <ul>
+                        <li>Predictive analytics for proactive maintenance</li>
+                        <li>Trend analysis and capacity forecasting</li>
+                        <li>Custom dashboard and reporting</li>
+                        <li>Machine learning-based anomaly detection</li>
+                    </ul>
+                `
+            },
+            support: {
+                title: "Technical Support",
+                content: `
+                    <h3>Comprehensive Technical Support</h3>
+                    <p>Our technical support services provide ongoing maintenance and troubleshooting for your network infrastructure.</p>
+                    
+                    <h4>Support Services:</h4>
+                    <ul>
+                        <li>24/7 help desk and emergency support</li>
+                        <li>Remote diagnostics and troubleshooting</li>
+                        <li>On-site technical assistance</li>
+                        <li>Preventive maintenance scheduling</li>
+                    </ul>
+
+                    <h4>Response Time SLAs:</h4>
+                    <ul>
+                        <li>Critical issues: 15 minutes response</li>
+                        <li>High priority: 2 hours response</li>
+                        <li>Medium priority: 4 hours response</li>
+                        <li>Low priority: Next business day</li>
+                    </ul>
+                `
+            }
+        };
+
+        const productDetails = {
+            routers: {
+                title: "Enterprise Routers - SME Solutions",
+                content: `
+                    <h3>Professional Router Solutions for SMEs</h3>
+                    <p>Scalable routing solutions designed for small to medium enterprises, offering enterprise-grade features with simplified management.</p>
+                    
+                    <h4>Small Business (10-50 employees)</h4>
+                    <ul>
+                        <li><strong>Cisco ISR 1100 Series:</strong> 4-8 Ethernet ports, integrated WiFi, cloud management</li>
+                        <li><strong>Ubiquiti EdgeRouter X:</strong> 5 Gigabit ports, VLAN support, budget-friendly</li>
+                    </ul>
+
+                    <h4>Medium Business (50-200 employees)</h4>
+                    <ul>
+                        <li><strong>Cisco ISR 4000 Series:</strong> Modular design, high throughput, security services</li>
+                        <li><strong>Juniper MX104:</strong> Carrier-grade performance, MPLS support</li>
+                    </ul>
+
+                    <h4>Key Features for SMEs:</h4>
+                    <ul>
+                        <li>Easy web-based management interface</li>
+                        <li>Built-in security features</li>
+                        <li>Scalable architecture for growth</li>
+                        <li>Cost-effective licensing models</li>
+                    </ul>
+                `
+            },
+            switches: {
+                title: "Managed Switches - SME Solutions",
+                content: `
+                    <h3>Professional Switch Solutions for SMEs</h3>
+                    <p>Managed switching solutions that provide enterprise-level features with simplified management for growing businesses.</p>
+                    
+                    <h4>Small Business (10-50 employees)</h4>
+                    <ul>
+                        <li><strong>Cisco Catalyst 1000 Series:</strong> 8-48 ports, Layer 2+, web management</li>
+                        <li><strong>Ubiquiti UniFi Switch:</strong> Cloud management, PoE+, fanless design</li>
+                    </ul>
+
+                    <h4>Medium Business (50-200 employees)</h4>
+                    <ul>
+                        <li><strong>Cisco Catalyst 9200 Series:</strong> 24-48 ports, Layer 3, stacking, advanced security</li>
+                        <li><strong>HPE Aruba CX 6300:</strong> Cloud-native, VSF stacking, intelligent management</li>
+                    </ul>
+
+                    <h4>SME-Focused Benefits:</h4>
+                    <ul>
+                        <li>Simplified configuration wizards</li>
+                        <li>Centralized cloud management</li>
+                        <li>Energy-efficient designs</li>
+                        <li>Flexible PoE options</li>
+                    </ul>
+                `
+            },
+            firewalls: {
+                title: "Security Firewalls - SME Solutions",
+                content: `
+                    <h3>Next-Generation Firewall Solutions for SMEs</h3>
+                    <p>Advanced security appliances that provide enterprise-grade protection with SME-friendly management.</p>
+                    
+                    <h4>Small Business (10-50 employees)</h4>
+                    <ul>
+                        <li><strong>Fortinet FortiGate 60F:</strong> 10 Gbps throughput, integrated WiFi, cloud management</li>
+                        <li><strong>SonicWall TZ370:</strong> High-speed VPN, intrusion prevention, content filtering</li>
+                    </ul>
+
+                    <h4>Medium Business (50-200 employees)</h4>
+                    <ul>
+                        <li><strong>Palo Alto PA-440:</strong> ML-powered security, app visibility, threat prevention</li>
+                        <li><strong>Fortinet FortiGate 100F:</strong> 20 Gbps firewall, SD-WAN, security fabric</li>
+                    </ul>
+
+                    <h4>Security Features for SMEs:</h4>
+                    <ul>
+                        <li>Simplified security policy management</li>
+                        <li>Automated threat detection</li>
+                        <li>Integrated VPN solutions</li>
+                        <li>Content filtering and web protection</li>
+                    </ul>
+                `
+            },
+            wireless: {
+                title: "Wireless Access Points - SME Solutions",
+                content: `
+                    <h3>Professional WiFi Solutions for SMEs</h3>
+                    <p>High-performance wireless access points designed to provide reliable, secure WiFi coverage for business environments.</p>
+                    
+                    <h4>Small Business (10-50 employees)</h4>
+                    <ul>
+                        <li><strong>Ubiquiti UniFi U6 Lite:</strong> WiFi 6, dual-band, centralized management</li>
+                        <li><strong>Aruba Instant On AP22:</strong> Cloud management, easy setup, mobile app control</li>
+                    </ul>
+
+                    <h4>Medium Business (50-200 employees)</h4>
+                    <ul>
+                        <li><strong>Cisco Catalyst 9120AXI:</strong> WiFi 6, 4x4 MIMO, advanced security, analytics</li>
+                        <li><strong>Aruba 515 Series:</strong> High-density environments, AI insights, IoT ready</li>
+                    </ul>
+
+                    <h4>Wireless Benefits for SMEs:</h4>
+                    <ul>
+                        <li>Easy deployment and management</li>
+                        <li>Guest network isolation</li>
+                        <li>Bandwidth management controls</li>
+                        <li>Mobile device optimization</li>
+                    </ul>
+                `
+            }
+        };
+
+        // Modal functionality
+        const modal = document.getElementById('serviceModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const closeBtn = document.querySelector('.modal-close');
+
+        function openModal(type, data) {
+            if (data) {
+                modalTitle.textContent = data.title;
+                // Use safe sanitization for modal content
+                sanitizeAndInsert(modalBody, data.content, true);
+                modal.style.display = 'block';
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Service modal buttons
+        document.querySelectorAll('.service-modal-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const serviceType = btn.getAttribute('data-service');
+                openModal('service', serviceDetails[serviceType]);
+            });
+        });
+
+        // Product category clicks
+        document.querySelectorAll('.product-category').forEach(category => {
+            category.addEventListener('click', () => {
+                const productType = category.getAttribute('data-product');
+                openModal('product', productDetails[productType]);
+            });
+        });
+
+        // Close modal events
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        function openContactForm() {
+            closeModal();
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Language selector
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+        });
+
+        // Chatbot functionality
+        const chatbotLauncher = document.getElementById('chatbotLauncher');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+        const chatbotClose = document.getElementById('chatbotClose');
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.getElementById('chatSend');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatTyping = document.getElementById('chatTyping');
+
+        // Chatbot responses database
+        const botResponses = {
+            greetings: [
+                "Hello! How can I assist you with your networking needs today?",
+                "Welcome to Sankarashield! What can I help you with?",
+                "Hi there! Ready to discuss your network infrastructure?"
+            ],
+            products: {
+                routers: "We offer enterprise-grade routers from Cisco (ISR Series), Juniper (MX Series), Ubiquiti, and MikroTik. Our routers range from SME solutions to carrier-grade equipment. Would you like specific pricing?",
+                switches: "Our switch portfolio includes Cisco Catalyst, HPE Aruba, Juniper EX Series, and Ubiquiti UniFi. We have options from 8 to 48 ports with Layer 2/3 capabilities. What's your port requirement?",
+                firewalls: "We provide next-gen firewalls from Palo Alto, Fortinet, SonicWall, and Sophos. Our solutions include threat prevention, VPN, and advanced security features. What's your security priority?",
+                wireless: "We offer WiFi 6 access points from Cisco, Ubiquiti, Aruba, and Ruckus. Perfect for high-density environments. How many APs do you need?"
+            },
+            services: {
+                design: "Our network design service includes topology planning, capacity analysis, and security architecture. We create custom solutions based on your business needs. Would you like a consultation?",
+                installation: "Professional installation by certified engineers. We handle rack mounting, configuration, testing, and optimization. On-site service available worldwide.",
+                support: "24/7 technical support with SLA guarantees. Remote diagnostics, on-site service, and preventive maintenance available. What level of support do you need?",
+                monitoring: "Real-time network monitoring with automated alerts, performance analytics, and predictive maintenance. Keep your network running at peak efficiency."
+            },
+            pricing: "Our pricing varies based on your specific requirements. I can connect you with our sales team for a customized quote. Would you like to schedule a consultation?",
+            contact: "You can reach us through the contact form below, or I can help you schedule a call with our technical team. What works best for you?",
+            default: "I'd be happy to help! Could you please be more specific about what you're looking for? You can ask about our products, services, pricing, or technical specifications."
+        };
+
+        // Open chatbot
+        chatbotLauncher.addEventListener('click', () => {
+            chatbotContainer.style.display = 'flex';
+            chatbotLauncher.style.display = 'none';
+        });
+
+        // Close chatbot
+        chatbotClose.addEventListener('click', () => {
+            chatbotContainer.style.display = 'none';
+            chatbotLauncher.style.display = 'flex';
+        });
+
+        // Send message function
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // Validate chat input for security
+            if (!validateInput(message, 'text')) {
+                const errorMessage = createSafeElement('div', 'Message contains invalid characters. Please use only alphanumeric characters and basic punctuation.', 'chat-message bot error');
+                chatMessages.appendChild(errorMessage);
+                logSecurityEvent('Invalid chat input', message);
+                chatInput.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                return;
+            }
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'chat-message user';
+            userMessage.textContent = message;
+            chatMessages.appendChild(userMessage);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Show typing indicator
+            chatMessages.appendChild(chatTyping);
+            chatTyping.style.display = 'flex';
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Generate bot response
+            setTimeout(() => {
+                chatTyping.style.display = 'none';
+                const botMessage = document.createElement('div');
+                botMessage.className = 'chat-message bot';
+                botMessage.textContent = getBotResponse(message);
+                chatMessages.appendChild(botMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Get bot response based on user input
+        function getBotResponse(input) {
+            const lowerInput = input.toLowerCase();
+
+            // Check greetings
+            if (lowerInput.match(/^(hi|hello|hey|good|bonjour)/)) {
+                return botResponses.greetings[Math.floor(Math.random() * botResponses.greetings.length)];
+            }
+
+            // Check for product queries
+            if (lowerInput.includes('router')) return botResponses.products.routers;
+            if (lowerInput.includes('switch')) return botResponses.products.switches;
+            if (lowerInput.includes('firewall') || lowerInput.includes('security')) return botResponses.products.firewalls;
+            if (lowerInput.includes('wifi') || lowerInput.includes('wireless') || lowerInput.includes('access point')) return botResponses.products.wireless;
+
+            // Check for service queries
+            if (lowerInput.includes('design') || lowerInput.includes('architecture')) return botResponses.services.design;
+            if (lowerInput.includes('install')) return botResponses.services.installation;
+            if (lowerInput.includes('support') || lowerInput.includes('help')) return botResponses.services.support;
+            if (lowerInput.includes('monitor')) return botResponses.services.monitoring;
+
+            // Check for pricing
+            if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('quote')) return botResponses.pricing;
+
+            // Check for contact
+            if (lowerInput.includes('contact') || lowerInput.includes('call') || lowerInput.includes('email')) return botResponses.contact;
+
+            // Product brands
+            if (lowerInput.includes('cisco')) return "We're a Cisco Gold Partner offering the full range of Cisco networking equipment including ISR routers, Catalyst switches, and Firepower security appliances.";
+            if (lowerInput.includes('fortinet')) return "As a Fortinet authorized distributor, we provide FortiGate firewalls, FortiSwitch, and the complete Security Fabric solution.";
+            if (lowerInput.includes('palo alto')) return "We offer Palo Alto's next-gen firewalls including PA-400 series, Prisma Cloud, and Cortex XDR solutions.";
+            if (lowerInput.includes('juniper')) return "Our Juniper portfolio includes MX routers, EX switches, and SRX security appliances for enterprise networks.";
+
+            // Default response
+            return botResponses.default;
+        }
+
+        // Send message on button click
+        chatSend.addEventListener('click', sendMessage);
+
+        // Send message on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.contains('active');
+            // Safe text content replacement
+            menuToggle.textContent = isOpen ? '✕' : '☰';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuToggle.textContent = '☰';
+            }
+        });
+
+        // Close menu when clicking on a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+
+        // Adjust header padding on scroll for mobile
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScrollY = window.scrollY;
+
+            if (window.innerWidth <= 768) {
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        // Improve touch interactions
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.cta-primary, .cta-secondary, .service-link, .connection-node, .product-category').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+
+                element.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                });
+            });
+        }
+
+        // Enregistrement du Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js')
+                    .then(function(registration) {
+                        console.log('✅ Service Worker enregistré avec succès:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('❌ Échec de l\'enregistrement du Service Worker:', error);
+                    });
+            });
+        } else {
+            console.log('❌ Service Worker non supporté par ce navigateur');
+        }
+
+        // Network Operations Center - Live Data Simulation
+        function updateNOCMetrics() {
+            // Update Active Devices
+            const devices = document.getElementById('activeDevices');
+            const currentDevices = parseInt(devices.textContent);
+            const newDevices = currentDevices + Math.floor(Math.random() * 11) - 5;
+            devices.textContent = Math.max(800, Math.min(900, newDevices));
+
+            // Update device trend
+            const deviceTrend = Math.random() > 0.5 ? '↗' : '↘';
+            const trendPercent = Math.floor(Math.random() * 5) + 1;
+            document.getElementById('devicesTrend').textContent = `${deviceTrend} ${trendPercent}%`;
+
+            // Update Managed Sites
+            const sites = document.getElementById('managedSites');
+            const currentSites = parseInt(sites.textContent);
+            const newSites = currentSites + Math.floor(Math.random() * 3) - 1;
+            sites.textContent = Math.max(150, Math.min(165, newSites));
+
+            // Update Active Alerts
+            const alerts = document.getElementById('activeAlerts');
+            const newAlerts = Math.floor(Math.random() * 40);
+            alerts.textContent = newAlerts;
+
+            const alertStatus = document.getElementById('alertStatus');
+            if (newAlerts > 30) {
+                alertStatus.textContent = '⚠️ HIGH';
+                alertStatus.style.color = '#ef4444';
+            } else if (newAlerts > 15) {
+                alertStatus.textContent = '🔄 MONITORING';
+                alertStatus.style.color = '#f97316';
+            } else {
+                alertStatus.textContent = '✓ NORMAL';
+                alertStatus.style.color = '#22c55e';
+            }
+
+            // Update Bandwidth
+            const bandwidth = document.getElementById('bandwidth');
+            const bwValue = (Math.random() * 2 + 1.5).toFixed(1);
+            bandwidth.textContent = `${bwValue} Gbps`;
+
+            // Update Uptime
+            const uptime = document.getElementById('uptime');
+            const uptimeValue = (99.9 + Math.random() * 0.09).toFixed(2);
+            uptime.textContent = `${uptimeValue}%`;
+
+            // Update Threats Blocked
+            const threats = document.getElementById('threats');
+            const threatCount = Math.floor(Math.random() * 100);
+            threats.textContent = threatCount;
+
+            if (threatCount > 50) {
+                document.getElementById('threatStatus').textContent = '⚔️ DEFENDING';
+            } else {
+                document.getElementById('threatStatus').textContent = '🛡️ PROTECTED';
+            }
+        }
+
+        // Update Network Core Status
+        function updateCoreMetrics() {
+            // Update core load
+            const coreLoad = document.getElementById('coreLoad');
+            const load = Math.floor(Math.random() * 40) + 30; // Between 30-70%
+            coreLoad.textContent = `LOAD: ${load}%`;
+
+            // Update core status
+            const coreStatus = document.getElementById('coreStatus');
+            if (load > 60) {
+                coreStatus.textContent = 'HIGH LOAD';
+                coreStatus.style.color = '#f97316';
+            } else if (load > 40) {
+                coreStatus.textContent = 'OPTIMAL';
+                coreStatus.style.color = '#00ff88';
+            } else {
+                coreStatus.textContent = 'LOW ACTIVITY';
+                coreStatus.style.color = '#06b6d4';
+            }
+
+            // Animate core pulse based on load
+            const corePulse = document.querySelector('.core-pulse');
+            if (load > 60) {
+                corePulse.style.animationDuration = '1s';
+            } else {
+                corePulse.style.animationDuration = '2s';
+            }
+        }
+
+        // Start live updates
+        setInterval(updateNOCMetrics, 3000); // Update every 3 seconds
+        setInterval(updateCoreMetrics, 2000); // Update every 2 seconds
+
+        // Initial updates
+        updateNOCMetrics();
+        updateCoreMetrics();
+
+        // Add interactive effect to Network Core
+        document.querySelector('.core-center').addEventListener('click', function() {
+            // Create explosion effect
+            const explosion = document.createElement('div');
+            explosion.style.position = 'absolute';
+            explosion.style.width = '100%';
+            explosion.style.height = '100%';
+            explosion.style.border = '2px solid var(--electric-blue)';
+            explosion.style.borderRadius = '50%';
+            explosion.style.animation = 'explode 1s ease-out forwards';
+            this.appendChild(explosion);
+
+            setTimeout(() => explosion.remove(), 1000);
+        });
+
+        // Add explosion animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes explode {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    <script>
+        // ========== TERMINAL INTERACTIVE ==========
+        const terminalInput = document.getElementById('terminalInput');
+        const terminalOutput = document.getElementById('terminalOutput');
+
+        const commands = {
+            help: () => {
+                return `Available commands:
+- help: Show this help message
+- scan: Scan network for vulnerabilities
+- ping [target]: Ping a target server
+- status: Check security status
+- firewall: Show firewall status
+- monitor: Start real-time monitoring
+- clear: Clear terminal
+- traceroute [host]: Trace route to host
+- netstat: Display network statistics
+- portscan [host]: Scan ports on target
+- dns [domain]: DNS lookup
+- whois [domain]: WHOIS information`;
+            },
+            scan: () => {
+                const scanResults = [
+                    'Initiating network scan...',
+                    'Scanning port 22... [SECURE]',
+                    'Scanning port 80... [OPEN]',
+                    'Scanning port 443... [SECURE]',
+                    'Scanning port 3306... [FILTERED]',
+                    'Scan complete: 4 services detected, 3 secure'
+                ];
+                scanResults.forEach((line, i) => {
+                    setTimeout(() => addLine(line), i * 500);
+                });
+                return 'Starting scan...';
+            },
+            ping: (args) => {
+                const target = args[0] || 'sankarashield.com';
+                return `PING ${target} (192.168.1.1): 56 data bytes
+64 bytes from ${target}: icmp_seq=0 ttl=64 time=2.3 ms
+64 bytes from ${target}: icmp_seq=1 ttl=64 time=1.8 ms
+64 bytes from ${target}: icmp_seq=2 ttl=64 time=2.1 ms
+--- ${target} ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss`;
+            },
+            status: () => {
+                return `System Status: SECURE
+Firewall: ACTIVE
+IDS/IPS: OPERATIONAL
+Last scan: 2 minutes ago
+Threats blocked today: ${Math.floor(Math.random() * 100) + 50}`;
+            },
+            firewall: () => {
+                return `Firewall Status: ACTIVE
+Rules loaded: 1,247
+Active connections: 523
+Blocked IPs: 89
+DDoS Protection: ENABLED`;
+            },
+            monitor: () => {
+                const monitoring = setInterval(() => {
+                    const threat = Math.random() > 0.7 ? 'THREAT DETECTED' : 'Normal';
+                    const ip = `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`;
+                    addLine(`[${new Date().toLocaleTimeString()}] ${ip} - ${threat}`);
+                }, 2000);
+                setTimeout(() => clearInterval(monitoring), 10000);
+                return 'Starting real-time monitoring (10 seconds)...';
+            },
+            clear: () => {
+                // Clear terminal safely
+                terminalOutput.innerHTML = '';
+                const clearLine = createSafeElement('div', 'Terminal cleared', 'terminal-line');
+                terminalOutput.appendChild(clearLine);
+                return '';
+            },
+            traceroute: (args) => {
+                const host = args[0] || 'google.com';
+                const hops = [
+                    `traceroute to ${host} (142.251.46.238), 30 hops max`,
+                    ' 1  192.168.1.1 (192.168.1.1)  1.234 ms',
+                    ' 2  10.0.0.1 (10.0.0.1)  5.678 ms',
+                    ' 3  172.16.0.1 (172.16.0.1)  12.345 ms',
+                    ' 4  * * * Request timed out',
+                    ' 5  142.251.46.238 (142.251.46.238)  25.789 ms'
+                ];
+                hops.forEach((line, i) => {
+                    setTimeout(() => addLine(line), i * 300);
+                });
+                return 'Tracing route...';
+            },
+            netstat: () => {
+                return `Active Internet connections:
+Proto  Local Address          Foreign Address        State
+TCP    0.0.0.0:80            0.0.0.0:*              LISTENING
+TCP    0.0.0.0:443           0.0.0.0:*              LISTENING
+TCP    127.0.0.1:3306        0.0.0.0:*              LISTENING
+TCP    192.168.1.100:52341   142.251.46.238:443     ESTABLISHED`;
+            },
+            portscan: (args) => {
+                const host = args[0] || '127.0.0.1';
+                const ports = [
+                    `Starting port scan on ${host}...`,
+                    'Port 22/tcp   CLOSED',
+                    'Port 80/tcp   OPEN',
+                    'Port 443/tcp  OPEN',
+                    'Port 3306/tcp FILTERED',
+                    'Port 8080/tcp CLOSED',
+                    'Scan complete: 2 open, 2 closed, 1 filtered'
+                ];
+                ports.forEach((line, i) => {
+                    setTimeout(() => addLine(line), i * 200);
+                });
+                return 'Initiating port scan...';
+            },
+            dns: (args) => {
+                const domain = args[0] || 'sankarashield.com';
+                return `DNS lookup for ${domain}:
+A Records: 192.168.1.1, 192.168.1.2
+MX Records: mail.${domain} (Priority: 10)
+NS Records: ns1.${domain}, ns2.${domain}`;
+            },
+            whois: (args) => {
+                const domain = args[0] || 'sankarashield.com';
+                return `WHOIS information for ${domain}:
+Registrar: SankaraShield Security Inc.
+Created: 2020-01-01
+Expires: 2025-01-01
+Status: ACTIVE
+Nameservers: ns1.${domain}, ns2.${domain}`;
+            }
+        };
+
+        function addLine(text) {
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            line.textContent = text;
+            terminalOutput.appendChild(line);
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
+
+        if (terminalInput) {
+            terminalInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const input = terminalInput.value.trim();
+                    if (input) {
+                        // Validate terminal input for security
+                        if (!validateInput(input, 'command')) {
+                            addLine('Invalid characters detected. Only alphanumeric, spaces, hyphens, dots and underscores allowed.');
+                            logSecurityEvent('Invalid terminal input', input);
+                            terminalInput.value = '';
+                            return;
+                        }
+
+                        // Sanitize input display
+                        addLine(`root@sankarashield:~$ ${escapeHTML(input)}`);
+                        const [cmd, ...args] = input.toLowerCase().split(' ');
+                        const output = commands[cmd] ? commands[cmd](args) : `Command not found: ${escapeHTML(cmd)}. Type 'help' for available commands.`;
+                        if (output) addLine(output);
+                        terminalInput.value = '';
+                    }
+                }
+            });
+        }
+
+        // ========== 3D GLOBE WITH THREATS ==========
+        function init3DGlobe() {
+            const canvas = document.getElementById('threejs-globe');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+
+            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            // Create globe
+            const geometry = new THREE.SphereGeometry(5, 32, 32);
+            const material = new THREE.MeshBasicMaterial({
+                color: 0x0a0e1a,
+                wireframe: true,
+                opacity: 0.3,
+                transparent: true
+            });
+            const globe = new THREE.Mesh(geometry, material);
+            scene.add(globe);
+
+            // Add glowing outline
+            const glowGeometry = new THREE.SphereGeometry(5.1, 32, 32);
+            const glowMaterial = new THREE.MeshBasicMaterial({
+                color: 0x3b82f6,
+                wireframe: true,
+                opacity: 0.15,
+                transparent: true
+            });
+            const glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
+            scene.add(glowMesh);
+
+            // Add threat points
+            const threats = [];
+            for (let i = 0; i < 20; i++) {
+                const threatGeometry = new THREE.SphereGeometry(0.05, 8, 8);
+                const threatMaterial = new THREE.MeshBasicMaterial({
+                    color: Math.random() > 0.5 ? 0xff4444 : 0x00ff88,
+                    emissive: 0xffffff,
+                    emissiveIntensity: 0.5
+                });
+                const threat = new THREE.Mesh(threatGeometry, threatMaterial);
+
+                const phi = Math.random() * Math.PI * 2;
+                const theta = Math.random() * Math.PI;
+                threat.position.x = 5.2 * Math.sin(theta) * Math.cos(phi);
+                threat.position.y = 5.2 * Math.sin(theta) * Math.sin(phi);
+                threat.position.z = 5.2 * Math.cos(theta);
+
+                scene.add(threat);
+                threats.push(threat);
+            }
+
+            camera.position.z = 12;
+
+            // Animation
+            function animate() {
+                requestAnimationFrame(animate);
+                globe.rotation.y += 0.002;
+                glowMesh.rotation.y += 0.002;
+
+                threats.forEach((threat, i) => {
+                    threat.scale.x = threat.scale.y = threat.scale.z = 1 + Math.sin(Date.now() * 0.001 + i) * 0.3;
+                });
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            // Update stats
+            setInterval(() => {
+                const activeThreatsEl = document.getElementById('activeThreats');
+                const blockedAttacksEl = document.getElementById('blockedAttacks');
+                if (activeThreatsEl) activeThreatsEl.textContent = Math.floor(Math.random() * 500) + 100;
+                if (blockedAttacksEl) {
+                    blockedAttacksEl.textContent =
+                        (parseInt(blockedAttacksEl.textContent.replace(/,/g, '')) + Math.floor(Math.random() * 10)).toLocaleString();
+                }
+            }, 3000);
+        }
+
+        // ========== TERMINAL TOGGLE ==========
+        let terminalOpen = false;
+        window.toggleTerminal = function() {
+            terminalOpen = !terminalOpen;
+            const terminal = document.getElementById('terminalContainer');
+            const overlay = document.getElementById('terminalOverlay');
+
+            if (terminalOpen) {
+                terminal.classList.add('active');
+                overlay.classList.add('active');
+                document.getElementById('terminalInput').focus();
+            } else {
+                terminal.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        window.closeTerminal = function() {
+            terminalOpen = false;
+            document.getElementById('terminalContainer').classList.remove('active');
+            document.getElementById('terminalOverlay').classList.remove('active');
+        }
+
+        // ESC key to close terminal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && terminalOpen) {
+                closeTerminal();
+            }
+        });
+
+        // ========== DEVELOPER MODE (formerly Hacker Mode) ==========
+        let hackerMode = false;
+        window.toggleHackerMode = function() {
+            hackerMode = !hackerMode;
+            document.body.classList.toggle('hacker-mode');
+
+            const btn = document.getElementById('hackerModeText');
+            if (btn) btn.textContent = hackerMode ? '💼 Professional Mode' : '👨‍💻 Developer Mode';
+
+            if (hackerMode) {
+                createMatrixRain();
+                addGlitchEffect();
+            } else {
+                clearMatrixRain();
+                removeGlitchEffect();
+            }
+        }
+
+        function createMatrixRain() {
+            const matrixRain = document.getElementById('matrixRain');
+            if (!matrixRain) return;
+
+            const columns = Math.floor(window.innerWidth / 20);
+
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = i * 20 + 'px';
+                column.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                column.style.animationDelay = Math.random() * 5 + 's';
+
+                // Binary Matrix Rain (01 only)
+                const chars = '01';
+                let text = '';
+                for (let j = 0; j < 50; j++) {
+                    text += chars[Math.floor(Math.random() * chars.length)] + '\n';
+                }
+                column.textContent = text;
+
+                matrixRain.appendChild(column);
+            }
+        }
+
+        function clearMatrixRain() {
+            const matrixRain = document.getElementById('matrixRain');
+            if (matrixRain) {
+                // Safely clear matrix rain
+                while (matrixRain.firstChild) {
+                    matrixRain.removeChild(matrixRain.firstChild);
+                }
+            }
+        }
+
+        function addGlitchEffect() {
+            document.querySelectorAll('h1, h2, h3').forEach(el => {
+                el.classList.add('glitch');
+                el.setAttribute('data-text', el.textContent);
+            });
+        }
+
+        function removeGlitchEffect() {
+            document.querySelectorAll('.glitch').forEach(el => {
+                el.classList.remove('glitch');
+            });
+        }
+
+        // Initialize 3D Globe
+        function init3DGlobe() {
+            const canvas = document.getElementById('threejs-globe');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+
+            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            // Create globe
+            const geometry = new THREE.SphereGeometry(5, 32, 32);
+            const material = new THREE.MeshBasicMaterial({
+                color: 0x0a0e1a,
+                wireframe: true,
+                opacity: 0.3,
+                transparent: true
+            });
+            const globe = new THREE.Mesh(geometry, material);
+            scene.add(globe);
+
+            // Add glowing outline
+            const glowGeometry = new THREE.SphereGeometry(5.1, 32, 32);
+            const glowMaterial = new THREE.MeshBasicMaterial({
+                color: 0x3b82f6,
+                wireframe: true,
+                opacity: 0.15,
+                transparent: true
+            });
+            const glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
+            scene.add(glowMesh);
+
+            // Add threat points
+            const threats = [];
+            for (let i = 0; i < 20; i++) {
+                const threatGeometry = new THREE.SphereGeometry(0.05, 8, 8);
+                const threatMaterial = new THREE.MeshBasicMaterial({
+                    color: Math.random() > 0.5 ? 0xff4444 : 0x00ff88,
+                    emissive: 0xffffff,
+                    emissiveIntensity: 0.5
+                });
+                const threat = new THREE.Mesh(threatGeometry, threatMaterial);
+
+                const phi = Math.random() * Math.PI * 2;
+                const theta = Math.random() * Math.PI;
+                threat.position.x = 5.2 * Math.sin(theta) * Math.cos(phi);
+                threat.position.y = 5.2 * Math.sin(theta) * Math.sin(phi);
+                threat.position.z = 5.2 * Math.cos(theta);
+
+                scene.add(threat);
+                threats.push(threat);
+            }
+
+            // Position camera
+            camera.position.z = 15;
+
+            // Animation
+            function animate() {
+                requestAnimationFrame(animate);
+
+                // Rotate globe
+                globe.rotation.x += 0.001;
+                globe.rotation.y += 0.005;
+                glowMesh.rotation.x += 0.001;
+                glowMesh.rotation.y += 0.005;
+
+                // Animate threat points
+                threats.forEach((threat, index) => {
+                    const scale = 1 + Math.sin(Date.now() * 0.003 + index) * 0.5;
+                    threat.scale.set(scale, scale, scale);
+                });
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            });
+        }
+
+        // Initialize 3D Global Security Network in Core
+        function initGlobalNetwork3D() {
+            const canvas = document.getElementById('globalNetworkCanvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+
+            renderer.setSize(400, 400);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            // Create Earth-like globe
+            const globeGeometry = new THREE.SphereGeometry(1, 32, 32);
+            const globeMaterial = new THREE.MeshPhongMaterial({
+                color: 0x00ff41,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.4
+            });
+            const globe = new THREE.Mesh(globeGeometry, globeMaterial);
+            scene.add(globe);
+
+            // Add orbital rings
+            const orbits = [];
+            for (let i = 0; i < 3; i++) {
+                const ringGeometry = new THREE.TorusGeometry(1.3 + i * 0.15, 0.01, 8, 100);
+                const ringMaterial = new THREE.MeshBasicMaterial({
+                    color: i === 0 ? 0x00ff41 : i === 1 ? 0x06b6d4 : 0x8b5cf6,
+                    transparent: true,
+                    opacity: 0.6
+                });
+                const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+                ring.rotation.x = Math.random() * Math.PI;
+                ring.rotation.y = Math.random() * Math.PI;
+                orbits.push(ring);
+                scene.add(ring);
+            }
+
+            // Add network nodes
+            const nodeGeometry = new THREE.SphereGeometry(0.02, 8, 8);
+            const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff41 });
+
+            for (let i = 0; i < 50; i++) {
+                const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.random() * Math.PI;
+                const radius = 1.05;
+
+                node.position.x = radius * Math.sin(phi) * Math.cos(theta);
+                node.position.y = radius * Math.sin(phi) * Math.sin(theta);
+                node.position.z = radius * Math.cos(phi);
+
+                scene.add(node);
+            }
+
+            // Add lights
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+
+            const pointLight = new THREE.PointLight(0x00ff41, 1, 100);
+            pointLight.position.set(2, 2, 2);
+            scene.add(pointLight);
+
+            camera.position.z = 3;
+
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                globe.rotation.y += 0.005;
+
+                orbits.forEach((orbit, index) => {
+                    orbit.rotation.x += 0.002 * (index + 1);
+                    orbit.rotation.y += 0.003 * (index + 1);
+                    orbit.rotation.z += 0.001 * (index + 1);
+                });
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        // Initialize 3D Global Network when page loads
+        window.addEventListener('load', () => {
+            initGlobalNetwork3D();
+        });
+
+        // AI Security Assistant (Jarvis Style)
+        const aiAssistant = {
+            container: null,
+            messages: null,
+            input: null,
+            canvas: null,
+            ctx: null,
+            animationId: null,
+            config: null,
+
+            updateConfig(config) {
+                this.config = config;
+                // Update responses with config data if available
+                if (config && config.chatbot && config.chatbot.responses) {
+                    this.responses = config.chatbot.responses;
+                }
+            },
+
+            responses: {
+                en: {
+                    // Service questions
+                    'services': 'We offer: Network Configuration, Firewall Installation, Infrastructure Maintenance, 24/7 Technical Support, and Security Solutions. How can I help you?',
+                    'price': 'Our rates vary based on your needs. Contact us at +228 90 12 34 56 for a free personalized quote.',
+                    'cost': 'Our rates vary based on your needs. Contact us at +228 90 12 34 56 for a free personalized quote.',
+
+                    // Company information
+                    'hours': 'We are open Monday to Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 1:00 PM.',
+                    'open': 'We are open Monday to Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 1:00 PM.',
+                    'contact': 'You can reach us at email sankara01@proton.me',
+                    'address': 'Our headquarters is located in Lomé, Togo. For the exact address, call +228 90 12 34 56.',
+                    'location': 'Our headquarters is located in Lomé, Togo. For the exact address, call +228 90 12 34 56.',
+
+                    // Product information
+                    'cisco': 'We are a certified Cisco partner. We offer routers, switches, firewalls and complete Cisco solutions.',
+                    'fortinet': 'As a Fortinet partner, we offer FortiGate solutions, FortiAnalyzer and the entire Security Fabric range.',
+                    'palo alto': 'We provide Palo Alto Networks solutions: Next-Generation Firewalls, Prisma Cloud, and Cortex XDR.',
+                    'juniper': 'Juniper Networks partner, we supply EX Series switches, MX Series routers and SD-WAN solutions.',
+
+                    // Technical support
+                    'support': 'Our technical support is available 24/7. Email sankara01@proton.me for assistance.',
+                    'emergency': 'For emergencies, call our 24/7 hotline at +228 90 12 34 56. Guaranteed response time within 30 minutes.',
+                    'maintenance': 'We offer preventive and corrective maintenance contracts. Contact us for more details.',
+
+                    // General questions
+                    'hello': 'Hello! Welcome to Sankarashield. How can I help you today?',
+                    'hi': 'Hi! Welcome to Sankarashield. How can I assist you today?',
+                    'help': 'I can provide information about: our services, pricing, hours, available products, technical support. What would you like to know?',
+
+                    // Quotes and orders
+                    'quote': 'For a free quote, send your request to sankara01@proton.me',
+                    'order': 'To place an order, contact our sales team at +228 90 12 34 56 or visit our office.',
+                    'buy': 'To make a purchase, contact us at +228 90 12 34 56. We accept bank transfers and mobile payments.',
+
+                    // Certifications
+                    'certification': 'Sankarashield is certified: Cisco Partner, Fortinet Partner, Palo Alto Partner, and Juniper Partner.',
+                    'warranty': 'All our equipment comes with warranty. Duration varies by product (1 to 3 years). Technical support included.',
+
+                    'default': 'I\'m Sankarashield\'s virtual assistant. How can I help you? Feel free to ask about our services, products, or contact information.'
+                },
+                fr: {
+                    // Questions sur les services
+                    'services': 'Nous offrons: Configuration réseau, Installation firewall, Maintenance infrastructure, Support technique 24/7, et Solutions de sécurité. Comment puis-je vous aider?',
+                    'prix': 'Nos tarifs varient selon vos besoins. Contactez-nous au +228 90 12 34 56 pour un devis personnalisé gratuit.',
+                    'coût': 'Nos tarifs varient selon vos besoins. Contactez-nous au +228 90 12 34 56 pour un devis personnalisé gratuit.',
+
+                    // Questions sur l'entreprise
+                    'horaires': 'Nous sommes ouverts du Lundi au Vendredi de 8h00 à 18h00, et le Samedi de 9h00 à 13h00.',
+                    'ouvert': 'Nous sommes ouverts du Lundi au Vendredi de 8h00 à 18h00, et le Samedi de 9h00 à 13h00.',
+                    'contact': 'Vous pouvez nous joindre par email à sankara01@proton.me',
+                    'adresse': 'Notre siège est situé à Lomé, Togo. Pour l\'adresse exacte, appelez le +228 90 12 34 56.',
+
+                    // Questions sur les produits
+                    'cisco': 'Nous sommes partenaire certifié Cisco. Nous proposons routeurs, switches, firewalls et solutions complètes Cisco.',
+                    'fortinet': 'En tant que partenaire Fortinet, nous offrons les solutions FortiGate, FortiAnalyzer et toute la gamme Security Fabric.',
+                    'palo alto': 'Nous proposons les solutions Palo Alto Networks: Next-Generation Firewalls, Prisma Cloud, et Cortex XDR.',
+                    'juniper': 'Partenaire Juniper Networks, nous fournissons switches EX Series, routeurs MX Series et solutions SD-WAN.',
+
+                    // Support technique
+                    'support': 'Notre support technique est disponible 24/7. Envoyez un email à sankara01@proton.me',
+                    'urgence': 'Pour les urgences, appelez notre hotline 24/7 au +228 90 12 34 56. Temps de réponse garanti sous 30 minutes.',
+                    'maintenance': 'Nous proposons des contrats de maintenance préventive et corrective. Contactez-nous pour plus de détails.',
+
+                    // Questions générales
+                    'bonjour': 'Bonjour! Bienvenue chez Sankarashield. Comment puis-je vous aider aujourd\'hui?',
+                    'salut': 'Salut! Bienvenue chez Sankarashield. Comment puis-je vous aider?',
+                    'aide': 'Je peux vous renseigner sur: nos services, tarifs, horaires, produits disponibles, support technique. Que souhaitez-vous savoir?',
+
+                    // Devis et commandes
+                    'devis': 'Pour obtenir un devis gratuit, envoyez votre demande à sankara01@proton.me',
+                    'commander': 'Pour passer commande, contactez notre service commercial au +228 90 12 34 56 ou visitez notre bureau.',
+                    'acheter': 'Pour effectuer un achat, contactez-nous au +228 90 12 34 56. Nous acceptons virements bancaires et paiements mobiles.',
+
+                    // Certifications
+                    'certification': 'Sankarashield est certifié: Cisco Partner, Fortinet Partner, Palo Alto Partner, et Juniper Partner.',
+                    'garantie': 'Tous nos équipements sont garantis. La durée varie selon le produit (1 à 3 ans). Support technique inclus.',
+
+                    'default': 'Je suis l\'assistant virtuel de Sankarashield. Comment puis-je vous aider? N\'hésitez pas à me poser des questions sur nos services, produits ou pour obtenir nos coordonnées.'
+                }
+            },
+
+            currentLang: 'en',
+
+            init() {
+                this.container = document.getElementById('aiAssistantContainer');
+                this.messages = document.getElementById('aiMessages');
+                this.canvas = document.getElementById('aiWaveform');
+
+                if (this.canvas) {
+                    this.ctx = this.canvas.getContext('2d');
+                    this.canvas.width = this.canvas.offsetWidth;
+                    this.canvas.height = this.canvas.offsetHeight;
+                }
+
+                // Setup event listeners
+                const launcher = document.getElementById('aiAssistantLauncher');
+                const closeBtn = document.getElementById('aiAssistantClose');
+                const input = document.querySelector('.ai-input-wrapper input');
+                const sendBtn = document.querySelector('.ai-input-wrapper button');
+
+                if (launcher) {
+                    launcher.addEventListener('click', () => this.toggle());
+                }
+
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', () => this.close());
+                }
+
+                if (input) {
+                    this.input = input;
+                    input.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') {
+                            this.sendMessage();
+                        }
+                    });
+                }
+
+                if (sendBtn) {
+                    sendBtn.addEventListener('click', () => this.sendMessage());
+                }
+            },
+
+            toggle() {
+                if (this.container.classList.contains('active')) {
+                    this.close();
+                } else {
+                    this.open();
+                }
+            },
+
+            open() {
+                this.container.classList.add('active');
+                this.startWaveAnimation();
+                if (this.input) {
+                    this.input.focus();
+                }
+            },
+
+            close() {
+                this.container.classList.remove('active');
+                this.stopWaveAnimation();
+            },
+
+            sendMessage() {
+                if (!this.input || !this.input.value.trim()) return;
+
+                const message = this.input.value.trim();
+                this.addMessage(message, 'user');
+                this.input.value = '';
+
+                // Simulate AI processing
+                setTimeout(() => {
+                    const response = this.generateResponse(message);
+                    this.addMessage(response, 'assistant');
+                }, 1000);
+            },
+
+            detectLanguage(message) {
+                const frenchWords = ['bonjour', 'salut', 'comment', 'puis', 'aide', 'prix', 'tarif', 'horaire', 'devis', 'merci', 'quoi', 'combien', 'où', 'quand'];
+                const englishWords = ['hello', 'hi', 'how', 'help', 'price', 'cost', 'hours', 'quote', 'thanks', 'what', 'where', 'when'];
+
+                const lowerMessage = message.toLowerCase();
+                let frenchCount = 0;
+                let englishCount = 0;
+
+                frenchWords.forEach(word => {
+                    if (lowerMessage.includes(word)) frenchCount++;
+                });
+
+                englishWords.forEach(word => {
+                    if (lowerMessage.includes(word)) englishCount++;
+                });
+
+                // If French words detected, use French
+                if (frenchCount > englishCount) {
+                    this.currentLang = 'fr';
+                } else if (englishCount > 0) {
+                    this.currentLang = 'en';
+                }
+                // Otherwise keep current language
+            },
+
+            generateResponse(message) {
+                const lowerMessage = message.toLowerCase();
+
+                // Detect language from message
+                this.detectLanguage(message);
+
+                const responses = this.responses[this.currentLang];
+
+                // Check for keywords in current language
+                for (const [keyword, response] of Object.entries(responses)) {
+                    if (lowerMessage.includes(keyword)) {
+                        return response;
+                    }
+                }
+
+                // Additional pattern matching based on language
+                if (this.currentLang === 'fr') {
+                    if (lowerMessage.includes('combien') || lowerMessage.includes('prix') || lowerMessage.includes('coût') || lowerMessage.includes('tarif')) {
+                        return responses['prix'] || responses['default'];
+                    }
+                    if (lowerMessage.includes('heure') || lowerMessage.includes('horaire') || lowerMessage.includes('ouvert')) {
+                        return responses['horaires'] || responses['default'];
+                    }
+                    if (lowerMessage.includes('téléphone') || lowerMessage.includes('email') || lowerMessage.includes('contacter')) {
+                        return responses['contact'] || responses['default'];
+                    }
+                    if (lowerMessage.includes('produit') || lowerMessage.includes('équipement') || lowerMessage.includes('matériel')) {
+                        return 'Nous proposons des équipements Cisco, Fortinet, Palo Alto et Juniper. Quel type de matériel recherchez-vous?';
+                    }
+                    if (lowerMessage.includes('merci')) {
+                        return 'Je vous en prie! N\'hésitez pas si vous avez d\'autres questions. Bonne journée!';
+                    }
+                } else {
+                    // English patterns
+                    if (lowerMessage.includes('how much') || lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('pricing')) {
+                        return responses['price'] || responses['default'];
+                    }
+                    if (lowerMessage.includes('hour') || lowerMessage.includes('open') || lowerMessage.includes('schedule') || lowerMessage.includes('time')) {
+                        return responses['hours'] || responses['default'];
+                    }
+                    if (lowerMessage.includes('phone') || lowerMessage.includes('email') || lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
+                        return responses['contact'] || responses['default'];
+                    }
+                    if (lowerMessage.includes('product') || lowerMessage.includes('equipment') || lowerMessage.includes('hardware')) {
+                        return 'We offer equipment from Cisco, Fortinet, Palo Alto, and Juniper. What type of hardware are you looking for?';
+                    }
+                    if (lowerMessage.includes('thank')) {
+                        return 'You\'re welcome! Feel free to ask if you have any other questions. Have a great day!';
+                    }
+                }
+
+                return responses['default'] || 'How can I help you today?';
+            },
+
+            addMessage(text, type) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `ai-message ${type}`;
+
+                const avatar = document.createElement('div');
+                avatar.className = 'message-avatar';
+                if (type === 'user') {
+                    avatar.textContent = '👤';
+                } else {
+                    const img = document.createElement('img');
+                    img.src = 'pngegg.png';
+                    img.alt = 'Invictus';
+                    img.style.width = '25px';
+                    img.style.height = '25px';
+                    img.style.filter = 'brightness(0) invert(1)';
+                    avatar.appendChild(img);
+                }
+
+                const content = document.createElement('div');
+                content.className = 'message-content';
+                content.textContent = text;
+
+                messageDiv.appendChild(avatar);
+                messageDiv.appendChild(content);
+
+                this.messages.appendChild(messageDiv);
+                this.messages.scrollTop = this.messages.scrollHeight;
+            },
+
+            startWaveAnimation() {
+                if (!this.ctx) return;
+
+                const animate = () => {
+                    const width = this.canvas.width;
+                    const height = this.canvas.height;
+
+                    this.ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+                    this.ctx.fillRect(0, 0, width, height);
+
+                    this.ctx.strokeStyle = '#3b82f6';
+                    this.ctx.lineWidth = 2;
+                    this.ctx.beginPath();
+
+                    const amplitude = height / 4;
+                    const frequency = 0.02;
+                    const speed = Date.now() * 0.002;
+
+                    for (let x = 0; x < width; x++) {
+                        const y = height / 2 + Math.sin(x * frequency + speed) * amplitude * Math.random();
+                        if (x === 0) {
+                            this.ctx.moveTo(x, y);
+                        } else {
+                            this.ctx.lineTo(x, y);
+                        }
+                    }
+
+                    this.ctx.stroke();
+                    this.animationId = requestAnimationFrame(animate);
+                };
+
+                animate();
+            },
+
+            stopWaveAnimation() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                    this.animationId = null;
+                }
+            }
+        };
+
+        // Global function for suggestion chips
+        window.askAI = function(question) {
+            if (aiAssistant.input) {
+                aiAssistant.input.value = question;
+                aiAssistant.sendMessage();
+            }
+        };
+
+        // Initialize AI Assistant when page loads
+        window.addEventListener('load', () => {
+            aiAssistant.init();
+        });
+    </script>
+</body>
+</html>
