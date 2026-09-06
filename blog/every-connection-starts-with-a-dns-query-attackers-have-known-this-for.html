@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every connection starts with a DNS query. Attackers have known t | SankaraShield Insights</title>
+<meta name="description" content="DNS-based attacks account for 88% of all malware command-and-control activity. You are watching the wrong protocol. What DNS does: The Domain Name System translates human-readable…">
+<link rel="canonical" href="https://www.sankarashield.com/blog/every-connection-starts-with-a-dns-query-attackers-have-known-this-for.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SankaraShield">
+<meta property="og:title" content="Every connection starts with a DNS query. Attackers have known t | SankaraShield Insights">
+<meta property="og:description" content="DNS-based attacks account for 88% of all malware command-and-control activity. You are watching the wrong protocol. What DNS does: The Domain Name System translates human-readable…">
+<meta property="og:url" content="https://www.sankarashield.com/blog/every-connection-starts-with-a-dns-query-attackers-have-known-this-for.html">
+<meta property="og:image" content="https://www.sankarashield.com/assets/blog/every-connection-starts-with-a-dns-query-attackers-have-known-this-for.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6D28D9">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/img/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,380;6..72,420;6..72,600&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Every connection starts with a DNS query. Attackers have known this for years. Most defenders still haven't ac", "datePublished": "2026-03-16", "dateModified": "2026-03-16", "author": {"@type": "Organization", "name": "SankaraShield", "url": "https://www.sankarashield.com"}, "publisher": {"@type": "Organization", "name": "SankaraShield", "logo": {"@type": "ImageObject", "url": "https://www.sankarashield.com/assets/img/logo-256.png"}}, "mainEntityOfPage": "https://www.sankarashield.com/blog/every-connection-starts-with-a-dns-query-attackers-have-known-this-for.html", "description": "DNS-based attacks account for 88% of all malware command-and-control activity. You are watching the wrong protocol. What DNS does: The Domain Name System translates human-readable…", "keywords": "DNSSecurity, NetworkSecurity, ThreatDetection, CyberResilience, ProtectiveDNS", "image": "https://www.sankarashield.com/assets/blog/every-connection-starts-with-a-dns-query-attackers-have-known-this-for.jpg"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav site-nav" aria-label="Main">
+      <a class="brand" href="../index.html" aria-label="SankaraShield home">
+        <img class="brand-mark" src="../assets/img/brand-mark.png" alt="" width="126" height="132" decoding="async">
+        <span class="brand-name">Sankara<span>Shield</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+          <path d="M2 5h14M2 9h14M2 13h14"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../solutions.html">Solutions</a></li>
+        <li><a href="../blog/index.html" class="active">Insights</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="../contact.html">Request a quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<article>
+  <div class="wrap wrap-narrow article-head">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>&rsaquo;</span>
+      <a href="index.html">Insights</a><span>&rsaquo;</span>
+      <span>Network Infrastructure</span>
+    </div>
+    <h1>Every connection starts with a DNS query. Attackers have known this for years. Most defenders still haven't acted.</h1>
+    <div class="article-meta">
+      <span class="post-topic">Network Infrastructure</span>
+      <span class="sep" aria-hidden="true">&middot;</span>
+      <time datetime="2026-03-16">March 16, 2026</time>
+      <span class="sep" aria-hidden="true">&middot;</span>
+      <span>2 min read</span>
+    </div>
+  </div>
+  <div class="wrap wrap-narrow">
+    <figure class="article-hero"><img src="../assets/blog/every-connection-starts-with-a-dns-query-attackers-have-known-this-for.jpg" alt="" width="1200" height="675" loading="eager" decoding="async"></figure>
+    <div class="prose">
+<p class="first-para">DNS-based attacks account for 88% of all malware command-and-control activity. You are watching the wrong protocol. What DNS does: The Domain Name System translates human-readable names into IP addresses. Every device, every application, every connection begins with DNS. It is the phonebook of the internet — and it was designed with zero security.</p>
+<h3>How attackers weaponize DNS</h3>
+<ul><li><b>DNS TUNNELING</b> Malware encodes command-and-control traffic inside DNS queries and responses. Firewalls allow DNS unconditionally. Data exfiltrates through port 53 while perimeter controls see nothing but routine lookups.</li><li><b>DNS FAST FLUX</b> Botnets rotate thousands of IP addresses behind a single domain within seconds. Traditional IP blocklists become useless. Infrastructure stays untraceable. Takedowns consistently fail.</li><li><b>DNS CACHE POISONING</b> Corrupted resolver caches silently redirect users to attacker infrastructure. Banking portals. VPN login pages. Authentication systems. Users see a legitimate URL and trust it completely.</li><li><b>DANGLING DNS</b> Abandoned records still pointing to decommissioned resources. Attackers register the expired asset. Instant subdomain takeover. Phishing campaigns launch under your brand with zero system access required.</li><li><b>NXDOMAIN HARVESTING</b> Mass queries for non-existent domains map internal naming conventions, enumerate active hosts, and fingerprint your environment — all before the intrusion formally begins.</li></ul>
+<p>Real consequences: In 2025, a DNS tunneling campaign exfiltrated 40 GB of financial records from a European bank over six months. Every packet was DNS. Every packet passed the firewall unchallenged. No DNS monitoring existed. Discovery came during a compliance audit — months after initial compromise.</p>
+<h3>How to defend</h3>
+<p>DNS OVER HTTPS/TLS — Encrypt all resolution queries. Eliminate passive interception of DNS traffic at the network layer.</p>
+<p>PROTECTIVE DNS — Route queries through real-time threat intelligence. Block malicious domains before connections are ever established.</p>
+<p>DNS MONITORING — Establish query volume baselines per host. High query rates, unusual TXT requests, and high-entropy domain names are active attack signals.</p>
+<p>DNSSEC — Cryptographically sign your zone data. Prevent cache poisoning at the authoritative level. Validate signatures at every resolver.</p>
+<p>INTERNAL HYGIENE — Audit and decommission stale DNS records every quarter. Automate record lifecycle management to eliminate dangling exposure permanently.</p>
+<p>DNS is not a security control. It was never designed to be. But it is a surveillance and enforcement point most organizations are not using.</p>
+<blockquote>Does your organization monitor DNS traffic for behavioral anomalies? When did you last audit your external zones for dangling records?</blockquote>
+    </div>
+    <div class="article-tags"><span class="tag">#DNSSecurity</span><span class="tag">#NetworkSecurity</span><span class="tag">#ThreatDetection</span><span class="tag">#CyberResilience</span><span class="tag">#ProtectiveDNS</span></div>
+    <nav class="article-nav"><a class="prev" href="every-connection-starts-with-a-dns-query-attackers-have-known-this-for-2.html"><span class="dir">&larr; Previous</span><span class="t">Every connection starts with a DNS query. Attackers have known this for years.</span></a><a class="next" href="sd-wan-was-supposed-to-modernize-your-network-for-many-organizations-it.html"><span class="dir">Next &rarr;</span><span class="t">SD-WAN was supposed to modernize your network. For many organizations, it quie</span></a></nav>
+    <div class="mt-48"></div>
+  </div>
+</article>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="cta-panel">
+      <span class="eyebrow eyebrow-plain" style="color:#DDD6FE">Turn the analysis into a plan</span>
+      <h2 class="h2 mt-8">The gap between knowing the risk and closing it is a purchase order and a weekend.</h2>
+      <p>We specify, source and deploy the equipment that closes it &mdash; firewalls, segmentation,
+         secure remote access &mdash; and we support it afterwards.</p>
+      <div class="btn-row mt-24">
+        <a class="btn btn-primary" href="../contact.html">Talk to an engineer
+          <svg class="arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9m0 0-3.4-3.4M12 8l-3.4 3.4"/></svg></a>
+        <a class="btn btn-outline" href="index.html">More insights</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <a class="brand" href="../index.html">
+          <img class="brand-mark" src="../assets/img/brand-mark.png" alt="" width="126" height="132" decoding="async">
+          <span class="brand-name">Sankara<span>Shield</span></span>
+        </a>
+        <p>Network and security infrastructure &mdash; specified, sourced, deployed and supported.
+           Certified engineering, vendor-neutral advice.</p>
+        <div class="social mt-16">
+          <a href="https://www.linkedin.com/in/kodjo-apedoh-03030990/" aria-label="LinkedIn" rel="noopener" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.35c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9z"/></svg>
+          </a>
+          <a href="https://github.com/ktf40858-stack" aria-label="GitHub" rel="noopener" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../solutions.html">Solutions</a></li>
+          <li><a href="../blog/index.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Capabilities</h4>
+        <ul>
+          <li><a href="../solutions.html#infrastructure">Network infrastructure</a></li>
+          <li><a href="../solutions.html#security">Security &amp; firewalls</a></li>
+          <li><a href="../solutions.html#deployment">Design &amp; deployment</a></li>
+          <li><a href="../solutions.html#support">Support &amp; monitoring</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@sankarashield.com">contact@sankarashield.com</a></li>
+          <li><a href="../contact.html">Request a quote</a></li>
+          <li><a href="../about.html#careers">Careers &amp; recruiters</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> SankaraShield. Arlington, Virginia, United States.</p>
+      <p>Built as a static site. No trackers, no cookies.</p>
+    </div>
+    <p class="legal-note">Vendor and product names referenced on this site are trademarks of their respective
+       owners. Their mention describes the technologies SankaraShield specifies, deploys and supports, and does
+       not imply any partnership, endorsement or authorised-reseller status unless explicitly stated.</p>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
