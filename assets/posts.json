@@ -1,0 +1,2314 @@
+[
+ {
+  "slug": "twelve-months-of-credit-monitoring-for-sealed-court-records-that-is-the",
+  "title": "Twelve months of credit monitoring. For sealed court records. That is the entire remedy on offer.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-09-04",
+  "minutes": 2,
+  "excerpt": "Thomson Reuters disclosed on September 3, 2026 that an unauthorised party obtained files from C-Track — the court case management platform run by its West Publishing unit —…",
+  "tags": [
+   "ThirdPartyRisk",
+   "DataBreach",
+   "SupplyChainSecurity",
+   "CloudSecurity",
+   "IncidentResponse",
+   "DataProtection"
+  ],
+  "image": "twelve-months-of-credit-monitoring-for-sealed-court-records-that-is-the-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "under-10-hours-public-api-to-root-credentials-to-ci-cd-to-the-victim-s",
+  "title": "Under 10 hours. Public API to root credentials to CI/CD to the victim's own AI keys. No zero-day was used.",
+  "topic": "AI Security",
+  "date": "2026-09-03",
+  "minutes": 2,
+  "excerpt": "Palo Alto Networks Unit 42 published the investigation on September 2, 2026: a human attacker who handed tactical execution to frontier AI models running inside attack-specific…",
+  "tags": [
+   "AISecurity",
+   "ThreatIntelligence",
+   "IncidentResponse",
+   "DevSecOps",
+   "CyberSecurity",
+   "Unit42"
+  ],
+  "image": "under-10-hours-public-api-to-root-credentials-to-ci-cd-to-the-victim-s-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "the-most-interesting-networking-launch-this-week-did-not-ship-a-box",
+  "title": "The most interesting networking launch this week did not ship a box",
+  "topic": "Network Infrastructure",
+  "date": "2026-09-03",
+  "minutes": 2,
+  "excerpt": "It shipped an abstraction — and abstractions are where blast radius hides. September 2, 2026: Equinix announced Fabric One, a managed any-to-any connectivity service across…",
+  "tags": [
+   "NetworkEngineering",
+   "Interconnect",
+   "Equinix",
+   "MultiCloud",
+   "AIInfrastructure",
+   "NetworkArchitecture"
+  ],
+  "image": "the-most-interesting-networking-launch-this-week-did-not-ship-a-box-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries",
+  "title": "Ten switch models. Two open TCP ports. Root on the fabric that carries your AI training traffic.",
+  "topic": "Network Infrastructure",
+  "date": "2026-09-03",
+  "minutes": 2,
+  "excerpt": "CVE-2026-20212 — CVSS 9.8 — unauthenticated remote code execution as root on Cisco Nexus 9000 Series switches built on the Silicon One ASIC. Disclosed September 2, 2026…",
+  "tags": [
+   "NetworkSecurity",
+   "Cisco",
+   "DataCenter",
+   "NXOS",
+   "NetworkEngineering",
+   "VulnerabilityManagement"
+  ],
+  "image": "ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "no-zero-day-no-malware-a-phone-call-to-a-helpdesk-and-roughly-one",
+  "title": "No zero-day. No malware. A phone call to a helpdesk — and roughly one terabyte walked out of a healthcare giant.",
+  "topic": "Threat Intelligence",
+  "date": "2026-09-03",
+  "minutes": 2,
+  "excerpt": "McKesson has confirmed a data breach. ShinyHunters claims 284 million records and has demanded $55,236,150, with a 72-hour clock that expired around September 1, 2026. WHAT…",
+  "tags": [
+   "IdentitySecurity",
+   "SocialEngineering",
+   "Vishing",
+   "Ransomware",
+   "Healthcare",
+   "ZeroTrust"
+  ],
+  "image": "no-zero-day-no-malware-a-phone-call-to-a-helpdesk-and-roughly-one-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "cisa-just-put-your-ai-stack-in-the-same-catalog-as-your-firewalls",
+  "title": "CISA just put your AI stack in the same catalog as your firewalls",
+  "topic": "Vulnerabilities",
+  "date": "2026-09-03",
+  "minutes": 2,
+  "excerpt": "Not a lab any more. Production — and under active exploitation. September 2, 2026: seven vulnerabilities added to the Known Exploited Vulnerabilities catalog. Two of them sit in…",
+  "tags": [
+   "AISecurity",
+   "KEV",
+   "CISA",
+   "DevSecOps",
+   "SupplyChainSecurity",
+   "VulnerabilityManagement"
+  ],
+  "image": "cisa-just-put-your-ai-stack-in-the-same-catalog-as-your-firewalls-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "your-git-server-is-production-infrastructure-attackers-knew-it-before",
+  "title": "Your Git server is production infrastructure. Attackers knew it before your security team did.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-31",
+  "minutes": 2,
+  "excerpt": "CVE-2026-60004 — critical code injection in Gitea, CVSS 9.8. CISA added it to the KEV catalog on August 25 after confirmed exploitation in the wild. More than 8,300…",
+  "tags": [
+   "Gitea",
+   "DevSecOps",
+   "SupplyChainSecurity",
+   "CISAKEV",
+   "CodeSecurity",
+   "ThreatIntel"
+  ],
+  "image": "your-git-server-is-production-infrastructure-attackers-knew-it-before-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-uptime-does-not-depend-on-your-network-it-depends-on-whose-network",
+  "title": "Your uptime does not depend on your network. It depends on whose network your provider bought transit from.",
+  "topic": "Network Infrastructure",
+  "date": "2026-08-30",
+  "minutes": 2,
+  "excerpt": "August 21, 2026: Arelion — a global Tier 1 backbone — went down for 1 hour 21 minutes across a 3 hour 10 minute window, disrupting customers in more than 30 countries. Four days…",
+  "tags": [
+   "NetworkEngineering",
+   "BGP",
+   "Resilience",
+   "ISP",
+   "NetworkOperations",
+   "Infrastructure"
+  ],
+  "image": "your-uptime-does-not-depend-on-your-network-it-depends-on-whose-network-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "your-source-code-server-is-a-production-server-attackers-figured-that",
+  "title": "Your source code server is a production server. Attackers figured that out before most security teams did.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-30",
+  "minutes": 2,
+  "excerpt": "CVE-2026-60004 — critical code injection in Gitea, CVSS 9.8. CISA added it to the KEV catalog on August 25 after confirmed exploitation in the wild. Over 8,300 internet-exposed…",
+  "tags": [
+   "Gitea",
+   "DevSecOps",
+   "SupplyChainSecurity",
+   "CISAKEV",
+   "CodeSecurity",
+   "ThreatIntel"
+  ],
+  "image": "your-source-code-server-is-a-production-server-attackers-figured-that-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "twelve-days-thirty-six-exploitation-attempts-twelve-attacker-ips-one",
+  "title": "Twelve days. Thirty-six exploitation attempts. Twelve attacker IPs. One edge appliance.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-30",
+  "minutes": 2,
+  "excerpt": "CVE-2026-8452 — Citrix NetScaler ADC and Gateway. CISA added it to the KEV catalog on August 26 with a three-day federal deadline. It is being exploited right now. WHAT ACTUALLY…",
+  "tags": [
+   "NetScaler",
+   "CISAKEV",
+   "EdgeSecurity",
+   "ThreatHunting",
+   "NetworkSecurity",
+   "IncidentResponse"
+  ],
+  "image": "twelve-days-thirty-six-exploitation-attempts-twelve-attacker-ips-one-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "four-of-the-six-vulnerabilities-cisa-flagged-as-actively-exploited-last",
+  "title": "Four of the six vulnerabilities CISA flagged as actively exploited last week are older than the phone in your pocket.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-30",
+  "minutes": 2,
+  "excerpt": "August 26, 2026 KEV additions: CVE-2015-3246 , CVE-2015-5287 , CVE-2019-1068 , CVE-2021-23758 , CVE-2022-0995 — and one 2026 flaw. Eleven years of backlog, all being exploited…",
+  "tags": [
+   "CISAKEV",
+   "VulnerabilityManagement",
+   "LegacySystems",
+   "PatchManagement",
+   "ThreatIntel",
+   "LinuxSecurity"
+  ],
+  "image": "four-of-the-six-vulnerabilities-cisa-flagged-as-actively-exploited-last-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "a-cvss-10-0-remote-code-execution-flaw-in-the-identity-layer-of-half",
+  "title": "A CVSS 10.0 remote code execution flaw in the identity layer of half the corporate world",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-08-30",
+  "minutes": 2,
+  "excerpt": "and there is no patch for you to install. CVE-2026-69836 , disclosed by Microsoft on August 20: unauthenticated RCE in Entra ID via deserialization of untrusted data. Already…",
+  "tags": [
+   "EntraID",
+   "CloudSecurity",
+   "IdentitySecurity",
+   "SharedResponsibility",
+   "VulnerabilityManagement",
+   "ZeroTrust"
+  ],
+  "image": "a-cvss-10-0-remote-code-execution-flaw-in-the-identity-layer-of-half-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "31-terabytes-144-u-s-universities-thirteen-years-and-almost-none-of-it",
+  "title": "31 terabytes. 144 U.S. universities. Thirteen years. And almost none of it involved a zero-day.",
+  "topic": "Threat Intelligence",
+  "date": "2026-08-30",
+  "minutes": 2,
+  "excerpt": "On August 20, 2026, the DOJ unsealed a 14-count superseding indictment charging 17 Iranian nationals from the Tehran-based Mabna Institute with running intrusions since at least…",
+  "tags": [
+   "ThreatIntel",
+   "IdentitySecurity",
+   "IPTheft",
+   "HigherEducation",
+   "NationStateThreats",
+   "DataProtection"
+  ],
+  "image": "31-terabytes-144-u-s-universities-thirteen-years-and-almost-none-of-it-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "cisco-just-shipped-five-separate-cvss-10-0-vulnerabilities-in-a-single",
+  "title": "Cisco just shipped five separate CVSS 10.0 vulnerabilities in a single release",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-28",
+  "minutes": 2,
+  "excerpt": "Not in a router. In the software that manages your routers. Nine flaws across Cisco Crosswork and Cisco Secure Workload, published 19 August 2026. Five scored a perfect 10.0 — the…",
+  "tags": [
+   "Cisco",
+   "Crosswork",
+   "NetworkSecurity",
+   "VulnerabilityManagement",
+   "Microsegmentation",
+   "CriticalInfrastructure"
+  ],
+  "image": "cisco-just-shipped-five-separate-cvss-10-0-vulnerabilities-in-a-single-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "they-did-not-steal-the-meetings-they-replaced-the-client-everyone",
+  "title": "They did not steal the meetings. They replaced the client everyone downloads to join them.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-24",
+  "minutes": 2,
+  "excerpt": "CVE-2026-72529 and CVE-2026-72530 — two actively exploited flaws in TrueConf Server. CISA added both to the KEV catalog on August 20 with a three-day patch deadline. Kaspersky…",
+  "tags": [
+   "SupplyChainSecurity",
+   "CISAKEV",
+   "TrueConf",
+   "ThreatIntel",
+   "NetworkSecurity",
+   "IncidentResponse"
+  ],
+  "image": "they-did-not-steal-the-meetings-they-replaced-the-client-everyone-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "the-tool-you-installed-to-watch-your-mail-server-just-became-the-way-in-2",
+  "title": "The tool you installed to watch your mail server just became the way in.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-24",
+  "minutes": 2,
+  "excerpt": "CVE-2026-73570 — CVSS 8.9 — unauthenticated command execution through Zimbra Collaboration's SNMP monitoring function. CERT Polska reported active exploitation on August 17.…",
+  "tags": [
+   "Zimbra",
+   "CISAKEV",
+   "SNMP",
+   "CVE202673570",
+   "EmailSecurity",
+   "IncidentResponse"
+  ],
+  "image": "the-tool-you-installed-to-watch-your-mail-server-just-became-the-way-in-2-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "the-patch-was-published-june-4-exploitation-started-june-29-the-kev",
+  "title": "The patch was published June 4. Exploitation started June 29. The KEV listing came August 7.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-24",
+  "minutes": 2,
+  "excerpt": "CVE-2026-8037 — CVSS 9.6 — unauthenticated command injection in Progress Kemp LoadMaster. Hundreds of exploit attempts from dozens of IP addresses across multiple countries before…",
+  "tags": [
+   "LoadBalancer",
+   "CISAKEV",
+   "EdgeSecurity",
+   "CVE20268037",
+   "NetworkSecurity",
+   "VulnerabilityManagement"
+  ],
+  "image": "the-patch-was-published-june-4-exploitation-started-june-29-the-kev-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "seven-critical-cves-cvss-9-8-no-workarounds-and-not-a-single-one-is",
+  "title": "Seven critical CVEs. CVSS 9.8. No workarounds. And not a single one is being exploited yet.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-24",
+  "minutes": 2,
+  "excerpt": "Cisco's IOS XE Software Security Hardening Release, published August 5, 2026, covers CVE-2026-20267 through CVE-2026-20273 in IOS XE and Catalyst SD-WAN. Cisco found them…",
+  "tags": [
+   "Cisco",
+   "IOSXE",
+   "SDWAN",
+   "NetworkSecurity",
+   "VulnerabilityManagement",
+   "PatchManagement"
+  ],
+  "image": "seven-critical-cves-cvss-9-8-no-workarounds-and-not-a-single-one-is-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "hours-that-is-how-long-it-took-between-this-cve-being-assigned-and-mass",
+  "title": "Hours. That is how long it took between this CVE being assigned and mass scanning starting.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-08-24",
+  "minutes": 2,
+  "excerpt": "CVE-2026-64849 — CVSS 9.3 — unauthenticated SSRF in MLflow, the tracking server sitting at the centre of most enterprise ML pipelines. Assigned August 17. Exploited the same day.…",
+  "tags": [
+   "MLflow",
+   "CloudSecurity",
+   "SSRF",
+   "AISecurity",
+   "CISAKEV",
+   "CVE202664849"
+  ],
+  "image": "hours-that-is-how-long-it-took-between-this-cve-being-assigned-and-mass-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "a-fake-job-offer-just-beat-a-kernel-level-security-stack-for-five-weeks",
+  "title": "A Fake Job Offer Just Beat a Kernel-Level Security Stack. For Five Weeks.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-24",
+  "minutes": 2,
+  "excerpt": "Lazarus Group exploited CVE-2026-68820 — a use-after-free in afd.sys, the driver behind Windows Sockets — against defense, aerospace and aviation targets across Europe and India.…",
+  "tags": [
+   "CyberSecurity",
+   "ZeroDay",
+   "Lazarus",
+   "ThreatIntelligence",
+   "EndpointSecurity",
+   "InfoSec",
+   "Techvernia"
+  ],
+  "image": "a-fake-job-offer-just-beat-a-kernel-level-security-stack-for-five-weeks-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-firewall-does-not-need-to-be-breached-to-take-you-offline",
+  "title": "Your firewall does not need to be breached to take you offline",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "It just needs to be rebooted — remotely, unauthenticated, on repeat. CVE-2026-20349 is an actively exploited flaw in the VPN web server of Cisco Secure Firewall ASA and FTD. CVSS…",
+  "tags": [
+   "Cisco",
+   "ASA",
+   "FTD",
+   "VPN",
+   "NetworkSecurity",
+   "KEV"
+  ],
+  "image": "your-firewall-does-not-need-to-be-breached-to-take-you-offline-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "your-ciso-is-not-the-one-who-gets-held-personally-liable-in-october",
+  "title": "Your CISO is not the one who gets held personally liable in October. Your board is.",
+  "topic": "Security Operations",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "NIS2 compliance obligations culminate in an October 2026 deadline across 18 critical sectors, and DORA has entered its first real supervisory enforcement cycle for financial…",
+  "tags": [
+   "NIS2",
+   "DORA",
+   "Compliance",
+   "CyberRisk",
+   "Governance",
+   "CyberSecurity"
+  ],
+  "image": "your-ciso-is-not-the-one-who-gets-held-personally-liable-in-october-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "your-ai-cluster-is-not-compute-bound-it-is-waiting-on-the-network-and",
+  "title": "Your AI cluster is not compute-bound. It is waiting on the network — and that is a design decision, not bad luck.",
+  "topic": "Network Infrastructure",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "800G Ethernet has moved from hyperscaler-only to enterprise reality, driven entirely by on-premises AI. IEEE 802.3dj standardization is expected to complete in 2026, with early…",
+  "tags": [
+   "Networking",
+   "800G",
+   "AIInfrastructure",
+   "DataCenter",
+   "Ethernet",
+   "NetworkEngineering"
+  ],
+  "image": "your-ai-cluster-is-not-compute-bound-it-is-waiting-on-the-network-and-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "your-ai-agent-has-an-api-key-network-access-and-no-concept-of-who-is",
+  "title": "Your AI agent has an API key, network access, and no concept of who is talking to it.",
+  "topic": "AI Security",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "The Model Context Protocol has become one of the fastest-weaponized attack surfaces in enterprise IT. The specification defines OAuth 2.1 authorization — and explicitly marks it…",
+  "tags": [
+   "MCP",
+   "AgenticAI",
+   "AISecurity",
+   "PromptInjection",
+   "ZeroTrust",
+   "CyberSecurity"
+  ],
+  "image": "your-ai-agent-has-an-api-key-network-access-and-no-concept-of-who-is-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "one-rmm-server-thousands-of-managed-endpoints-zero-credentials-required",
+  "title": "One RMM server. Thousands of managed endpoints. Zero credentials required.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "CVE-2026-18577 is an authentication bypass in N-able N-central — the platform MSPs and IT teams use to centrally administer servers, workstations and network devices. CVSS 8.2,…",
+  "tags": [
+   "Nable",
+   "RMM",
+   "MSP",
+   "SupplyChain",
+   "KEV",
+   "CyberSecurity"
+  ],
+  "image": "one-rmm-server-thousands-of-managed-endpoints-zero-credentials-required-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "no-exploit-no-malware-just-valid-credentials-and-3-6-million-employee",
+  "title": "No exploit. No malware. Just valid credentials and 3.6 million employee records walking out of Azure.",
+  "topic": "Threat Intelligence",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "A threat actor calling himself \"TheHatman\" is selling internal directory data allegedly pulled from the Azure/Entra tenants of Fortune 500 organizations — McDonald's (~1.7M…",
+  "tags": [
+   "Azure",
+   "EntraID",
+   "DataBreach",
+   "IdentitySecurity",
+   "Phishing",
+   "CyberSecurity"
+  ],
+  "image": "no-exploit-no-malware-just-valid-credentials-and-3-6-million-employee-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "more-than-400-cves-in-a-single-patch-tuesday-exactly-one-of-them-was",
+  "title": "More than 400 CVEs in a single Patch Tuesday. Exactly one of them was already being used against defense contractors.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "Microsoft's August 2026 release addressed over 400 vulnerabilities — 42 rated Critical, 37 of those remote code execution — with CVE-2026-68820 confirmed exploited in the wild…",
+  "tags": [
+   "PatchTuesday",
+   "Microsoft",
+   "KEV",
+   "VulnerabilityManagement",
+   "ZeroDay",
+   "CyberSecurity"
+  ],
+  "image": "more-than-400-cves-in-a-single-patch-tuesday-exactly-one-of-them-was-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "medusa-does-not-write-zero-days-it-just-weaponizes-yours-within-24",
+  "title": "Medusa does not write zero-days. It just weaponizes yours within 24 hours of disclosure.",
+  "topic": "Threat Intelligence",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "On August 18, the FBI, CISA and HHS published an updated #StopRansomware advisory: Medusa has now impacted more than 500 victims across critical infrastructure — up from 300 in…",
+  "tags": [
+   "Medusa",
+   "Ransomware",
+   "CriticalInfrastructure",
+   "CISA",
+   "KEV",
+   "CyberSecurity"
+  ],
+  "image": "medusa-does-not-write-zero-days-it-just-weaponizes-yours-within-24-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "broadcom-patched-it-on-july-29-five-days-later-a-state-grade-actor-was",
+  "title": "Broadcom patched it on July 29. Five days later, a state-grade actor was already root on vCenter servers in 47",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "countries. CVE-2026-59310 — a CVSS 9.8 directory traversal in VMware vCenter — went from public disclosure to global exploitation by a suspected China-nexus APT in under a week.…",
+  "tags": [
+   "VMware",
+   "vCenter",
+   "KEV",
+   "Ransomware",
+   "ThreatIntelligence",
+   "CyberSecurity"
+  ],
+  "image": "broadcom-patched-it-on-july-29-five-days-later-a-state-grade-actor-was-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "a-fake-job-offer-a-modified-pdf-viewer-and-a-windows-kernel-zero-day",
+  "title": "A fake job offer, a modified PDF viewer, and a Windows kernel zero-day. That was the whole chain.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-23",
+  "minutes": 2,
+  "excerpt": "Lazarus Group spent roughly five weeks exploiting CVE-2026-68820 — a use-after-free in afd.sys, the driver behind Windows Sockets — against defense, aerospace and aviation targets…",
+  "tags": [
+   "Lazarus",
+   "ZeroDay",
+   "PatchTuesday",
+   "EDR",
+   "ThreatIntelligence",
+   "CyberSecurity"
+  ],
+  "image": "a-fake-job-offer-a-modified-pdf-viewer-and-a-windows-kernel-zero-day-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "an-attacker-does-not-need-to-get-through-your-firewall-if-they-can",
+  "title": "An attacker does not need to get through your firewall if they can simply turn it off.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-21",
+  "minutes": 2,
+  "excerpt": "CVE-2026-20349 — CVSS 8.6 — a single crafted HTTP request reloads Cisco Secure Firewall ASA and FTD appliances. Cisco published the advisory on August 11, 2026, already aware of…",
+  "tags": [
+   "Cisco",
+   "FirewallSecurity",
+   "VPN",
+   "CVE202620349",
+   "CISAKEV",
+   "NetworkSecurity"
+  ],
+  "image": "an-attacker-does-not-need-to-get-through-your-firewall-if-they-can-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-vpn-gateway-can-be-compromised-before-anyone-logs-in",
+  "title": "Your VPN gateway can be compromised before anyone logs in",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-19",
+  "minutes": 2,
+  "excerpt": "Authentication is not the first thing an attacker reaches — the handshake is. CVE-2026-33824 — CVSS 9.8 — a double free in the Windows IKE Service Extensions. Microsoft patched it…",
+  "tags": [
+   "IPsec",
+   "VPNSecurity",
+   "CVE202633824",
+   "CISAKEV",
+   "NetworkSecurity",
+   "PatchManagement"
+  ],
+  "image": "your-vpn-gateway-can-be-compromised-before-anyone-logs-in-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "a-bug-patched-in-2023-came-back-in-2026-and-the-mitigation-that-worked",
+  "title": "A bug patched in 2023 came back in 2026, and the mitigation that worked last time does not work this time.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-17",
+  "minutes": 2,
+  "excerpt": "GeoServer jsonArrayContains — CVSS 9.8, unauthenticated SQL injection, no CVE number, exploitation attempts within hours of a public tweet. The fixed versions landed Friday. Your…",
+  "tags": [
+   "GeoServer",
+   "SQLInjection",
+   "ZeroDay",
+   "PostGIS",
+   "OpenSource",
+   "VulnerabilityManagement"
+  ],
+  "image": "a-bug-patched-in-2023-came-back-in-2026-and-the-mitigation-that-worked-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-hypervisor-management-plane-can-be-taken-over-with-zero",
+  "title": "Your hypervisor management plane can be taken over with zero credentials, and the vendor says there is no workaround.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-14",
+  "minutes": 2,
+  "excerpt": "CVE-2026-59309 — CVSS 9.8 — an authentication bypass in VMware Directory Service, the identity layer behind vCenter Single Sign-On. Disclosed by Broadcom in VMSA-2026-0006. No…",
+  "tags": [
+   "VMware",
+   "vCenter",
+   "CVE202659309",
+   "Virtualization",
+   "NetworkSegmentation",
+   "PatchManagement"
+  ],
+  "image": "your-hypervisor-management-plane-can-be-taken-over-with-zero-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "a-maximum-severity-zero-day-with-no-cve-number-has-been-draining",
+  "title": "A maximum-severity zero-day with no CVE number has been draining production databases since August 3.",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-12",
+  "minutes": 2,
+  "excerpt": "CVSS 10.0. Unauthenticated SQL injection in Metabase, the open-source BI platform thousands of teams use to query their data warehouses. No CVE identifier was ever assigned — so…",
+  "tags": [
+   "Metabase",
+   "ZeroDay",
+   "SQLInjection",
+   "DataBreach",
+   "BusinessIntelligence",
+   "VulnerabilityManagement"
+  ],
+  "image": "a-maximum-severity-zero-day-with-no-cve-number-has-been-draining-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "a-ransomware-group-is-claiming-it-stole-the-blueprint-for-how-hospitals",
+  "title": "A ransomware group is claiming it stole the blueprint for how hospitals dispense medication",
+  "topic": "Threat Intelligence",
+  "date": "2026-08-07",
+  "minutes": 2,
+  "excerpt": "not just patient records, the actual software and firmware behind it. The Everest ransomware group says it exfiltrated 1 TB of data, more than 682,887 files, from Omnicell, the…",
+  "tags": [
+   "Ransomware",
+   "Healthcare",
+   "Omnicell",
+   "EverestRansomware",
+   "SupplyChainSecurity",
+   "PatchManagement"
+  ],
+  "image": "a-ransomware-group-is-claiming-it-stole-the-blueprint-for-how-hospitals-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "an-ai-agent-builder-platform-just-handed-attackers-root-access-with",
+  "title": "An AI agent-builder platform just handed attackers root access with zero credentials required.",
+  "topic": "AI Security",
+  "date": "2026-08-05",
+  "minutes": 2,
+  "excerpt": "CVE-2026-9198 — CVSS 9.8 — Langflow code injection — added to CISA's Known Exploited Vulnerabilities catalog on August 4, 2026, with a public proof-of-concept already circulating.…",
+  "tags": [
+   "AIsecurity",
+   "Langflow",
+   "CVE20269198",
+   "CISAKEV",
+   "AgenticAI",
+   "VulnerabilityManagement"
+  ],
+  "image": "an-ai-agent-builder-platform-just-handed-attackers-root-access-with-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "three-critical-unauthenticated-remote-code-execution-flaws-landed-in",
+  "title": "Three critical, unauthenticated remote code execution flaws landed in three different tools your engineering",
+  "topic": "Vulnerabilities",
+  "date": "2026-08-03",
+  "minutes": 2,
+  "excerpt": "team touches every day — within 48 hours of each other. CVE-2026-63077 (TeamCity, CVSS 9.8), CVE-2026-59309 /59310 (vCenter, CVSS 9.8), and CVE-2026-66066 (Rails Active Storage,…",
+  "tags": [
+   "TeamCity",
+   "vCenter",
+   "RubyOnRails",
+   "VulnerabilityManagement",
+   "CyberSecurity",
+   "PatchManagement"
+  ],
+  "image": "three-critical-unauthenticated-remote-code-execution-flaws-landed-in-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "a-hacker-sent-one-instruction-over-telegram",
+  "title": "A hacker sent one instruction over Telegram",
+  "topic": "AI Security",
+  "date": "2026-08-03",
+  "minutes": 2,
+  "excerpt": "The AI agent took it from there — no human clicked another button for the rest of the operation. Unit 42 tracked \"knaithe\" (aka KnYuan), a Zhuhai-based operator who wired DeepSeek…",
+  "tags": [
+   "AIThreat",
+   "ThreatIntelligence",
+   "CyberSecurity",
+   "AgenticAI",
+   "Unit42",
+   "ThreatDetection"
+  ],
+  "image": "a-hacker-sent-one-instruction-over-telegram-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "two-chained-vulnerabilities-one-command",
+  "title": "Two chained vulnerabilities. One command",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-29",
+  "minutes": 2,
+  "excerpt": "And a Cisco Catalyst 9300 switch stops passing traffic entirely — no crash, no reboot, no alarm. CVE-2026-20114 and CVE-2026-20110 , uncovered by Opswat's Unit 515 Critical…",
+  "tags": [
+   "CiscoCatalyst",
+   "CVE202620114",
+   "NetworkSecurity",
+   "VulnerabilityManagement",
+   "CyberSecurity",
+   "InfrastructureSecurity"
+  ],
+  "image": "two-chained-vulnerabilities-one-command-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "a-137-year-old-bible-college-just-confirmed-one-of-the-largest",
+  "title": "A 137-year-old Bible college just confirmed one of the largest nonprofit data breaches of 2026.",
+  "topic": "Threat Intelligence",
+  "date": "2026-07-27",
+  "minutes": 2,
+  "excerpt": "Moody Bible Institute disclosed that ShinyHunters compromised 2.3 million records — donor financial details, student records, and decades of alumni data — and leaked them. The…",
+  "tags": [
+   "DataBreach",
+   "ShinyHunters",
+   "Ransomware",
+   "NonprofitSecurity",
+   "DataPrivacy",
+   "CyberSecurity"
+  ],
+  "image": "a-137-year-old-bible-college-just-confirmed-one-of-the-largest-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "facebook-instagram-and-whatsapp-went-dark-again-on-july-22-the-second",
+  "title": "Facebook, Instagram, and WhatsApp went dark again on July 22 — the second time in 72 hours.",
+  "topic": "Network Infrastructure",
+  "date": "2026-07-24",
+  "minutes": 2,
+  "excerpt": "Meta's three flagship platforms failed together, in the same afternoon window, for the second time this week. Users worldwide got logged out, saw \"account temporarily…",
+  "tags": [
+   "NetworkOutage",
+   "Meta",
+   "DNS",
+   "BGP",
+   "NetworkResilience",
+   "IncidentResponse"
+  ],
+  "image": "facebook-instagram-and-whatsapp-went-dark-again-on-july-22-the-second-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "water-utilities-don-t-get-to-choose-whether-they-re-a-target-qilin",
+  "title": "Water utilities don't get to choose whether they're a target. Qilin chose for them.",
+  "topic": "Threat Intelligence",
+  "date": "2026-07-22",
+  "minutes": 2,
+  "excerpt": "On July 17, 2026, Acosol — the public water utility serving Spain's western Costa del Sol — confirmed a ransomware attack by the Qilin group. This is not a hypothetical about…",
+  "tags": [
+   "Qilin",
+   "Ransomware",
+   "CriticalInfrastructure",
+   "WaterSecurity",
+   "ICS",
+   "CyberSecurity"
+  ],
+  "image": "water-utilities-don-t-get-to-choose-whether-they-re-a-target-qilin-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-ran-was-designed-to-move-radio-signals",
+  "title": "Your RAN was designed to move radio signals",
+  "topic": "AI Security",
+  "date": "2026-07-20",
+  "minutes": 2,
+  "excerpt": "Nokia just turned it into an AI inference platform — and that changes what \"network capacity\" means. On July 15, Nokia unveiled the industry's first commercial AI-RAN platform,…",
+  "tags": [
+   "5G",
+   "AIRAN",
+   "TelecomSecurity",
+   "NetworkSecurity",
+   "EdgeComputing",
+   "Nokia"
+  ],
+  "image": "your-ran-was-designed-to-move-radio-signals-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "clone-a-repository-open-it-in-cursor-that-s-it",
+  "title": "Clone a repository. Open it in Cursor. That's it",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-17",
+  "minutes": 2,
+  "excerpt": "no click, no approval dialog, no warning. If the repo has a file named git.exe sitting in its root, Cursor just ran it as you. A zero-day in Cursor's Windows Git path resolution…",
+  "tags": [
+   "CursorIDE",
+   "ZeroDay",
+   "SupplyChainSecurity",
+   "AppSec",
+   "DeveloperSecurity",
+   "CyberSecurity"
+  ],
+  "image": "clone-a-repository-open-it-in-cursor-that-s-it-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "two-zero-days-chained-together-turned-a-remote-access-appliance-into-a",
+  "title": "Two zero-days, chained together, turned a remote access appliance into a long-term backdoor",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-16",
+  "minutes": 2,
+  "excerpt": "SonicWall confirmed active exploitation this week — and patching alone will not evict the attacker. CVE-2026-15409 (CVSS 10.0) — unauthenticated SSRF in the SMA1000 Work Place…",
+  "tags": [
+   "SonicWall",
+   "ZeroDay",
+   "VPNSecurity",
+   "MFA",
+   "VulnerabilityManagement",
+   "CyberSecurity"
+  ],
+  "image": "two-zero-days-chained-together-turned-a-remote-access-appliance-into-a-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "one-unauthenticated-http-request-is-enough-to-take-over-oracle-e",
+  "title": "One unauthenticated HTTP request is enough to take over Oracle E-Business Suite's payments module",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-16",
+  "minutes": 2,
+  "excerpt": "The patch has existed since May. Exploitation started in July anyway. CVE-2026-46817 — CVSS 9.8 — improper privilege management in the File Transmission component of Oracle…",
+  "tags": [
+   "OracleEBS",
+   "CVE202646817",
+   "CISAKEV",
+   "ERPSecurity",
+   "VulnerabilityManagement",
+   "CyberSecurity"
+  ],
+  "image": "one-unauthenticated-http-request-is-enough-to-take-over-oracle-e-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "one-phished-employee-nearly-7-million-driver-s-licenses-exposed",
+  "title": "One phished employee. Nearly 7 million driver's licenses exposed",
+  "topic": "Security Operations",
+  "date": "2026-07-16",
+  "minutes": 2,
+  "excerpt": "AssuranceAmerica detected the intrusion in one day. The public found out 115 days later. AssuranceAmerica, an Atlanta-based auto insurer working through 9,500+ independent agents…",
+  "tags": [
+   "DataBreach",
+   "Phishing",
+   "InsuranceSecurity",
+   "IncidentResponse",
+   "CyberSecurity"
+  ],
+  "image": "one-phished-employee-nearly-7-million-driver-s-licenses-exposed-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "a-hacker-put-35gb-of-a-consulting-giant-s-source-code-signing-keys-and",
+  "title": "A hacker put 35GB of a consulting giant's source code, signing keys, and cloud tokens up for sale",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-07-16",
+  "minutes": 2,
+  "excerpt": "The company confirmed the breach and called it \"isolated.\" It did not say what was actually taken. Accenture, July 6 — a threat actor using the handle \"888\" claimed to have stolen…",
+  "tags": [
+   "DataBreach",
+   "Accenture",
+   "SupplyChainSecurity",
+   "ThirdPartyRisk",
+   "CyberSecurity"
+  ],
+  "image": "a-hacker-put-35gb-of-a-consulting-giant-s-source-code-signing-keys-and-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "a-breach-reported-at-10-million-victims-in-february-is-now-confirmed-at",
+  "title": "A breach reported at 10 million victims in February is now confirmed at 62.2 million in July",
+  "topic": "Threat Intelligence",
+  "date": "2026-07-16",
+  "minutes": 2,
+  "excerpt": "Conduent didn't get hacked five more times. It just took that long to find out how big the first one was. Conduent Business Services, a back-office vendor serving hundreds of…",
+  "tags": [
+   "DataBreach",
+   "HealthcareSecurity",
+   "ThirdPartyRisk",
+   "Conduent",
+   "CyberSecurity"
+  ],
+  "image": "a-breach-reported-at-10-million-victims-in-february-is-now-confirmed-at-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "today-1-1-1-1-went-dark-for-over-two-hours-the-cause-was-not-the-attack",
+  "title": "Today, 1.1.1.1 went dark for over two hours. The cause was not the attack everyone assumed.",
+  "topic": "Network Infrastructure",
+  "date": "2026-07-15",
+  "minutes": 2,
+  "excerpt": "Cloudflare's public DNS resolver suffered a global outage on July 14. Within minutes, monitoring tools showed Tata Communications (AS4755) announcing Cloudflare's 1.1.1.0/24…",
+  "tags": [
+   "BGP",
+   "DNS",
+   "NetworkOutage",
+   "Cloudflare",
+   "NetworkSecurity",
+   "InternetInfrastructure"
+  ],
+  "image": "today-1-1-1-1-went-dark-for-over-two-hours-the-cause-was-not-the-attack-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "this-bug-sat-inside-the-linux-hypervisor-for-sixteen-years-before",
+  "title": "This bug sat inside the Linux hypervisor for sixteen years before anyone found it",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-14",
+  "minutes": 2,
+  "excerpt": "It works against both Intel and AMD. CVE-2026-53359 — \"Januscape.\" A use-after-free in the shadow MMU code that KVM shares across x86 vendors, letting a malicious guest VM with…",
+  "tags": [
+   "KVM",
+   "VMEscape",
+   "CloudSecurity",
+   "LinuxKernel",
+   "Virtualization",
+   "CyberSecurity"
+  ],
+  "image": "this-bug-sat-inside-the-linux-hypervisor-for-sixteen-years-before-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "this-cisco-vulnerability-is-eighteen-years-old-cisa-just-confirmed-it",
+  "title": "This Cisco vulnerability is eighteen years old. CISA just confirmed it is being actively exploited right now.",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-14",
+  "minutes": 2,
+  "excerpt": "CVE-2008-4128 — cross-site request forgery flaws in the HTTP administration interface of Cisco IOS 12.4, originally disclosed in 2008. On July 13, CISA added it to the Known…",
+  "tags": [
+   "CiscoIOS",
+   "NetworkSecurity",
+   "LegacyInfrastructure",
+   "CISAKEV",
+   "VulnerabilityManagement",
+   "CyberSecurity"
+  ],
+  "image": "this-cisco-vulnerability-is-eighteen-years-old-cisa-just-confirmed-it-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "microsoft-just-shipped-the-largest-patch-tuesday-in-its-history-570",
+  "title": "Microsoft just shipped the largest Patch Tuesday in its history. 570 vulnerabilities. Three of them zero-days.",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-14",
+  "minutes": 2,
+  "excerpt": "July 2026 Patch Tuesday: 59 critical, 510 important, 3 zero-days — two actively exploited before the patch existed, one publicly disclosed ahead of a fix. If your patch window is…",
+  "tags": [
+   "PatchTuesday",
+   "CVE",
+   "VulnerabilityManagement",
+   "ActiveDirectory",
+   "SharePoint",
+   "CyberSecurity"
+  ],
+  "image": "microsoft-just-shipped-the-largest-patch-tuesday-in-its-history-570-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "attackers-started-exploiting-this-vulnerability-two-hours-after-it-went",
+  "title": "Attackers started exploiting this vulnerability two hours after it went public",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-14",
+  "minutes": 2,
+  "excerpt": "Your patch window closed before most teams finished reading the advisory. CVE-2026-48282 — Adobe ColdFusion, CVSS 10.0, maximum severity. A path traversal flaw in the Remote…",
+  "tags": [
+   "ColdFusion",
+   "RCE",
+   "VulnerabilityManagement",
+   "CVE",
+   "WebSecurity",
+   "CyberSecurity"
+  ],
+  "image": "attackers-started-exploiting-this-vulnerability-two-hours-after-it-went-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "same-protocol-same-malformed-attribute-five-vendors-go-down-four-stay",
+  "title": "Same protocol. Same malformed attribute. Five vendors go down. Four stay standing.",
+  "topic": "Network Infrastructure",
+  "date": "2026-07-13",
+  "minutes": 2,
+  "excerpt": "New BGP attribute parsing vulnerabilities are hitting the wire in 2026, and testing shows they don't affect every router equally. Juniper Junos OS, Nokia SR-OS, Extreme EXOS,…",
+  "tags": [
+   "BGP",
+   "NetworkSecurity",
+   "RoutingSecurity",
+   "Juniper",
+   "FRRouting",
+   "NetworkEngineering",
+   "CyberSecurity"
+  ],
+  "image": "same-protocol-same-malformed-attribute-five-vendors-go-down-four-stay-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "an-attacker-with-a-low-privileged-account-and-one-crafted-http-request",
+  "title": "An attacker with a low-privileged account and one crafted HTTP request",
+  "topic": "Network Infrastructure",
+  "date": "2026-07-10",
+  "minutes": 2,
+  "excerpt": "That's all it takes to write root-level files onto the platform managing your entire SD-WAN fabric. CVE-2026-20262 — CVSS 6.5 — arbitrary file write in Cisco Catalyst SD-WAN…",
+  "tags": [
+   "CiscoSDWAN",
+   "CVE202620262",
+   "NetworkSecurity",
+   "VulnerabilityManagement",
+   "CyberSecurity",
+   "InfrastructureSecurity"
+  ],
+  "image": "an-attacker-with-a-low-privileged-account-and-one-crafted-http-request-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "no-human-ran-this-ransomware-attack-an-ai-agent-did-start-to-finish",
+  "title": "No human ran this ransomware attack. An AI agent did — start to finish.",
+  "topic": "AI Security",
+  "date": "2026-07-08",
+  "minutes": 2,
+  "excerpt": "Researchers at Sysdig have documented JadePuffer, what appears to be the first fully autonomous ransomware operation. Reconnaissance, credential theft, lateral movement,…",
+  "tags": [
+   "JadePuffer",
+   "AIThreats",
+   "Ransomware",
+   "AgenticAI",
+   "ThreatIntelligence",
+   "CyberSecurity"
+  ],
+  "image": "no-human-ran-this-ransomware-attack-an-ai-agent-did-start-to-finish-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "there-is-no-patch-coming-for-this-one-the-vendor-stopped-making-them",
+  "title": "There is no patch coming for this one. The vendor stopped making them.",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-07",
+  "minutes": 2,
+  "excerpt": "CVE-2026-0625 — CVSS 9.3 — arbitrary shell command execution on discontinued D-Link DSL gateway devices, actively exploited through a compromised CGI library. VulnCheck confirmed…",
+  "tags": [
+   "DLink",
+   "ZeroDay",
+   "EOLHardware",
+   "NetworkSecurity",
+   "VulnerabilityManagement",
+   "CyberSecurity"
+  ],
+  "image": "there-is-no-patch-coming-for-this-one-the-vendor-stopped-making-them-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "one-rmm-platform-every-msp-client-behind-it-cvss-10-0",
+  "title": "One RMM platform. Every MSP client behind it. CVSS 10.0.",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-07",
+  "minutes": 2,
+  "excerpt": "CVE-2026-48558 in SimpleHelp's remote monitoring and management platform scores a perfect 10. The TaskWeaver loader is already being deployed through it. If your MSP uses…",
+  "tags": [
+   "SimpleHelp",
+   "SupplyChainSecurity",
+   "MSPSecurity",
+   "TaskWeaver",
+   "VulnerabilityManagement",
+   "CyberSecurity"
+  ],
+  "image": "one-rmm-platform-every-msp-client-behind-it-cvss-10-0-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "no-human-ran-this-ransomware-attack-an-ai-agent-did-start-to-finish-2",
+  "title": "No human ran this ransomware attack. An AI agent did — start to finish.",
+  "topic": "AI Security",
+  "date": "2026-07-07",
+  "minutes": 2,
+  "excerpt": "Researchers at Sysdig have documented JadePuffer, what appears to be the first fully autonomous ransomware operation. Reconnaissance, credential theft, lateral movement,…",
+  "tags": [
+   "JadePuffer",
+   "AIThreats",
+   "Ransomware",
+   "AgenticAI",
+   "ThreatIntelligence",
+   "CyberSecurity"
+  ],
+  "image": "no-human-ran-this-ransomware-attack-an-ai-agent-did-start-to-finish-2-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "microsoft-patched-this-vulnerability-in-may-it-did-not-tell-you-it-was",
+  "title": "Microsoft patched this vulnerability in May. It did not tell you it was being exploited until July.",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-07",
+  "minutes": 2,
+  "excerpt": "CVE-2026-45659 — CVSS 8.8 — SharePoint Server remote code execution via deserialization of untrusted data — just landed on CISA's Known Exploited Vulnerabilities catalog. The…",
+  "tags": [
+   "SharePoint",
+   "CVE202645659",
+   "CISAKEV",
+   "VulnerabilityManagement",
+   "CyberSecurity",
+   "PatchManagement"
+  ],
+  "image": "microsoft-patched-this-vulnerability-in-may-it-did-not-tell-you-it-was-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "430-000-fortigate-firewalls-not-endpoints-not-servers-the-devices-meant",
+  "title": "430,000 FortiGate firewalls. Not endpoints. Not servers. The devices meant to stop this.",
+  "topic": "Threat Intelligence",
+  "date": "2026-07-07",
+  "minutes": 2,
+  "excerpt": "The FortiBleed credential-theft campaign has now been linked directly to the INC and Lynx ransomware operations. This was never a smash-and-grab. It was reconnaissance at…",
+  "tags": [
+   "FortiBleed",
+   "Fortinet",
+   "Ransomware",
+   "NetworkSecurity",
+   "CredentialTheft",
+   "CyberSecurity"
+  ],
+  "image": "430-000-fortigate-firewalls-not-endpoints-not-servers-the-devices-meant-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "the-network-without-humans-agentic-ai-takes-over-tier-1-tier-2-noc",
+  "title": "The Network Without Humans: Agentic AI Takes Over Tier 1/Tier 2 NOC",
+  "topic": "AI Security",
+  "date": "2026-07-06",
+  "minutes": 2,
+  "excerpt": "By the time most tickets reach a human in 2026, the fix will already be deployed. That is the direction Tier 1 and Tier 2 network operations are heading. Not \"AI-assisted.\" Not…",
+  "tags": [
+   "NetworkEngineering",
+   "AgenticAI",
+   "NOC",
+   "NetworkAutomation",
+   "ITOps",
+   "CyberSecurity"
+  ],
+  "image": "the-network-without-humans-agentic-ai-takes-over-tier-1-tier-2-noc-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "cisa-just-gave-federal-agencies-until-july-4-to-patch-this-sharepoint",
+  "title": "CISA Just Gave Federal Agencies Until July 4 to Patch This SharePoint Flaw. Your Org Should Move Just as Fast.",
+  "topic": "Vulnerabilities",
+  "date": "2026-07-03",
+  "minutes": 2,
+  "excerpt": "CVE-2026-45659 — a remote code execution vulnerability in SharePoint Server — was just added to CISA's Known Exploited Vulnerabilities catalog. Translation: this isn't theoretical…",
+  "tags": [
+   "Cybersecurity",
+   "SharePoint",
+   "CISA",
+   "VulnerabilityManagement",
+   "RCE",
+   "InfoSec",
+   "PatchManagement",
+   "Techvernia"
+  ],
+  "image": "cisa-just-gave-federal-agencies-until-july-4-to-patch-this-sharepoint-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-rise-of-mistic-how-access-broker-kongtuke-is-redefining-the",
+  "title": "The Rise of Mistic: How Access Broker KongTuke Is Redefining the Ransomware Supply Chain",
+  "topic": "Threat Intelligence",
+  "date": "2026-07-01",
+  "minutes": 2,
+  "excerpt": "The cybercrime ecosystem is becoming increasingly industrialized, and a recent discovery underscores this evolution more clearly than ever. Since April 2026, a stealthy new…",
+  "tags": [],
+  "image": "the-rise-of-mistic-how-access-broker-kongtuke-is-redefining-the-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "supply-chain-under-attack-how-cordyceps-could-compromise-microsoft",
+  "title": "Supply Chain Under Attack: How \"Cordyceps\" Could Compromise Microsoft, Google & Cloudflare",
+  "topic": "Vulnerabilities",
+  "date": "2026-06-26",
+  "minutes": 2,
+  "excerpt": "Novee Security just uncovered a critical CI/CD vulnerability — codenamed Cordyceps — giving attackers full control over repositories at Microsoft, Google, Apache, and Cloudflare.…",
+  "tags": [
+   "CyberSecurity",
+   "SupplyChainSecurity",
+   "DevSecOps",
+   "GitHub",
+   "GitHubActions",
+   "CICD",
+   "AppSec",
+   "InfoSec"
+  ],
+  "image": "supply-chain-under-attack-how-cordyceps-could-compromise-microsoft-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "dns-the-exfiltration-channel-your-soc-is-not-watching",
+  "title": "DNS: The Exfiltration Channel Your SOC Is Not Watching",
+  "topic": "Network Infrastructure",
+  "date": "2026-06-24",
+  "minutes": 2,
+  "excerpt": "8 gigabytes of sensitive data left your network last quarter. Not through HTTP. Not through email. Not through VPN. Through DNS queries. Each query carried 63 bytes of encoded…",
+  "tags": [
+   "DNS",
+   "CyberSecurity",
+   "NetworkSecurity",
+   "BlueTeam",
+   "SOC",
+   "DataExfiltration"
+  ],
+  "image": "dns-the-exfiltration-channel-your-soc-is-not-watching-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "dns-the-exfiltration-channel-your-soc-is-not-watching-2",
+  "title": "DNS: The Exfiltration Channel Your SOC Is Not Watching",
+  "topic": "Network Infrastructure",
+  "date": "2026-06-23",
+  "minutes": 2,
+  "excerpt": "8 gigabytes of sensitive data left your network last quarter. Not through HTTP. Not through email. Not through VPN. Through DNS queries. Each query carried 63 bytes of encoded…",
+  "tags": [
+   "DNS",
+   "CyberSecurity",
+   "NetworkSecurity",
+   "ThreatDetection",
+   "BlueTeam",
+   "SOC",
+   "DataExfiltration"
+  ],
+  "image": "dns-the-exfiltration-channel-your-soc-is-not-watching-2-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "86-644-fortinet-devices-one-unauthenticated-rce",
+  "title": "86,644 Fortinet devices. One unauthenticated RCE",
+  "topic": "Vulnerabilities",
+  "date": "2026-06-22",
+  "minutes": 2,
+  "excerpt": "Russian-speaking threat actors already inside enterprise perimeters worldwide. This is FortiBleed. An active campaign that has already breached tens of thousands of network…",
+  "tags": [
+   "FortiBleed",
+   "Fortinet",
+   "CVE202620253",
+   "NetworkSecurity",
+   "PerimeterSecurity",
+   "CriticalInfrastructure",
+   "VulnerabilityManagement",
+   "CyberDefense"
+  ],
+  "image": "86-644-fortinet-devices-one-unauthenticated-rce-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "208-vulnerabilities-patched-in-a-single-month-microsoft-just-broke",
+  "title": "208 vulnerabilities patched in a single month. Microsoft just broke every record on the books.",
+  "topic": "Vulnerabilities",
+  "date": "2026-06-19",
+  "minutes": 2,
+  "excerpt": "June 2026 Patch Tuesday is not routine maintenance. It is the most consequential patch cycle in Microsoft's history. 208 CVEs. 33 critical. Two of them require your immediate…",
+  "tags": [
+   "PatchTuesday",
+   "CVE202645657",
+   "CVE202647281",
+   "Microsoft",
+   "WindowsSecurity",
+   "ZeroDay",
+   "VulnerabilityManagement",
+   "CyberDefense"
+  ],
+  "image": "208-vulnerabilities-patched-in-a-single-month-microsoft-just-broke-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "when-the-production-line-becomes-the-target",
+  "title": "When the Production Line Becomes the Target",
+  "topic": "Threat Intelligence",
+  "date": "2026-06-17",
+  "minutes": 2,
+  "excerpt": "June 2026 confirmed what security teams have warned for years: ransomware has moved beyond data theft. Three attacks in one month — three sectors — one objective: disrupt…",
+  "tags": [
+   "Ransomware",
+   "OTSecurity",
+   "CriticalInfrastructure",
+   "SupplyChain"
+  ],
+  "image": "when-the-production-line-becomes-the-target-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "when-uncontrolled-access-becomes-the-threat",
+  "title": "When Uncontrolled Access Becomes the Threat",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-06-17",
+  "minutes": 2,
+  "excerpt": "In cybersecurity, we focus on external actors — APTs, ransomware, supply chain attacks. We build firewalls, deploy zero-trust, and harden endpoints. The DOGE/SSA case exposes a…",
+  "tags": [
+   "Cybersecurity",
+   "DataGovernance",
+   "IAM"
+  ],
+  "image": "when-uncontrolled-access-becomes-the-threat-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "ai-just-crossed-a-red-line-in-cybersecurity-and-this-time-it-s",
+  "title": "AI just crossed a red line in cybersecurity — and this time, it's officially confirmed.",
+  "topic": "AI Security",
+  "date": "2026-06-15",
+  "minutes": 2,
+  "excerpt": "For the first time in history, a criminal threat actor used artificial intelligence to develop a zero-day exploit. This isn't a prediction or a war game scenario. It happened —…",
+  "tags": [
+   "Cybersecurity",
+   "ArtificialIntelligence",
+   "ZeroDay",
+   "ThreatIntelligence",
+   "InfoSec",
+   "APT",
+   "MalwareAnalysis",
+   "CISO"
+  ],
+  "image": "ai-just-crossed-a-red-line-in-cybersecurity-and-this-time-it-s-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "sase-vs-sd-wan-the-convergence-is-no-longer-optional",
+  "title": "SASE vs. SD-WAN: The Convergence Is No Longer Optional",
+  "topic": "Network Infrastructure",
+  "date": "2026-06-12",
+  "minutes": 2,
+  "excerpt": "For years, the debate was theoretical. In 2026, it's a budget line item. Enterprise networks built on hybrid WAN architectures — MPLS cores with SD-WAN overlays — are being…",
+  "tags": [
+   "NetworkSecurity",
+   "SASE",
+   "SDWAN",
+   "ZeroTrust",
+   "CyberSecurity",
+   "NetworkEngineering",
+   "CloudSecurity",
+   "EnterpriseIT"
+  ],
+  "image": "sase-vs-sd-wan-the-convergence-is-no-longer-optional-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "cert-fr-record-breaking-data-breach-violations-16-critical-alerts-on",
+  "title": "CERT-FR: Record-Breaking Data Breach Violations — 16 Critical Alerts on May 18",
+  "topic": "Threat Intelligence",
+  "date": "2026-06-10",
+  "minutes": 2,
+  "excerpt": "On May 18, CERT-FR issued 16 critical security alerts in a single day — a remarkable and unprecedented concentration of simultaneous threat activity. Official data confirms a…",
+  "tags": [
+   "Cybersecurity",
+   "CERTFR",
+   "DataBreach",
+   "ANSSI",
+   "InfoSec",
+   "CyberThreats",
+   "IncidentResponse",
+   "CyberResilience"
+  ],
+  "image": "cert-fr-record-breaking-data-breach-violations-16-critical-alerts-on-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "kimwolf-botnet-dismantled-23-year-old-arrested-in-ottawa-in-global-ddos",
+  "title": "KIMWOLF BOTNET DISMANTLED: 23-YEAR-OLD ARRESTED IN OTTAWA IN GLOBAL DDoS-FOR-HIRE OPERATION",
+  "topic": "Threat Intelligence",
+  "date": "2026-06-08",
+  "minutes": 2,
+  "excerpt": "Canadian federal authorities have arrested a 23-year-old Ottawa man in connection with \"Kimwolf,\" a Mirai-variant botnet that infected approximately 2 million IoT devices…",
+  "tags": [],
+  "image": "kimwolf-botnet-dismantled-23-year-old-arrested-in-ottawa-in-global-ddos-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "operation-saffron-europol-eurojust-dismantle-first-vpn",
+  "title": "OPERATION SAFFRON — Europol & Eurojust Dismantle First VPN",
+  "topic": "Threat Intelligence",
+  "date": "2026-06-05",
+  "minutes": 2,
+  "excerpt": "Law enforcement just delivered a direct message to every cybercriminal relying on bulletproof infrastructure. In a coordinated action, Europol and Eurojust dismantled First VPN —…",
+  "tags": [
+   "CyberSecurity",
+   "Europol",
+   "Eurojust",
+   "OperationSaffron",
+   "VPN",
+   "BulletproofHosting",
+   "ThreatIntelligence",
+   "InfoSec"
+  ],
+  "image": "operation-saffron-europol-eurojust-dismantle-first-vpn-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "pwn2own-berlin-2026-47-zero-days-1-298-250-in-rewards",
+  "title": "Pwn2Own Berlin 2026: 47 Zero-Days, $1,298,250 in Rewards",
+  "topic": "Vulnerabilities",
+  "date": "2026-06-03",
+  "minutes": 2,
+  "excerpt": "The results are in. Pwn2Own Berlin 2026 has wrapped up, and the numbers deserve serious attention. 47 zero-day vulnerabilities successfully demonstrated. $1,298,250 paid out to…",
+  "tags": [
+   "CyberSecurity",
+   "Pwn2Own",
+   "ZeroDay",
+   "BugBounty",
+   "ZDI",
+   "InfoSec",
+   "RedTeam",
+   "ThreatIntelligence"
+  ],
+  "image": "pwn2own-berlin-2026-47-zero-days-1-298-250-in-rewards-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "patch-tuesday-may-2026-microsoft-patches-a-critical-zero-click-flaw-in",
+  "title": "Patch Tuesday May 2026: Microsoft patches a critical zero-click flaw in Outlook and Word.",
+  "topic": "Vulnerabilities",
+  "date": "2026-06-01",
+  "minutes": 2,
+  "excerpt": "If you have not patched yet, you are exposed right now. CVE-2026-40361 — CVSS 9.8 — is a remote code execution vulnerability requiring zero user interaction. No click. No macro.…",
+  "tags": [
+   "PatchTuesday",
+   "CVE202640361",
+   "Microsoft",
+   "OutlookSecurity",
+   "ZeroClick",
+   "VulnerabilityManagement",
+   "CyberDefense"
+  ],
+  "image": "patch-tuesday-may-2026-microsoft-patches-a-critical-zero-click-flaw-in-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "shinyhunters-vs-7-eleven-185-000-victims-9-4gb-leaked-on-the-dark-web",
+  "title": "ShinyHunters vs. 7-Eleven: 185,000 victims, 9.4GB leaked on the dark web",
+  "topic": "Threat Intelligence",
+  "date": "2026-05-29",
+  "minutes": 2,
+  "excerpt": "Here is what happened — and what it means for your organization. In April 2026, 7-Eleven confirmed a significant data breach after the ShinyHunters extortion gang gained…",
+  "tags": [
+   "Cybersecurity",
+   "DataBreach",
+   "ShinyHunters",
+   "7Eleven",
+   "Salesforce",
+   "InfoSec",
+   "CyberThreats",
+   "IncidentResponse"
+  ],
+  "image": "shinyhunters-vs-7-eleven-185-000-victims-9-4gb-leaked-on-the-dark-web-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "botnet-takedown-the-fall-of-kimwolf-a-ddos-for-hire-empire-built-on-2",
+  "title": "BOTNET TAKEDOWN: The Fall of Kimwolf — A DDoS-for-Hire Empire Built on 2 Million Compromised Devices",
+  "topic": "Threat Intelligence",
+  "date": "2026-05-27",
+  "minutes": 2,
+  "excerpt": "On May 20, 2026, U.S. and Canadian authorities announced the arrest of Jacob Butler, a 23-year-old Ottawa resident known online as \"Dort,\" suspected of building and operating…",
+  "tags": [],
+  "image": "botnet-takedown-the-fall-of-kimwolf-a-ddos-for-hire-empire-built-on-2-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-tool-you-installed-to-watch-your-mail-server-just-became-the-way-in",
+  "title": "The tool you installed to watch your mail server just became the way in.",
+  "topic": "Vulnerabilities",
+  "date": "2026-05-26",
+  "minutes": 2,
+  "excerpt": "CVE-2026-73570 — CVSS 8.9 — unauthenticated command execution through Zimbra Collaboration's SNMP monitoring function. CERT Polska reported active exploitation on August 17.…",
+  "tags": [
+   "Zimbra",
+   "CISAKEV",
+   "SNMP",
+   "CVE202673570",
+   "EmailSecurity",
+   "IncidentResponse"
+  ],
+  "image": "the-tool-you-installed-to-watch-your-mail-server-just-became-the-way-in-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "fortinet-has-eight-nse-levels-most-engineers-stop-at-nse-4",
+  "title": "Fortinet has eight NSE levels. Most engineers stop at NSE 4",
+  "topic": "Security Operations",
+  "date": "2026-05-25",
+  "minutes": 2,
+  "excerpt": "without realizing the program goes much further, and that levels five through eight certify entirely different roles. A certification is a commitment. Choosing the wrong level…",
+  "tags": [
+   "Fortinet",
+   "NSE",
+   "FortiGate",
+   "NetworkSecurity",
+   "CyberSecurity",
+   "FortiManager",
+   "SIEM",
+   "OTSecurity"
+  ],
+  "image": "fortinet-has-eight-nse-levels-most-engineers-stop-at-nse-4-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "palo-alto-networks-has-six-certification-paths",
+  "title": "Palo Alto Networks has six certification paths",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-05-22",
+  "minutes": 2,
+  "excerpt": "Most engineers default to PCNSE — without realizing there are distinct tracks built for different roles. A certification is a commitment. Choosing the wrong one costs twelve to…",
+  "tags": [
+   "PaloAltoNetworks",
+   "PCNSE",
+   "PCCSE",
+   "PCSAE",
+   "NetworkSecurity",
+   "CloudSecurity",
+   "CyberSecurity",
+   "SOCAutomation"
+  ],
+  "image": "palo-alto-networks-has-six-certification-paths-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "ccnp-has-seven-tracks-most-engineers-pick-the-wrong-one",
+  "title": "CCNP has seven tracks. Most engineers pick the wrong one",
+  "topic": "Security Operations",
+  "date": "2026-05-20",
+  "minutes": 2,
+  "excerpt": "not because they lack knowledge, but because they don't understand what each track actually certifies. A certification is a commitment. Choosing the wrong one costs twelve to…",
+  "tags": [
+   "CCNP",
+   "CiscoSecurity",
+   "NetworkEngineering",
+   "CyberSecurity",
+   "VPN",
+   "Firewall",
+   "NetworkAutomation"
+  ],
+  "image": "ccnp-has-seven-tracks-most-engineers-pick-the-wrong-one-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "gpu-compute-power-password-cracking-and-the-attack-vector-nobody-patches",
+  "title": "GPU: Compute Power, Password Cracking, and the Attack Vector Nobody Patches",
+  "topic": "Security Brief",
+  "date": "2026-05-18",
+  "minutes": 2,
+  "excerpt": "The GPU was built for graphics. It became the most powerful password cracking tool ever created. It is also one of the least monitored components in your security stack. WHY IT…",
+  "tags": [
+   "GPU",
+   "PasswordSecurity",
+   "Hashcat",
+   "CyberSecurity",
+   "OffensiveSecurity"
+  ],
+  "image": "gpu-compute-power-password-cracking-and-the-attack-vector-nobody-patches-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "ospf-routing-time-to-replace-your-static-routes-with-a-dynamic-protocol",
+  "title": "OSPF Routing: Time to Replace Your Static Routes with a Dynamic Protocol",
+  "topic": "Network Infrastructure",
+  "date": "2026-05-15",
+  "minutes": 2,
+  "excerpt": "Most network engineers start the same way. A static route here. Another one there. It works — until the network grows and the routing table becomes a full-time maintenance job.…",
+  "tags": [],
+  "image": "ospf-routing-time-to-replace-your-static-routes-with-a-dynamic-protocol-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "traditional-antivirus-is-dead-here-s-why-your-soc-needs-to-think",
+  "title": "Traditional Antivirus Is Dead. Here's Why Your SOC Needs to Think Differently.",
+  "topic": "Security Operations",
+  "date": "2026-05-13",
+  "minutes": 2,
+  "excerpt": "In 2026, relying solely on signature-based detection is like playing chess blindfolded — you're always one move behind, and your opponent knows it. The threat landscape has…",
+  "tags": [],
+  "image": "traditional-antivirus-is-dead-here-s-why-your-soc-needs-to-think-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-best-os-for-networking-and-cybersecurity-a-field-guide",
+  "title": "The Best OS for Networking and Cybersecurity: A Field Guide",
+  "topic": "Network Infrastructure",
+  "date": "2026-05-11",
+  "minutes": 2,
+  "excerpt": "Every security engineer has an opinion. Most are wrong about the tradeoffs. The right OS is not the most popular one. It is the one built for the threat model you are actually…",
+  "tags": [
+   "CyberSecurity",
+   "NetworkSecurity",
+   "Linux",
+   "PenTesting",
+   "BlueTeam"
+  ],
+  "image": "the-best-os-for-networking-and-cybersecurity-a-field-guide-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "sase-is-no-longer-just-a-networking-architecture",
+  "title": "SASE is no longer just a networking architecture.",
+  "topic": "AI Security",
+  "date": "2026-05-08",
+  "minutes": 2,
+  "excerpt": "In 2026, Fortinet, Palo Alto Networks, and Cisco have embedded generative AI into the core of their SASE platforms. The result is not smarter dashboards. It is autonomous policy…",
+  "tags": [
+   "SASE",
+   "ZeroTrust",
+   "Fortinet",
+   "PaloAltoNetworks",
+   "Cisco",
+   "GenerativeAI",
+   "NetworkSecurity"
+  ],
+  "image": "sase-is-no-longer-just-a-networking-architecture-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "microsoft-exchange-online-is-dropping-legacy-tls-for-pop3-imap4-are-you",
+  "title": "Microsoft Exchange Online Is Dropping Legacy TLS for POP3 & IMAP4 — Are You Ready?",
+  "topic": "Vulnerabilities",
+  "date": "2026-05-06",
+  "minutes": 2,
+  "excerpt": "Starting July 2026, Microsoft will permanently block TLS 1.0 and TLS 1.1 connections for POP3 and IMAP4 protocols on Exchange Online. No exceptions. No extensions. If your mail…",
+  "tags": [],
+  "image": "microsoft-exchange-online-is-dropping-legacy-tls-for-pop3-imap4-are-you-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "tls-1-3-vs-tls-1-2-it-s-not-just-a-number",
+  "title": "TLS 1.3 vs TLS 1.2: It's Not Just a Number.",
+  "topic": "Threat Intelligence",
+  "date": "2026-05-04",
+  "minutes": 2,
+  "excerpt": "Most engineers treat it as a minor version bump. It isn't. TLS 1.3 is a fundamental redesign of how secure connections are established — and the gap between the two protocols is…",
+  "tags": [
+   "CyberSecurity",
+   "TLS",
+   "NetworkSecurity",
+   "Infrastructure",
+   "DevSecOps",
+   "AppSec"
+  ],
+  "image": "tls-1-3-vs-tls-1-2-it-s-not-just-a-number-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-vpn-encrypts-traffic-but-does-it-encrypt-the-right-things",
+  "title": "Your VPN encrypts traffic. But does it encrypt the right things?",
+  "topic": "Network Infrastructure",
+  "date": "2026-05-01",
+  "minutes": 2,
+  "excerpt": "This is a question most network engineers never ask — until it's too late. IPSec is the backbone of enterprise VPN security. But there's a critical configuration decision hiding…",
+  "tags": [],
+  "image": "your-vpn-encrypts-traffic-but-does-it-encrypt-the-right-things-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-rise-of-cloud-and-zero-trust-makes-traditional-networking-knowledge",
+  "title": "The Rise of Cloud and Zero Trust Makes Traditional Networking Knowledge Obsolete",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-04-28",
+  "minutes": 2,
+  "excerpt": "For: Abstraction Has Redefined Security Priorities The cloud has transformed how infrastructure is built and secured. Platforms like AWS, Azure, and Google Cloud abstract away the…",
+  "tags": [],
+  "image": "the-rise-of-cloud-and-zero-trust-makes-traditional-networking-knowledge-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "your-network-is-electing-a-new-root-bridge-right-now",
+  "title": "Your network is electing a new Root Bridge right now.",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-27",
+  "minutes": 2,
+  "excerpt": "You did not authorize it. Spanning Tree Protocol has no authentication. Any device on your segment can send a BPDU and reshape your topology. If its priority is low enough, it…",
+  "tags": [
+   "SpanningTree",
+   "STP",
+   "Layer2Security",
+   "NetworkSecurity",
+   "CyberDefense"
+  ],
+  "image": "your-network-is-electing-a-new-root-bridge-right-now-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-incident-had-been-running-for-11-days-when-the-it-team-noticed",
+  "title": "The incident had been running for 11 days when the IT team noticed.",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-24",
+  "minutes": 2,
+  "excerpt": "Not because monitoring caught it. Because a user complained about slowness. The logs existed. The anomaly was there. No one was watching. NETWORK VISIBILITY FOR SME INFRASTRUCTURE…",
+  "tags": [
+   "NetworkMonitoring",
+   "SNMP",
+   "Syslog",
+   "NetFlow",
+   "SMESecurity",
+   "Visibility"
+  ],
+  "image": "the-incident-had-been-running-for-11-days-when-the-it-team-noticed-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "one-misconfigured-switch-brought-down-an-entire-campus-network-no",
+  "title": "One misconfigured switch brought down an entire campus network. No failover triggered. No alert fired. Just silence.",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-22",
+  "minutes": 2,
+  "excerpt": "The cause: Spanning Tree Protocol with no Root Bridge defined. STP saves you from broadcast storms. Wrong configuration makes it the source of one. WHAT STP DOES AND WHY IT BREAKS…",
+  "tags": [
+   "SpanningTree",
+   "NetworkEngineering",
+   "SwitchConfiguration",
+   "NetworkTroubleshooting"
+  ],
+  "image": "one-misconfigured-switch-brought-down-an-entire-campus-network-no-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-most-dangerous-password-isn-t-123456",
+  "title": "The most dangerous password isn't 123456.",
+  "topic": "Threat Intelligence",
+  "date": "2026-04-20",
+  "minutes": 2,
+  "excerpt": "It's \"admin\". Or \"password\". Or just nothing at all. And it's sitting right now on a router, a switch, a camera, or a firewall somewhere in your company's network — completely…",
+  "tags": [],
+  "image": "the-most-dangerous-password-isn-t-123456-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "5g-private-networks-the-new-attack-surface-for-critical-infrastructure",
+  "title": "5G Private Networks: The New Attack Surface for Critical Infrastructure",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-04-17",
+  "minutes": 2,
+  "excerpt": "Private 5G networks are no longer a concept — they're being deployed right now across manufacturing floors, hospital campuses, seaports, and smart warehouses. And most security…",
+  "tags": [
+   "5G",
+   "PrivateNetworks",
+   "OTSecurity",
+   "CriticalInfrastructure",
+   "NetworkSecurity",
+   "CyberSecurity",
+   "ZeroTrust",
+   "IndustrialSecurity"
+  ],
+  "image": "5g-private-networks-the-new-attack-surface-for-critical-infrastructure-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "wi-fi-7-the-next-generation-standard-and-its-expanding-attack-surface",
+  "title": "Wi-Fi 7: The Next Generation Standard and Its Expanding Attack Surface",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-15",
+  "minutes": 2,
+  "excerpt": "Wi-Fi 7 deployments are accelerating. Faster throughput, lower latency, better spectrum efficiency. The promise is real. So are the new risks. 802.11be introduces capabilities…",
+  "tags": [
+   "WiFi7",
+   "WirelessSecurity",
+   "NetworkSecurity",
+   "AttackSurface",
+   "CyberSecurity"
+  ],
+  "image": "wi-fi-7-the-next-generation-standard-and-its-expanding-attack-surface-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "wi-fi-7-the-next-generation-standard-and-its-expanding-attack-surface-2",
+  "title": "Wi-Fi 7: The Next Generation Standard and Its Expanding Attack Surface",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-14",
+  "minutes": 2,
+  "excerpt": "Wi-Fi 7 deployments are accelerating. Faster throughput, lower latency, better spectrum efficiency. The promise is real. So are the new risks. 802.11be introduces capabilities…",
+  "tags": [
+   "WiFi7",
+   "WirelessSecurity",
+   "NetworkSecurity",
+   "AttackSurface",
+   "CyberSecurity"
+  ],
+  "image": "wi-fi-7-the-next-generation-standard-and-its-expanding-attack-surface-2-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "ai-powered-ndr-the-evolution-of-network-threat-detection",
+  "title": "AI-Powered NDR: The Evolution of Network Threat Detection",
+  "topic": "AI Security",
+  "date": "2026-04-13",
+  "minutes": 2,
+  "excerpt": "Attackers no longer break in — they log in. And once inside, they move quietly, blend with legitimate traffic, and exploit the one blind spot most security stacks still can't…",
+  "tags": [],
+  "image": "ai-powered-ndr-the-evolution-of-network-threat-detection-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "sase-adoption-in-2026-converging-networking-and-security-at-scale",
+  "title": "SASE Adoption in 2026: Converging Networking and Security at Scale",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-04-10",
+  "minutes": 2,
+  "excerpt": "SASE is no longer a buzzword. It is the dominant architecture for hybrid organizations. But most deployments still fail for the same reason. Organizations buy SASE products before…",
+  "tags": [
+   "SASE",
+   "SSE",
+   "ZTNA",
+   "NetworkSecurity",
+   "CloudSecurity"
+  ],
+  "image": "sase-adoption-in-2026-converging-networking-and-security-at-scale-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "most-bgp-enterprise-networks-are-one-misconfiguration-away-from-a-full",
+  "title": "Most BGP enterprise networks are one misconfiguration away from a full routing meltdown.",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-08",
+  "minutes": 2,
+  "excerpt": "Not because engineers don't know BGP. Because the design decisions that prevent failures are invisible — until it all goes down at 2 AM. Four pillars. One resilient design. 1.…",
+  "tags": [
+   "BGP",
+   "NetworkEngineering",
+   "EnterpriseNetworking",
+   "RoutingProtocols",
+   "NetworkDesign"
+  ],
+  "image": "most-bgp-enterprise-networks-are-one-misconfiguration-away-from-a-full-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "red-team-vs-blue-team-the-real-power-is-purple-team",
+  "title": "Red Team vs Blue Team? The Real Power Is Purple Team.",
+  "topic": "Vulnerabilities",
+  "date": "2026-04-06",
+  "minutes": 2,
+  "excerpt": "For years, cybersecurity operated like a divided house. On one side: the Red Team — ethical hackers, penetration testers, adversary simulators. Their job? Break things. Find the…",
+  "tags": [],
+  "image": "red-team-vs-blue-team-the-real-power-is-purple-team-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "netdevops-is-not-the-future-it-s-the-standard-your-network-team-hasn-t",
+  "title": "NetDevOps is not the future. It's the standard your network team hasn't adopted yet.",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-03",
+  "minutes": 2,
+  "excerpt": "For decades, network engineering relied on manual CLI commands, undocumented changes, and \"if it works, don't touch it\" culture. That era is over. NetDevOps — the convergence of…",
+  "tags": [
+   "NetDevOps",
+   "NetworkAutomation",
+   "NetworkAsCode",
+   "Ansible",
+   "GitOps",
+   "NAPALM",
+   "Batfish",
+   "InfrastructureAsCode"
+  ],
+  "image": "netdevops-is-not-the-future-it-s-the-standard-your-network-team-hasn-t-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-switch-is-handing-out-ip-addresses-right-now",
+  "title": "Your switch is handing out IP addresses right now.",
+  "topic": "Network Infrastructure",
+  "date": "2026-04-01",
+  "minutes": 2,
+  "excerpt": "One of those responses might not be from your DHCP server. A rogue DHCP server needs no exploit. It just needs to reply faster than yours. What DHCP does: When a device connects,…",
+  "tags": [
+   "DHCPSnooping",
+   "NetworkSecurity",
+   "Layer2Security",
+   "SwitchSecurity",
+   "CyberDefense"
+  ],
+  "image": "your-switch-is-handing-out-ip-addresses-right-now-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "arp-has-no-authentication-every-device-on-your-lan-trusts-every-arp",
+  "title": "ARP has no authentication. Every device on your LAN trusts every ARP reply",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-30",
+  "minutes": 2,
+  "excerpt": "Attackers built entire toolkits around this single design flaw. Dynamic ARP Inspection (DAI) and IP Source Guard close the gap. Together with DHCP Snooping, they complete the…",
+  "tags": [
+   "DynamicARPInspection",
+   "IPSourceGuard",
+   "CiscoSecurity",
+   "Layer2Hardening",
+   "NetworkDefense"
+  ],
+  "image": "arp-has-no-authentication-every-device-on-your-lan-trusts-every-arp-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-vlans-are-segmented-your-attacker-is-already-hopping-between-them",
+  "title": "Your VLANs are segmented. Your attacker is already hopping between them.",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-27",
+  "minutes": 2,
+  "excerpt": "Network segmentation is one of the most cited controls in modern architecture. It is also one of the most consistently misconfigured. The same switches that segment your network…",
+  "tags": [
+   "NetworkSecurity",
+   "VLANSecurity",
+   "NetworkSegmentation",
+   "CyberResilience",
+   "LayerTwoSecurity"
+  ],
+  "image": "your-vlans-are-segmented-your-attacker-is-already-hopping-between-them-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "network-as-code-your-infrastructure-is-still-configured-by-hand-that-s",
+  "title": "Network as Code: Your Infrastructure is Still Configured by Hand. That's a Problem.",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-25",
+  "minutes": 2,
+  "excerpt": "83% of network outages are caused by human configuration errors. Yet most organizations still manage their networks through CLI sessions and tribal knowledge locked in individual…",
+  "tags": [
+   "NetDevOps",
+   "NetworkAutomation",
+   "GitOps",
+   "Ansible",
+   "InfrastructureAsCode",
+   "NetworkSecurity",
+   "NAPALM",
+   "Batfish"
+  ],
+  "image": "network-as-code-your-infrastructure-is-still-configured-by-hand-that-s-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-routers-have-a-default-configuration-that-configuration-was",
+  "title": "Your routers have a default configuration. That configuration was designed for interoperability, not security.",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-23",
+  "minutes": 2,
+  "excerpt": "CIS Cisco IOS benchmark has 87 controls. The average enterprise enforces fewer than 30. What an unprotected management plane looks like TELNET STILL ENABLED Telnet transmits…",
+  "tags": [
+   "RouterHardening",
+   "CISBenchmark",
+   "NetworkSecurity",
+   "CiscoIOS",
+   "EnterpriseNetworking"
+  ],
+  "image": "your-routers-have-a-default-configuration-that-configuration-was-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "a-critical-cve-drops-at-9-00-am-automated-exploitation-begins-at-11-00",
+  "title": "A critical CVE drops at 9:00 AM. Automated exploitation begins at 11:00 AM. Your patch cycle runs every 30 days.",
+  "topic": "Vulnerabilities",
+  "date": "2026-03-20",
+  "minutes": 2,
+  "excerpt": "You normalized a 29-day exposure window. Attackers measured it. They built tooling around it. Average time to patch critical vulnerabilities: 60 days. Average time to exploitation…",
+  "tags": [
+   "VulnerabilityManagement",
+   "PatchManagement",
+   "EPSS",
+   "CISAKEV",
+   "RiskReduction"
+  ],
+  "image": "a-critical-cve-drops-at-9-00-am-automated-exploitation-begins-at-11-00-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "sd-wan-was-supposed-to-modernize-your-network-for-many-organizations-it",
+  "title": "SD-WAN was supposed to modernize your network. For many organizations, it quietly expanded the attack surface instead.",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-18",
+  "minutes": 2,
+  "excerpt": "67% of enterprises that deployed SD-WAN created direct internet breakouts at branch sites without rebuilding security controls first. The perimeter did not disappear. It…",
+  "tags": [
+   "SDWANSecurity",
+   "NetworkSecurity",
+   "ZeroTrust",
+   "SASE",
+   "CyberResilience"
+  ],
+  "image": "sd-wan-was-supposed-to-modernize-your-network-for-many-organizations-it-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "every-connection-starts-with-a-dns-query-attackers-have-known-this-for",
+  "title": "Every connection starts with a DNS query. Attackers have known this for years. Most defenders still haven't acted.",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-16",
+  "minutes": 2,
+  "excerpt": "DNS-based attacks account for 88% of all malware command-and-control activity. You are watching the wrong protocol. What DNS does: The Domain Name System translates human-readable…",
+  "tags": [
+   "DNSSecurity",
+   "NetworkSecurity",
+   "ThreatDetection",
+   "CyberResilience",
+   "ProtectiveDNS"
+  ],
+  "image": "every-connection-starts-with-a-dns-query-attackers-have-known-this-for-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "every-connection-starts-with-a-dns-query-attackers-have-known-this-for-2",
+  "title": "Every connection starts with a DNS query. Attackers have known this for years. Most defenders still haven't acted.",
+  "topic": "Network Infrastructure",
+  "date": "2026-03-16",
+  "minutes": 2,
+  "excerpt": "DNS-based attacks account for 88% of all malware command-and-control activity. You are watching the wrong protocol. What DNS does: The Domain Name System translates human-readable…",
+  "tags": [
+   "DNSSecurity",
+   "NetworkSecurity",
+   "ThreatDetection",
+   "CyberResilience",
+   "ProtectiveDNS"
+  ],
+  "image": "every-connection-starts-with-a-dns-query-attackers-have-known-this-for-2-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-vpn-is-not-broken-it-was-built-for-a-world-that-no-longer-exists",
+  "title": "The VPN Is Not Broken. It Was Built for a World That No Longer Exists.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-03-13",
+  "minutes": 2,
+  "excerpt": "VPN technology was designed in the 1990s to extend a trusted perimeter to remote users. The core assumption: your network is safe, outside users need access, bring them inside. In…",
+  "tags": [
+   "ZTNA",
+   "ZeroTrust",
+   "NetworkSecurity",
+   "VPN"
+  ],
+  "image": "the-vpn-is-not-broken-it-was-built-for-a-world-that-no-longer-exists-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "ai-in-your-soc-detects-threats-55-faster",
+  "title": "AI in your SOC detects threats 55% faster",
+  "topic": "AI Security",
+  "date": "2026-03-11",
+  "minutes": 2,
+  "excerpt": "It also gives your analysts dangerous confidence in wrong answers. The case for AI-assisted defense is real. The risks of deploying it without discipline are underestimated. What…",
+  "tags": [
+   "AIinSecurity",
+   "SOC",
+   "CyberDefense",
+   "ThreatDetection",
+   "SecurityOperations",
+   "CyberResilience"
+  ],
+  "image": "ai-in-your-soc-detects-threats-55-faster-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "hackers-no-longer-just-steal-data-they-now-shut-down-power-grids-poison",
+  "title": "Hackers no longer just steal data. They now shut down power grids, poison water supplies, and stop production lines.",
+  "topic": "Threat Intelligence",
+  "date": "2026-03-09",
+  "minutes": 2,
+  "excerpt": "OT/ICS cyberattacks with physical consequences increased 355% between 2020 and 2025. The battlefield has changed. What is OT/ICS: Operational Technology and Industrial Control…",
+  "tags": [
+   "OTSecurity",
+   "ICSecurity",
+   "CriticalInfrastructure",
+   "CyberResilience",
+   "IndustrialCybersecurity"
+  ],
+  "image": "hackers-no-longer-just-steal-data-they-now-shut-down-power-grids-poison-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "hackers-no-longer-just-steal-data-they-now-shut-down-power-grids-poison-2",
+  "title": "Hackers no longer just steal data. They now shut down power grids, poison water supplies, and stop production lines.",
+  "topic": "Threat Intelligence",
+  "date": "2026-03-09",
+  "minutes": 2,
+  "excerpt": "OT/ICS cyberattacks with physical consequences increased 355% between 2020 and 2025. The battlefield has changed. What is OT/ICS: Operational Technology and Industrial Control…",
+  "tags": [
+   "OTSecurity",
+   "ICSecurity",
+   "CriticalInfrastructure",
+   "CyberResilience",
+   "IndustrialCybersecurity"
+  ],
+  "image": "hackers-no-longer-just-steal-data-they-now-shut-down-power-grids-poison-2-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "agentic-ai-the-security-blind-spot-your-organization-cannot-afford-to",
+  "title": "Agentic AI: The Security Blind Spot Your Organization Cannot Afford to Ignore Your employees are deploying AI agents",
+  "topic": "AI Security",
+  "date": "2026-03-06",
+  "minutes": 2,
+  "excerpt": "Your developers are building autonomous workflows. Your security team has no idea. This is the defining security challenge of 2026. Unlike a chatbot that answers questions, an AI…",
+  "tags": [
+   "AgenticAI",
+   "AISecurity",
+   "AIGovernance",
+   "Cybersecurity"
+  ],
+  "image": "agentic-ai-the-security-blind-spot-your-organization-cannot-afford-to-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-network-will-run-itself-by-2027-are-you-ready",
+  "title": "Your Network Will Run Itself by 2027. Are You Ready?",
+  "topic": "AI Security",
+  "date": "2026-03-04",
+  "minutes": 2,
+  "excerpt": "In 2026, enterprise networks are no longer managed by humans alone. Agentic AI systems now handle Tier 1 and Tier 2 network operations autonomously. Incident detection, root cause…",
+  "tags": [
+   "AINetworking",
+   "AIOps",
+   "EnterpriseNetworking",
+   "NetworkAutomation"
+  ],
+  "image": "your-network-will-run-itself-by-2027-are-you-ready-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "cisco-fortinet-palo-alto-three-giants-one-priority",
+  "title": "Cisco, Fortinet, Palo Alto: Three Giants, One Priority",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-03-02",
+  "minutes": 2,
+  "excerpt": "Securing Your Network Most cyberattacks exploit poorly configured or under-protected network infrastructure. Choosing the right equipment is not enough. You need to know how to…",
+  "tags": [
+   "NetworkSecurity",
+   "Cisco",
+   "Fortinet",
+   "PaloAlto",
+   "NGFW",
+   "ZeroTrust",
+   "Cybersecurity",
+   "Infrastructure"
+  ],
+  "image": "cisco-fortinet-palo-alto-three-giants-one-priority-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "shadow-ai-your-employees-are-using-chatgpt-with-your-client-data-right",
+  "title": "Shadow AI: Your Employees Are Using ChatGPT With Your Client Data Right Now 73% of employees use AI tools not",
+  "topic": "AI Security",
+  "date": "2026-02-27",
+  "minutes": 2,
+  "excerpt": "approved by their IT department. Most of them see no problem with this. This is Shadow AI, and it is the fastest-growing data leakage vector in enterprise security today. The…",
+  "tags": [
+   "ShadowAI",
+   "DataProtection",
+   "AIGovernance",
+   "CyberSecurity"
+  ],
+  "image": "shadow-ai-your-employees-are-using-chatgpt-with-your-client-data-right-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "byod-is-a-security-nightmare-the-mobile-endpoint-crisis",
+  "title": "BYOD Is a Security Nightmare: The Mobile Endpoint Crisis",
+  "topic": "Threat Intelligence",
+  "date": "2026-02-25",
+  "minutes": 2,
+  "excerpt": "5.5 billion smartphones worldwide. 85% of employees use personal devices for work. 47% of organizations have experienced mobile security incidents. The BYOD revolution has created…",
+  "tags": [
+   "MobileSecurity",
+   "BYOD",
+   "EndpointSecurity",
+   "ZeroTrust",
+   "DataProtection"
+  ],
+  "image": "byod-is-a-security-nightmare-the-mobile-endpoint-crisis-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "shift-left-security-why-fixing-bugs-in-production-costs-100x-more",
+  "title": "Shift-Left Security: Why Fixing Bugs in Production Costs 100x More",
+  "topic": "Threat Intelligence",
+  "date": "2026-02-23",
+  "minutes": 2,
+  "excerpt": "The cost of fixing a security vulnerability increases exponentially Design: 100 USD — Development: 1,500 USD — Testing: 10,000 USD — Production: 150,000 USD The financial case for…",
+  "tags": [
+   "DevSecOps",
+   "SecureDevelopment",
+   "ShiftLeft",
+   "ApplicationSecurity",
+   "SDLC"
+  ],
+  "image": "shift-left-security-why-fixing-bugs-in-production-costs-100x-more-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "security-automation-the-only-way-to-scale-protection-in-2026",
+  "title": "Security Automation: The Only Way to Scale Protection in 2026",
+  "topic": "Security Operations",
+  "date": "2026-02-20",
+  "minutes": 2,
+  "excerpt": "Security teams are drowning in alerts. The average SOC analyst receives 4,500 alerts per day. 67% are false positives. Manual triage and response is impossible at this scale.…",
+  "tags": [
+   "SecurityAutomation",
+   "SOAR",
+   "SOC",
+   "ThreatDetection",
+   "IncidentResponse"
+  ],
+  "image": "security-automation-the-only-way-to-scale-protection-in-2026-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "apis-are-the-new-attack-surface-90-are-vulnerable",
+  "title": "APIs Are the New Attack Surface: 90% Are Vulnerable",
+  "topic": "Threat Intelligence",
+  "date": "2026-02-18",
+  "minutes": 2,
+  "excerpt": "Modern applications run on APIs. They connect services, power mobile experiences, and enable integrations. They are also massively insecure. 90% of APIs have critical…",
+  "tags": [
+   "APISecurity",
+   "ApplicationSecurity",
+   "SecureDevelopment",
+   "CloudSecurity",
+   "DevSecOps"
+  ],
+  "image": "apis-are-the-new-attack-surface-90-are-vulnerable-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "quantum-computers-capable-of-breaking-current-encryption-are-still-2",
+  "title": "Quantum computers capable of breaking current encryption are still years away.",
+  "topic": "Security Operations",
+  "date": "2026-02-17",
+  "minutes": 2,
+  "excerpt": "But adversaries are stealing your encrypted data today, storing it, and waiting for quantum capabilities to decrypt it. This is \"harvest now, decrypt later\" and it represents an…",
+  "tags": [
+   "QuantumComputing",
+   "PostQuantumCrypto",
+   "Encryption",
+   "DataSecurity",
+   "CyberThreats"
+  ],
+  "image": "quantum-computers-capable-of-breaking-current-encryption-are-still-2-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "your-security-is-only-as-strong-as-your-weakest-vendor",
+  "title": "Your security is only as strong as your weakest vendor.",
+  "topic": "Threat Intelligence",
+  "date": "2026-02-16",
+  "minutes": 2,
+  "excerpt": "In 2025, 62% of data breaches originated from compromised third-party suppliers. That number is projected to reach 75% by the end of 2026. The attack surface is no longer just…",
+  "tags": [
+   "SupplyChainSecurity",
+   "ThirdPartyRisk",
+   "VendorManagement",
+   "CyberResilience",
+   "InfoSec"
+  ],
+  "image": "your-security-is-only-as-strong-as-your-weakest-vendor-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "quantum-computers-capable-of-breaking-current-encryption-are-still",
+  "title": "Quantum computers capable of breaking current encryption are still years away.",
+  "topic": "Security Operations",
+  "date": "2026-02-16",
+  "minutes": 2,
+  "excerpt": "But adversaries are stealing your encrypted data today, storing it, and waiting for quantum capabilities to decrypt it. This is \"harvest now, decrypt later\" and it represents an…",
+  "tags": [
+   "QuantumComputing",
+   "PostQuantumCrypto",
+   "Encryption",
+   "DataSecurity",
+   "CyberThreats"
+  ],
+  "image": "quantum-computers-capable-of-breaking-current-encryption-are-still-thumb.jpg",
+  "date_approx": false
+ },
+ {
+  "slug": "the-insider-threat-when-the-call-comes-from-inside-the-house",
+  "title": "The Insider Threat: When the Call Comes From Inside the House",
+  "topic": "Threat Intelligence",
+  "date": "2026-02-13",
+  "minutes": 2,
+  "excerpt": "60% of data breaches involve insider access, either malicious or negligent. Your greatest security risk is not external hackers. It is your own employees, contractors, and…",
+  "tags": [
+   "InsiderThreat",
+   "DataProtection",
+   "UserBehaviorAnalytics",
+   "AccessControl",
+   "SecurityAwareness"
+  ],
+  "image": "the-insider-threat-when-the-call-comes-from-inside-the-house-thumb.jpg",
+  "date_approx": true
+ },
+ {
+  "slug": "cloud-misconfigurations-the-silent-killer-of-enterprise-security",
+  "title": "Cloud Misconfigurations: The Silent Killer of Enterprise Security",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-02-11",
+  "minutes": 2,
+  "excerpt": "95% of cloud security failures are caused by customer misconfigurations, not provider vulnerabilities. Your cloud infrastructure is secure. Your implementation of it is not. This…",
+  "tags": [
+   "CloudSecurity",
+   "AWS",
+   "Azure",
+   "GCP",
+   "SecurityMisconfigurations",
+   "DevSecOps"
+  ],
+  "image": "cloud-misconfigurations-the-silent-killer-of-enterprise-security-thumb.jpg",
+  "date_approx": true
+ }
+]
