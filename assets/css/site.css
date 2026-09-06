@@ -68,6 +68,9 @@ body{
 
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
+/* an e-mail address is one unbreakable token: without this it sets the minimum
+   width of its container and scrolls the whole page sideways on a phone */
+a[href^="mailto:"]{overflow-wrap:anywhere}
 h1,h2,h3,h4{margin:0;font-weight:640;letter-spacing:-.022em;line-height:1.12;color:var(--ink)}
 p{margin:0}
 ul,ol{margin:0;padding:0}
@@ -463,6 +466,15 @@ ul,ol{margin:0;padding:0}
 .breadcrumb a:hover{color:var(--v-700)}
 
 /* ---------- contact ---------- */
+/* form beside the direct-email card; stacks on a phone. This lives here rather
+   than inline on the element, because an inline style cannot be overridden by
+   a media query and kept both columns at 320px. */
+.contact-layout{
+  display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
+  gap:clamp(24px,3vw,40px);align-items:start;
+}
+@media (max-width:820px){.contact-layout{grid-template-columns:1fr}}
+
 .contact-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
   padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:11px;

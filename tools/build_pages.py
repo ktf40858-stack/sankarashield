@@ -685,7 +685,7 @@ def page_contact():
 
 <section class="section" style="padding-top:clamp(30px,4vw,50px)">
   <div class="wrap">
-    <div class="grid" style="grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);align-items:start">
+    <div class="contact-layout">
 
       <div class="form-panel">
         <span class="eyebrow">Send a message</span>
