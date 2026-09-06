@@ -1,5 +1,22 @@
 [
  {
+  "slug": "nobody-breached-the-airport-the-credentials-were-published-on-its-own",
+  "title": "Nobody breached the airport. The credentials were published on its own website.",
+  "topic": "Threat Intelligence",
+  "date": "2026-09-07",
+  "minutes": 2,
+  "excerpt": "Manchester Airports Group disclosed on August 27, 2026 that customer data had been taken from Manchester, London Stansted and East Midlands. On September 3, the extortion group…",
+  "tags": [
+   "CyberSecurity",
+   "DataBreach",
+   "ApplicationSecurity",
+   "ThirdPartyRisk",
+   "DevSecOps"
+  ],
+  "image": "nobody-breached-the-airport-the-credentials-were-published-on-its-own-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "twelve-months-of-credit-monitoring-for-sealed-court-records-that-is-the",
   "title": "Twelve months of credit monitoring. For sealed court records. That is the entire remedy on offer.",
   "topic": "Cloud & Zero Trust",
