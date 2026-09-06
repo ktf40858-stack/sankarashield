@@ -8,8 +8,9 @@ static article pages, the blog index, a JSON index and sitemap fragments.
 
     python tools/build_blog.py
 
-Source of truth for content:  C:\\Users\\Freddy\\Desktop\\Post\\Sankarashield
-Nothing outside sankarashield-v2/ is ever written to.
+Source of truth for content:  $SANKARASHIELD_POSTS, defaulting to
+                              ~/Desktop/Post/Sankarashield
+Nothing outside the site directory is ever written to.
 """
 
 import html
@@ -26,7 +27,12 @@ from PIL import Image
 # --------------------------------------------------------------------------
 # paths / config
 # --------------------------------------------------------------------------
-SRC = r"C:\Users\Freddy\Desktop\Post\Sankarashield"
+# Archive of source posts. Override with SANKARASHIELD_POSTS; otherwise it is
+# looked up under the current user's Desktop.
+SRC = os.environ.get(
+    "SANKARASHIELD_POSTS",
+    os.path.join(os.path.expanduser("~"), "Desktop", "Post", "Sankarashield"),
+)
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BLOG_DIR = os.path.join(ROOT, "blog")
 IMG_DIR = os.path.join(ROOT, "assets", "blog")

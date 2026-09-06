@@ -8,7 +8,7 @@ Reconstruction complète du site, **en local uniquement**. Le site en production
 ## Voir le site
 
 ```
-cd C:\Users\Freddy\Desktop\sankarashield-v2
+cd <racine du dépôt>
 python -m http.server 8099
 ```
 
@@ -46,7 +46,10 @@ robots.txt, sitemap.xml, favicon.ico
 
 ## Régénérer le site
 
-Après avoir ajouté un article dans `C:\Users\Freddy\Desktop\Post\Sankarashield\<Mois>\` :
+Après avoir ajouté un article dans l'archive des sources, `<Mois>\` :
+
+L'archive est lue depuis `$SANKARASHIELD_POSTS`, ou à défaut
+`~\Desktop\Post\Sankarashield`.
 
 ```
 python tools\build_blog.py     # articles, index du blog, posts.json, sitemap
@@ -101,24 +104,22 @@ caches, se désenregistre et recharge les onglets ouverts.
 
 ## Points volontairement laissés en attente
 
-### ⚠️ Activer le formulaire de contact — 2 minutes, à faire une seule fois
+### Formulaire de contact — actif
 
-Le formulaire est écrit et fonctionne, mais il lui manque **une clé d'accès** pour
-livrer les messages. Sans elle, il affiche « Form not activated yet ».
+Le formulaire passe par **Web3Forms** et livre à **contact@sankarashield.com**.
+La clé d'accès est dans `tools\build_pages.py` (`WEB3FORMS_KEY`) et dans le HTML
+généré : elle est publique par conception, elle ne permet que d'envoyer un message
+vers l'adresse qui la possède.
 
-1. Aller sur <https://web3forms.com> (gratuit, pas de compte à créer)
-2. Saisir **contact@sankarashield.com** → la clé arrive par e-mail
-3. Ouvrir `tools\build_pages.py`, remplacer la valeur de `WEB3FORMS_KEY`
-4. `python tools\build_pages.py`
-
-La clé est conçue pour être publique, il n'y a aucun risque à la mettre dans le HTML.
-Elle ne permet que d'envoyer un message vers l'adresse qui la possède.
+Chaîne testée de bout en bout le 5 septembre 2026, message bien reçu.
+Web3Forms refuse les envois côté serveur sur le plan gratuit : un test ne peut se
+faire que depuis un navigateur, pas avec `curl`.
 
 Aucune donnée n'est stockée sur le site : le message part directement dans la boîte.
 
 | Sujet | État |
 |---|---|
-| Clé Web3Forms | **à générer et coller** (ci-dessus) |
+| Clé Web3Forms | En place et testée |
 | Téléphone | Volontairement absent (aucun faux numéro) |
 | Version française | Prévue, non faite — cible Afrique |
 | CV PDF | Pas encore mis en téléchargement |
