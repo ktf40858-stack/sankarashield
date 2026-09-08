@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,380;6..72,420;6..72,600&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Ten switch models. Two open TCP ports. Root on the fabric that carries your AI training traffic.", "datePublished": "2026-09-03", "dateModified": "2026-09-03", "author": {"@type": "Organization", "name": "SankaraShield", "url": "https://www.sankarashield.com"}, "publisher": {"@type": "Organization", "name": "SankaraShield", "logo": {"@type": "ImageObject", "url": "https://www.sankarashield.com/assets/img/logo-256.png"}}, "mainEntityOfPage": "https://www.sankarashield.com/blog/ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries.html", "description": "CVE-2026-20212 — CVSS 9.8 — unauthenticated remote code execution as root on Cisco Nexus 9000 Series switches built on the Silicon One ASIC. Disclosed September 2, 2026…", "keywords": "NetworkSecurity, Cisco, DataCenter, NXOS, NetworkEngineering, VulnerabilityManagement", "image": "https://www.sankarashield.com/assets/blog/ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Ten switch models. Two open TCP ports. Root on the fabric that carries your AI training traffic.", "datePublished": "2026-09-09", "dateModified": "2026-09-09", "author": {"@type": "Organization", "name": "SankaraShield", "url": "https://www.sankarashield.com"}, "publisher": {"@type": "Organization", "name": "SankaraShield", "logo": {"@type": "ImageObject", "url": "https://www.sankarashield.com/assets/img/logo-256.png"}}, "mainEntityOfPage": "https://www.sankarashield.com/blog/ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries.html", "description": "CVE-2026-20212 — CVSS 9.8 — unauthenticated remote code execution as root on Cisco Nexus 9000 Series switches built on the Silicon One ASIC. Disclosed September 2, 2026…", "keywords": "NetworkSecurity, Cisco, DataCenter, NXOS, NetworkEngineering, VulnerabilityManagement", "image": "https://www.sankarashield.com/assets/blog/ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries.jpg"}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -60,7 +60,7 @@
     <div class="article-meta">
       <span class="post-topic">Network Infrastructure</span>
       <span class="sep" aria-hidden="true">&middot;</span>
-      <time datetime="2026-09-03">September 3, 2026</time>
+      <time datetime="2026-09-09">September 9, 2026</time>
       <span class="sep" aria-hidden="true">&middot;</span>
       <span>2 min read</span>
     </div>
@@ -71,24 +71,24 @@
 <p class="first-para"><span class="cve">CVE-2026-20212</span> — CVSS 9.8 — unauthenticated remote code execution as root on Cisco Nexus 9000 Series switches built on the Silicon One ASIC. Disclosed September 2, 2026 (cisco-sa-n9k-s1-rce-EH8dEtr).</p>
 <h2>WHAT ACTUALLY HAPPENED</h2>
 <p>The Silicon One integration in NX-OS binds a service to an unrestricted IP address — CWE-1327. The result: TCP ports 43210 and 43211 are reachable in the default Layer 3 VRF.</p>
-<p>Send crafted data to that listener and it executes with root privileges. No credentials. No user interaction. It can also crash the S1HAL process and force a reload — so the same flaw is both RCE and denial of service.</p>
-<p>Cisco did not find this via a bug bounty or a red team. TAC engineers hit it while working an unrelated support case.</p>
-<p>Ten Silicon One-based Nexus 9000 models are affected. Nexus 3000, Nexus 7000, other Nexus 9000 platforms and 9000 Fabric Switches in ACI mode are not. Cisco PSIRT reported no known exploitation at publication. Patches are available.</p>
+<p>Send crafted data to that listener and it executes with root privileges. No credentials. No user interaction. It can also crash the affected process and force a device reload — so the same flaw is both RCE and denial of service.</p>
+<p>Cisco did not find this through a bug bounty or a red team. Engineers hit it while resolving an unrelated TAC support case.</p>
+<p>Ten Silicon One-based Nexus 9000 models are affected. Nexus 3000, Nexus 7000, most other Nexus 9000 variants, MDS 9000, Firepower and UCS fabric interconnects are not. Cisco PSIRT reported no known exploitation at publication. Fixed releases are available.</p>
 <h2>WHY LOSING THE FABRIC IS WORSE THAN LOSING A SERVER</h2>
 <p>A compromised server is one workload. A compromised leaf or spine is every workload that transits it.</p>
 <p>Root on a data centre switch means arbitrary traffic mirroring, silent ACL changes, route injection, and a persistence point that no EDR agent watches and no vulnerability scanner logs into. Network devices are the least monitored tier in most estates and the most privileged.</p>
-<p>The detail that should worry you is the default VRF. Many teams assume management-plane services are confined to a management VRF and firewalled accordingly. Here the listener sits in the data-plane VRF — the one that reaches your compute, your storage and, in AI builds, your GPU fabric.</p>
+<p>The detail that should worry you is the default VRF. Many teams assume these services are confined to a management VRF and firewalled accordingly. Here the listener sits in the data-plane VRF — the one that reaches your compute, your storage and, in AI builds, your GPU fabric.</p>
 <p>If your east-west segmentation assumes the switch itself is not a target, that assumption just expired.</p>
 <h2>WHAT TO DO NOW</h2>
 <p>INVENTORY BY ASIC, NOT BY MODEL NAME — the exposure follows Silicon One, so confirm the platform rather than trusting the Nexus 9000 label.</p>
 <p>PROBE PORTS 43210 AND 43211 FROM THE DATA PLANE — test from where an attacker would actually sit, not from your management jump host.</p>
-<p>PATCH, THEN RESTRICT — apply Cisco's fixed release and add infrastructure ACLs so control services are never reachable from workload segments.</p>
-<p>TREAT SWITCHES AS MONITORED ASSETS — ship NX-OS syslog and config diffs to your SIEM, because unexplained reloads are a detection signal here.</p>
+<p>PATCH, THEN RESTRICT — apply the fixed release, and until you can, Cisco's own mitigation is an infrastructure ACL blocking those two ports.</p>
+<p>TREAT SWITCHES AS MONITORED ASSETS — ship NX-OS syslog and config diffs to your SIEM, because an unexplained reload is a detection signal here.</p>
 <p>Your firewalls are useless if the thing forwarding packets to them is owned.</p>
 <blockquote>Do you know which of your switches expose services in the default VRF today?</blockquote>
     </div>
     <div class="article-tags"><span class="tag">#NetworkSecurity</span><span class="tag">#Cisco</span><span class="tag">#DataCenter</span><span class="tag">#NXOS</span><span class="tag">#NetworkEngineering</span><span class="tag">#VulnerabilityManagement</span></div>
-    <nav class="article-nav"><a class="prev" href="no-zero-day-no-malware-a-phone-call-to-a-helpdesk-and-roughly-one.html"><span class="dir">&larr; Previous</span><span class="t">No zero-day. No malware. A phone call to a helpdesk — and roughly one terabyte</span></a><a class="next" href="the-most-interesting-networking-launch-this-week-did-not-ship-a-box.html"><span class="dir">Next &rarr;</span><span class="t">The most interesting networking launch this week did not ship a box</span></a></nav>
+    <nav class="article-nav"><a class="prev" href="nobody-breached-the-airport-the-credentials-were-published-on-its-own.html"><span class="dir">&larr; Previous</span><span class="t">Nobody breached the airport. The credentials were published on its own website</span></a></nav>
     <div class="mt-48"></div>
   </div>
 </article>
