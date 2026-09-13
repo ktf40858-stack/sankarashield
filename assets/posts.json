@@ -1,5 +1,23 @@
 [
  {
+  "slug": "966-patches-two-zero-days-and-the-bugs-that-should-worry-you-most-are",
+  "title": "966 patches. Two zero-days. And the bugs that should worry you most are neither.",
+  "topic": "Vulnerabilities",
+  "date": "2026-09-14",
+  "minutes": 2,
+  "excerpt": "Microsoft's September 2026 Patch Tuesday fixed a record 966 flaws. The two exploited zero-days are local privilege escalations. The real exposure is 20 wormable bugs in the…",
+  "tags": [
+   "NetworkSecurity",
+   "PatchTuesday",
+   "Windows",
+   "VulnerabilityManagement",
+   "ActiveDirectory",
+   "CyberSecurity"
+  ],
+  "image": "966-patches-two-zero-days-and-the-bugs-that-should-worry-you-most-are-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "ten-switch-models-two-open-tcp-ports-root-on-the-fabric-that-carries",
   "title": "Ten switch models. Two open TCP ports. Root on the fabric that carries your AI training traffic.",
   "topic": "Network Infrastructure",
