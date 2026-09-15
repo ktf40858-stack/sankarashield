@@ -1,5 +1,23 @@
 [
  {
+  "slug": "attackers-didn-t-break-through-the-firewall-they-logged-into-the",
+  "title": "Attackers didn't break through the firewall. They logged into the console that manages it.",
+  "topic": "Vulnerabilities",
+  "date": "2026-09-16",
+  "minutes": 2,
+  "excerpt": "CVE-2026-20079 — CVSS 10.0 — authentication bypass to root on Cisco Secure Firewall Management Center (FMC). Cisco Talos confirms three separate threat clusters exploiting it,…",
+  "tags": [
+   "NetworkSecurity",
+   "Cisco",
+   "Firewall",
+   "Ransomware",
+   "ThreatIntelligence",
+   "CyberSecurity"
+  ],
+  "image": "attackers-didn-t-break-through-the-firewall-they-logged-into-the-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "966-patches-two-zero-days-and-the-bugs-that-should-worry-you-most-are",
   "title": "966 patches. Two zero-days. And the bugs that should worry you most are neither.",
   "topic": "Vulnerabilities",
