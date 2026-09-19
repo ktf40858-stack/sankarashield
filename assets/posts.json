@@ -1,5 +1,23 @@
 [
  {
+  "slug": "the-spies-got-there-first-the-ransomware-crews-just-took-over-their",
+  "title": "The spies got there first. The ransomware crews just took over their access.",
+  "topic": "Threat Intelligence",
+  "date": "2026-09-21",
+  "minutes": 6,
+  "excerpt": "CVE-2026-59310 is a CVSS 9.8 directory traversal in the VMware vCenter syslog server. Broadcom patched it on 29 July 2026. Exploitation began five days after disclosure. On 15…",
+  "tags": [
+   "CyberSecurity",
+   "Ransomware",
+   "VMware",
+   "Virtualization",
+   "IncidentResponse",
+   "ThreatHunting"
+  ],
+  "image": "the-spies-got-there-first-the-ransomware-crews-just-took-over-their-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "cisco-did-not-find-these-seven-vulnerabilities-because-someone-attacked",
   "title": "Cisco did not find these seven vulnerabilities because someone attacked them. They found them by looking.",
   "topic": "Vulnerabilities",
