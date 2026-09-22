@@ -1,5 +1,23 @@
 [
  {
+  "slug": "the-only-customers-exposed-are-the-ones-who-followed-the-hardening",
+  "title": "The only customers exposed are the ones who followed the hardening advice.",
+  "topic": "Vulnerabilities",
+  "date": "2026-09-23",
+  "minutes": 6,
+  "excerpt": "CVE-2026-93952 is a CVSS 10.0 improper input validation flaw in on-premises Arista VeloCloud Orchestrator. Arista disclosed it on 22 September 2026, having found it already in use…",
+  "tags": [
+   "CyberSecurity",
+   "SDWAN",
+   "NetworkSecurity",
+   "Arista",
+   "CISAKEV",
+   "ZeroTrust"
+  ],
+  "image": "the-only-customers-exposed-are-the-ones-who-followed-the-hardening-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "the-spies-got-there-first-the-ransomware-crews-just-took-over-their",
   "title": "The spies got there first. The ransomware crews just took over their access.",
   "topic": "Threat Intelligence",
