@@ -1,5 +1,23 @@
 [
  {
+  "slug": "no-password-no-account-no-click-just-someone-else-s-customer-session",
+  "title": "No password. No account. No click. Just someone else's customer session.",
+  "topic": "Vulnerabilities",
+  "date": "2026-09-28",
+  "minutes": 6,
+  "excerpt": "CVE-2026-71362 is a CVSS 9.1 incorrect authorization flaw in Adobe Commerce and Magento Open Source. It lets an attacker with no account, no privileges and no help from the victim…",
+  "tags": [
+   "CyberSecurity",
+   "Magento",
+   "AdobeCommerce",
+   "Ecommerce",
+   "CISAKEV",
+   "PatchManagement"
+  ],
+  "image": "no-password-no-account-no-click-just-someone-else-s-customer-session-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "the-only-customers-exposed-are-the-ones-who-followed-the-hardening",
   "title": "The only customers exposed are the ones who followed the hardening advice.",
   "topic": "Vulnerabilities",
