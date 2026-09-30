@@ -1,5 +1,23 @@
 [
  {
+  "slug": "eight-cve-ids-an-unknown-number-of-vulnerabilities-behind-them",
+  "title": "Eight CVE IDs. An unknown number of vulnerabilities behind them.",
+  "topic": "Vulnerabilities",
+  "date": "2026-09-30",
+  "minutes": 6,
+  "excerpt": "On 16 September Cisco published its Security Hardening Release for Secure Firewall ASA, Secure Firewall Threat Defense (FTD) and Secure Firewall Management Center (FMC). It…",
+  "tags": [
+   "CyberSecurity",
+   "NetworkSecurity",
+   "Cisco",
+   "Firewall",
+   "PatchManagement",
+   "VulnerabilityManagement"
+  ],
+  "image": "eight-cve-ids-an-unknown-number-of-vulnerabilities-behind-them-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "no-password-no-account-no-click-just-someone-else-s-customer-session",
   "title": "No password. No account. No click. Just someone else's customer session.",
   "topic": "Vulnerabilities",
