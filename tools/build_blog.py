@@ -42,7 +42,7 @@ BRAND = "SankaraShield"
 
 MONTHS = {
     "Fevrier": 2, "Mars": 3, "Avril": 4, "Mai": 5,
-    "Juin": 6, "Juillet": 7, "Aout": 8, "September": 9,
+    "Juin": 6, "Juillet": 7, "Aout": 8, "September": 9, "octobre": 10,
 }
 YEAR = 2026
 
@@ -50,7 +50,8 @@ MONTH_TOKENS = {
     "january": 1, "february": 2, "fevrier": 2, "march": 3, "mars": 3,
     "april": 4, "avril": 4, "may": 5, "mai": 5, "june": 6, "juin": 6,
     "july": 7, "juillet": 7, "august": 8, "aout": 8,
-    "september": 9, "septembre": 9, "october": 10, "novembre": 11, "decembre": 12,
+    "september": 9, "septembre": 9, "october": 10, "octobre": 10,
+    "novembre": 11, "decembre": 12,
 }
 WEEKDAYS = ("lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche")
 

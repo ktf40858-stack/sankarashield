@@ -1,5 +1,23 @@
 [
  {
+  "slug": "most-firewall-advisories-arrive-already-exploited-this-one-did-not-and",
+  "title": "Most firewall advisories arrive already exploited. This one did not, and that is the window.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-02",
+  "minutes": 6,
+  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310, a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
+  "tags": [
+   "CyberSecurity",
+   "NetworkSecurity",
+   "PaloAltoNetworks",
+   "PANOS",
+   "Firewall",
+   "VulnerabilityManagement"
+  ],
+  "image": "most-firewall-advisories-arrive-already-exploited-this-one-did-not-and-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "eight-cve-ids-an-unknown-number-of-vulnerabilities-behind-them",
   "title": "Eight CVE IDs. An unknown number of vulnerabilities behind them.",
   "topic": "Vulnerabilities",
