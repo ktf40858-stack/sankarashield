@@ -1,11 +1,29 @@
 [
  {
+  "slug": "cisa-gave-three-days-to-fix-fortimail-fortinet-has-not-shipped-the-fix",
+  "title": "CISA gave three days to fix FortiMail. Fortinet has not shipped the fix.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-05",
+  "minutes": 7,
+  "excerpt": "On 1 October Fortinet published advisory FG-IR-26-175 for CVE-2026-104286, a critical flaw in FortiMail, its secure email gateway. It scores CVSS 9.8, needs no credentials and no…",
+  "tags": [
+   "CyberSecurity",
+   "Fortinet",
+   "FortiMail",
+   "ZeroDay",
+   "EmailSecurity",
+   "IncidentResponse"
+  ],
+  "image": "cisa-gave-three-days-to-fix-fortimail-fortinet-has-not-shipped-the-fix-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "most-firewall-advisories-arrive-already-exploited-this-one-did-not-and",
   "title": "Most firewall advisories arrive already exploited. This one did not, and that is the window.",
   "topic": "Vulnerabilities",
   "date": "2026-10-02",
   "minutes": 6,
-  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310, a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
+  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310 , a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
   "tags": [
    "CyberSecurity",
    "NetworkSecurity",
