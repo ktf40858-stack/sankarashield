@@ -1,5 +1,23 @@
 [
  {
+  "slug": "you-built-expressroute-with-a-vpn-backup-both-failed-at-the-same-time",
+  "title": "You built ExpressRoute with a VPN backup. Both failed at the same time, for the same reason.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-10-07",
+  "minutes": 7,
+  "excerpt": "On the evening of 30 September, a subset of Microsoft Azure customers lost the network connections between their own sites and their Azure virtual networks. Not one connection…",
+  "tags": [
+   "Networking",
+   "Azure",
+   "CloudNetworking",
+   "ExpressRoute",
+   "Resilience",
+   "NOC"
+  ],
+  "image": "you-built-expressroute-with-a-vpn-backup-both-failed-at-the-same-time-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "cisa-gave-three-days-to-fix-fortimail-fortinet-has-not-shipped-the-fix",
   "title": "CISA gave three days to fix FortiMail. Fortinet has not shipped the fix.",
   "topic": "Vulnerabilities",
@@ -23,7 +41,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-10-02",
   "minutes": 6,
-  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310 , a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
+  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310, a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
   "tags": [
    "CyberSecurity",
    "NetworkSecurity",
