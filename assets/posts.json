@@ -1,5 +1,23 @@
 [
  {
+  "slug": "the-attacker-says-it-took-seven-minutes-495-organisations-are-now",
+  "title": "The attacker says it took seven minutes. 495 organisations are now learning if their backups lived in the same cloud.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-10-12",
+  "minutes": 7,
+  "excerpt": "At about 03:40 Japan time on Wednesday 7 October, IDC Frontier detected unauthorised access in \"East Japan Region 1\" of its IDCF Cloud platform, a data-center region in Shirakawa,…",
+  "tags": [
+   "Ransomware",
+   "CloudSecurity",
+   "Backup",
+   "Resilience",
+   "IncidentResponse",
+   "BusinessContinuity"
+  ],
+  "image": "the-attacker-says-it-took-seven-minutes-495-organisations-are-now-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "you-built-expressroute-with-a-vpn-backup-both-failed-at-the-same-time",
   "title": "You built ExpressRoute with a VPN backup. Both failed at the same time, for the same reason.",
   "topic": "Cloud & Zero Trust",
@@ -382,7 +400,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-08-30",
   "minutes": 2,
-  "excerpt": "August 26, 2026 KEV additions: CVE-2015-3246 , CVE-2015-5287 , CVE-2019-1068 , CVE-2021-23758 , CVE-2022-0995 — and one 2026 flaw. Eleven years of backlog, all being exploited…",
+  "excerpt": "August 26, 2026 KEV additions: CVE-2015-3246, CVE-2015-5287, CVE-2019-1068, CVE-2021-23758, CVE-2022-0995 — and one 2026 flaw. Eleven years of backlog, all being exploited…",
   "tags": [
    "CISAKEV",
    "VulnerabilityManagement",
@@ -400,7 +418,7 @@
   "topic": "Cloud & Zero Trust",
   "date": "2026-08-30",
   "minutes": 2,
-  "excerpt": "and there is no patch for you to install. CVE-2026-69836 , disclosed by Microsoft on August 20: unauthenticated RCE in Entra ID via deserialization of untrusted data. Already…",
+  "excerpt": "and there is no patch for you to install. CVE-2026-69836, disclosed by Microsoft on August 20: unauthenticated RCE in Entra ID via deserialization of untrusted data. Already…",
   "tags": [
    "EntraID",
    "CloudSecurity",
@@ -905,7 +923,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-07-29",
   "minutes": 2,
-  "excerpt": "And a Cisco Catalyst 9300 switch stops passing traffic entirely — no crash, no reboot, no alarm. CVE-2026-20114 and CVE-2026-20110 , uncovered by Opswat's Unit 515 Critical…",
+  "excerpt": "And a Cisco Catalyst 9300 switch stops passing traffic entirely — no crash, no reboot, no alarm. CVE-2026-20114 and CVE-2026-20110, uncovered by Opswat's Unit 515 Critical…",
   "tags": [
    "CiscoCatalyst",
    "CVE202620114",
