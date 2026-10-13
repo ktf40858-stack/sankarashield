@@ -1,5 +1,23 @@
 [
  {
+  "slug": "1-411-patches-landed-yesterday-for-windows-11-24h2-pro-laptops-it-was",
+  "title": "1,411 patches landed yesterday. For Windows 11 24H2 Pro laptops, it was the last one they will ever get.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-14",
+  "minutes": 6,
+  "excerpt": "On Tuesday 13 October, Microsoft shipped its October 2026 Patch Tuesday. By BleepingComputer's count it fixes a record 1,411 vulnerabilities, 70 of them rated Critical, with three…",
+  "tags": [
+   "PatchTuesday",
+   "Windows11",
+   "VulnerabilityManagement",
+   "NetworkSecurity",
+   "EndpointSecurity",
+   "ZeroDay"
+  ],
+  "image": "1-411-patches-landed-yesterday-for-windows-11-24h2-pro-laptops-it-was-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "the-attacker-says-it-took-seven-minutes-495-organisations-are-now",
   "title": "The attacker says it took seven minutes. 495 organisations are now learning if their backups lived in the same cloud.",
   "topic": "Cloud & Zero Trust",
