@@ -1,5 +1,23 @@
 [
  {
+  "slug": "five-vendors-thirty-days-every-one-of-them-sells-the-box-that-is",
+  "title": "Five vendors. Thirty days. Every one of them sells the box that is supposed to keep attackers out.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-16",
+  "minutes": 8,
+  "excerpt": "Between 14 September and 13 October 2026, Cisco, Check Point, Fortinet, SonicWall and Ivanti each disclosed a critical vulnerability in an internet-facing appliance: a mail…",
+  "tags": [
+   "NetworkSecurity",
+   "ZeroDay",
+   "VPN",
+   "EdgeSecurity",
+   "CISAKEV",
+   "ZeroTrust"
+  ],
+  "image": "five-vendors-thirty-days-every-one-of-them-sells-the-box-that-is-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "1-411-patches-landed-yesterday-for-windows-11-24h2-pro-laptops-it-was",
   "title": "1,411 patches landed yesterday. For Windows 11 24H2 Pro laptops, it was the last one they will ever get.",
   "topic": "Vulnerabilities",
@@ -59,7 +77,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-10-05",
   "minutes": 7,
-  "excerpt": "On 1 October Fortinet published advisory FG-IR-26-175 for CVE-2026-104286, a critical flaw in FortiMail, its secure email gateway. It scores CVSS 9.8, needs no credentials and no…",
+  "excerpt": "On 1 October Fortinet published advisory FG-IR-26-175 for CVE-2026-104286 , a critical flaw in FortiMail, its secure email gateway. It scores CVSS 9.8, needs no credentials and no…",
   "tags": [
    "CyberSecurity",
    "Fortinet",
@@ -77,7 +95,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-10-02",
   "minutes": 6,
-  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310, a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
+  "excerpt": "On 9 September Palo Alto Networks published CVE-2026-0310 , a buffer overflow in the way PAN-OS processes XML. An unauthenticated attacker who can reach the management web…",
   "tags": [
    "CyberSecurity",
    "NetworkSecurity",
@@ -418,7 +436,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-08-30",
   "minutes": 2,
-  "excerpt": "August 26, 2026 KEV additions: CVE-2015-3246, CVE-2015-5287, CVE-2019-1068, CVE-2021-23758, CVE-2022-0995 — and one 2026 flaw. Eleven years of backlog, all being exploited…",
+  "excerpt": "August 26, 2026 KEV additions: CVE-2015-3246 , CVE-2015-5287 , CVE-2019-1068 , CVE-2021-23758 , CVE-2022-0995 — and one 2026 flaw. Eleven years of backlog, all being exploited…",
   "tags": [
    "CISAKEV",
    "VulnerabilityManagement",
@@ -436,7 +454,7 @@
   "topic": "Cloud & Zero Trust",
   "date": "2026-08-30",
   "minutes": 2,
-  "excerpt": "and there is no patch for you to install. CVE-2026-69836, disclosed by Microsoft on August 20: unauthenticated RCE in Entra ID via deserialization of untrusted data. Already…",
+  "excerpt": "and there is no patch for you to install. CVE-2026-69836 , disclosed by Microsoft on August 20: unauthenticated RCE in Entra ID via deserialization of untrusted data. Already…",
   "tags": [
    "EntraID",
    "CloudSecurity",
@@ -941,7 +959,7 @@
   "topic": "Vulnerabilities",
   "date": "2026-07-29",
   "minutes": 2,
-  "excerpt": "And a Cisco Catalyst 9300 switch stops passing traffic entirely — no crash, no reboot, no alarm. CVE-2026-20114 and CVE-2026-20110, uncovered by Opswat's Unit 515 Critical…",
+  "excerpt": "And a Cisco Catalyst 9300 switch stops passing traffic entirely — no crash, no reboot, no alarm. CVE-2026-20114 and CVE-2026-20110 , uncovered by Opswat's Unit 515 Critical…",
   "tags": [
    "CiscoCatalyst",
    "CVE202620114",
