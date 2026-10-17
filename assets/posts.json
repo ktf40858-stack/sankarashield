@@ -1,5 +1,23 @@
 [
  {
+  "slug": "fully-patched-was-true-it-just-was-not-enough",
+  "title": "“Fully patched” was true. It just was not enough.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-19",
+  "minutes": 7,
+  "excerpt": "In the first days of October, an attacker nobody had documented before walked into an Ivanti Connect Secure VPN appliance that was running the latest release, 22.8R2.4. It did not…",
+  "tags": [
+   "CyberSecurity",
+   "Ivanti",
+   "VPN",
+   "ZeroDay",
+   "ActiveDirectory",
+   "IncidentResponse"
+  ],
+  "image": "fully-patched-was-true-it-just-was-not-enough-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "five-vendors-thirty-days-every-one-of-them-sells-the-box-that-is",
   "title": "Five vendors. Thirty days. Every one of them sells the box that is supposed to keep attackers out.",
   "topic": "Vulnerabilities",
