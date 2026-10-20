@@ -1,5 +1,23 @@
 [
  {
+  "slug": "nobody-stole-a-single-file-they-just-turned-the-cold-off",
+  "title": "Nobody stole a single file. They just turned the cold off.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-21",
+  "minutes": 7,
+  "excerpt": "On the night of Sunday 11 October, attackers reached into the refrigeration systems of hundreds of French supermarkets and forced them into defrost. By the time stores opened on…",
+  "tags": [
+   "CyberSecurity",
+   "OTSecurity",
+   "ICS",
+   "Retail",
+   "CriticalInfrastructure",
+   "Danfoss"
+  ],
+  "image": "nobody-stole-a-single-file-they-just-turned-the-cold-off-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "fully-patched-was-true-it-just-was-not-enough",
   "title": "“Fully patched” was true. It just was not enough.",
   "topic": "Vulnerabilities",
