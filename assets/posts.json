@@ -1,5 +1,23 @@
 [
  {
+  "slug": "one-availability-zone-went-down-some-of-britain-s-biggest-banks-felt-it",
+  "title": "One availability zone went down. Some of Britain's biggest banks felt it.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-10-23",
+  "minutes": 7,
+  "excerpt": "On the morning of Tuesday 20 October, at 06:08 UTC, one of the three availability zones in Google Cloud's London region, europe-west2-b, started failing. Google later put it in…",
+  "tags": [
+   "CloudComputing",
+   "GoogleCloud",
+   "Resilience",
+   "Networking",
+   "BusinessContinuity",
+   "SRE"
+  ],
+  "image": "one-availability-zone-went-down-some-of-britain-s-biggest-banks-felt-it-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "nobody-stole-a-single-file-they-just-turned-the-cold-off",
   "title": "Nobody stole a single file. They just turned the cold off.",
   "topic": "Vulnerabilities",
