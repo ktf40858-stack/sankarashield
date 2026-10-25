@@ -1,5 +1,23 @@
 [
  {
+  "slug": "three-exploited-flaws-in-the-same-sd-wan-orchestrator-in-three-months",
+  "title": "Three exploited flaws in the same SD-WAN orchestrator in three months.",
+  "topic": "Vulnerabilities",
+  "date": "2026-10-26",
+  "minutes": 6,
+  "excerpt": "On Thursday 22 October, Arista published Security Advisory 0199 for CVE-2026-114625, a SQL injection in on-premises VeloCloud Orchestrator rated CVSS 9.9. The next day, CISA…",
+  "tags": [
+   "SDWAN",
+   "Networking",
+   "CyberSecurity",
+   "VeloCloud",
+   "CISA",
+   "VulnerabilityManagement"
+  ],
+  "image": "three-exploited-flaws-in-the-same-sd-wan-orchestrator-in-three-months-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "one-availability-zone-went-down-some-of-britain-s-biggest-banks-felt-it",
   "title": "One availability zone went down. Some of Britain's biggest banks felt it.",
   "topic": "Cloud & Zero Trust",
