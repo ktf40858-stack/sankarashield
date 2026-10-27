@@ -1,5 +1,23 @@
 [
  {
+  "slug": "the-backups-went-first-inside-the-safepay-ransomware-playbook",
+  "title": "The backups went first: inside the SafePay ransomware playbook.",
+  "topic": "Threat Intelligence",
+  "date": "2026-10-28",
+  "minutes": 6,
+  "excerpt": "On Tuesday 20 October, CISA, the FBI and the US Secret Service, together with Germany's Landeskriminalamt Rheinland-Pfalz, the UK National Crime Agency and the North West Regional…",
+  "tags": [
+   "Ransomware",
+   "CyberSecurity",
+   "Backup",
+   "NetworkSecurity",
+   "CISA",
+   "IncidentResponse"
+  ],
+  "image": "the-backups-went-first-inside-the-safepay-ransomware-playbook-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "three-exploited-flaws-in-the-same-sd-wan-orchestrator-in-three-months",
   "title": "Three exploited flaws in the same SD-WAN orchestrator in three months.",
   "topic": "Vulnerabilities",
