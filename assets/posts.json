@@ -1,5 +1,24 @@
 [
  {
+  "slug": "no-human-required-hpe-s-self-driving-network-promise-and-who-holds-the",
+  "title": "No human required: HPE's self-driving network promise, and who holds the brake.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-10-30",
+  "minutes": 6,
+  "excerpt": "\"Within two to three years, we'll have no issues that require humans.\" That is Rami Rahim, the former CEO of Juniper Networks and now president and general manager of HPE's…",
+  "tags": [
+   "NetworkEngineering",
+   "AIOps",
+   "HPE",
+   "Juniper",
+   "NetworkAutomation",
+   "NetworkSecurity",
+   "SASE"
+  ],
+  "image": "no-human-required-hpe-s-self-driving-network-promise-and-who-holds-the-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "the-backups-went-first-inside-the-safepay-ransomware-playbook",
   "title": "The backups went first: inside the SafePay ransomware playbook.",
   "topic": "Threat Intelligence",
