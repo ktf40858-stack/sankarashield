@@ -1,5 +1,24 @@
 [
  {
+  "slug": "one-request-no-password-the-cisco-firewall-zero-day-that-reboots-your",
+  "title": "One request, no password: the Cisco firewall zero-day that reboots your VPN.",
+  "topic": "Vulnerabilities",
+  "date": "2026-11-02",
+  "minutes": 6,
+  "excerpt": "No stolen credentials. No phishing. No malware. One crafted request to a public login page, and the firewall that carries your remote access reboots. On Wednesday 28 October, at…",
+  "tags": [
+   "Cisco",
+   "NetworkSecurity",
+   "Firewall",
+   "VPN",
+   "CVE",
+   "ZeroDay",
+   "NetworkEngineering"
+  ],
+  "image": "one-request-no-password-the-cisco-firewall-zero-day-that-reboots-your-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "no-human-required-hpe-s-self-driving-network-promise-and-who-holds-the",
   "title": "No human required: HPE's self-driving network promise, and who holds the brake.",
   "topic": "Cloud & Zero Trust",
