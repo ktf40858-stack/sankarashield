@@ -1,5 +1,24 @@
 [
  {
+  "slug": "one-laptop-one-fake-job-interview-inside-the-6-3-billion-binance-heist",
+  "title": "One laptop, one fake job interview: inside the $6.3 billion Binance heist.",
+  "topic": "Threat Intelligence",
+  "date": "2026-11-04",
+  "minutes": 6,
+  "excerpt": "Nobody broke the cryptography. Nobody stole a private key. One engineer's laptop was compromised, and the exchange's own withdrawal pipeline did the rest. On Thursday 29 October…",
+  "tags": [
+   "CyberSecurity",
+   "Bitcoin",
+   "Crypto",
+   "Binance",
+   "SocialEngineering",
+   "ZeroTrust",
+   "InfoSec"
+  ],
+  "image": "one-laptop-one-fake-job-interview-inside-the-6-3-billion-binance-heist-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "one-request-no-password-the-cisco-firewall-zero-day-that-reboots-your",
   "title": "One request, no password: the Cisco firewall zero-day that reboots your VPN.",
   "topic": "Vulnerabilities",
