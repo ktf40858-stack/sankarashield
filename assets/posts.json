@@ -1,5 +1,24 @@
 [
  {
+  "slug": "a-leak-site-is-not-a-source-how-to-read-the-byod-ransomware-claims",
+  "title": "A leak site is not a source: how to read the BYOD ransomware claims against Vanderbilt and Toyota.",
+  "topic": "Threat Intelligence",
+  "date": "2026-11-11",
+  "minutes": 6,
+  "excerpt": "\"More than one million Social Security numbers.\" That is what a ransomware group says it took from Vanderbilt University. It may be true. It may be inflated. Right now, nobody…",
+  "tags": [
+   "CyberSecurity",
+   "Ransomware",
+   "IncidentResponse",
+   "DataBreach",
+   "ThreatIntel",
+   "HigherEd",
+   "InfoSec"
+  ],
+  "image": "a-leak-site-is-not-a-source-how-to-read-the-byod-ransomware-claims-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "extreme-networks-may-be-for-sale-what-network-teams-should-do-before",
   "title": "Extreme Networks may be for sale: what network teams should do before the map changes again.",
   "topic": "Network Infrastructure",
