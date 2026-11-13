@@ -1,5 +1,24 @@
 [
  {
+  "slug": "the-tool-that-manages-everything-n-able-n-central-zero-days-exploited",
+  "title": "The tool that manages everything: N-able N-central zero-days exploited hours after public exploits.",
+  "topic": "Vulnerabilities",
+  "date": "2026-11-13",
+  "minutes": 6,
+  "excerpt": "Proof-of-concept exploits for N-able N-central went public on 12 November 2026. Within hours, attackers were using them to install cryptocurrency miners on production servers.…",
+  "tags": [
+   "CyberSecurity",
+   "ZeroDay",
+   "MSP",
+   "RMM",
+   "ThreatIntel",
+   "IncidentResponse",
+   "InfoSec"
+  ],
+  "image": "the-tool-that-manages-everything-n-able-n-central-zero-days-exploited-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "a-leak-site-is-not-a-source-how-to-read-the-byod-ransomware-claims",
   "title": "A leak site is not a source: how to read the BYOD ransomware claims against Vanderbilt and Toyota.",
   "topic": "Threat Intelligence",
