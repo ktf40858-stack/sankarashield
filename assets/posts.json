@@ -1,5 +1,24 @@
 [
  {
+  "slug": "one-prompt-every-agent-inside-agentcorruption-on-aws-agentcore",
+  "title": "One prompt, every agent: inside AgentCorruption on AWS AgentCore.",
+  "topic": "AI Security",
+  "date": "2026-11-16",
+  "minutes": 5,
+  "excerpt": "A single prompt sent to a public-facing AI agent. That is all Zenity Labs needed to reach the temporary cloud credentials behind it, read secrets the agent was never meant to…",
+  "tags": [
+   "CyberSecurity",
+   "AWS",
+   "CloudSecurity",
+   "AIAgents",
+   "AISecurity",
+   "IAM",
+   "InfoSec"
+  ],
+  "image": "one-prompt-every-agent-inside-agentcorruption-on-aws-agentcore-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "the-tool-that-manages-everything-n-able-n-central-zero-days-exploited",
   "title": "The tool that manages everything: N-able N-central zero-days exploited hours after public exploits.",
   "topic": "Vulnerabilities",
