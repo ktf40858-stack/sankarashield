@@ -1,5 +1,25 @@
 [
  {
+  "slug": "i-attacked-my-own-aws-account-what-a-red-team-exercise-taught-me-about",
+  "title": "I attacked my own AWS account: what a red team exercise taught me about cloud detection.",
+  "topic": "Cloud & Zero Trust",
+  "date": "2026-11-18",
+  "minutes": 6,
+  "excerpt": "Most cloud security projects end when the last control is deployed. This one ended with an attack. After four weeks building and hardening a serverless application on AWS, I ran…",
+  "tags": [
+   "CyberSecurity",
+   "AWS",
+   "CloudSecurity",
+   "DevSecOps",
+   "DetectionEngineering",
+   "Terraform",
+   "ThreatModeling",
+   "InfoSec"
+  ],
+  "image": "i-attacked-my-own-aws-account-what-a-red-team-exercise-taught-me-about-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "one-prompt-every-agent-inside-agentcorruption-on-aws-agentcore",
   "title": "One prompt, every agent: inside AgentCorruption on AWS AgentCore.",
   "topic": "AI Security",

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.sankarashield.com/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://www.sankarashield.com/solutions.html</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://www.sankarashield.com/about.html</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://www.sankarashield.com/contact.html</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://www.sankarashield.com/blog/index.html</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://www.sankarashield.com/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://www.sankarashield.com/solutions.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://www.sankarashield.com/about.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://www.sankarashield.com/contact.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://www.sankarashield.com/blog/index.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://www.sankarashield.com/blog/i-attacked-my-own-aws-account-what-a-red-team-exercise-taught-me-about.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://www.sankarashield.com/blog/one-prompt-every-agent-inside-agentcorruption-on-aws-agentcore.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://www.sankarashield.com/blog/the-tool-that-manages-everything-n-able-n-central-zero-days-exploited.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://www.sankarashield.com/blog/a-leak-site-is-not-a-source-how-to-read-the-byod-ransomware-claims.html</loc><lastmod>2026-11-11</lastmod></url>
