@@ -1,5 +1,25 @@
 [
  {
+  "slug": "one-router-grounded-every-flight-in-the-us-what-the-faa-ground-stop",
+  "title": "One router grounded every flight in the US: what the FAA ground stop teaches network teams.",
+  "topic": "Network Infrastructure",
+  "date": "2026-11-20",
+  "minutes": 6,
+  "excerpt": "On Friday, November 13, 2026, the Federal Aviation Administration ordered a nationwide ground stop. For more than four hours, no flight could take off anywhere in the United…",
+  "tags": [
+   "NetworkSecurity",
+   "Networking",
+   "CriticalInfrastructure",
+   "ChangeManagement",
+   "NetworkResilience",
+   "FAA",
+   "CCNA",
+   "CyberSecurity"
+  ],
+  "image": "one-router-grounded-every-flight-in-the-us-what-the-faa-ground-stop-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "i-attacked-my-own-aws-account-what-a-red-team-exercise-taught-me-about",
   "title": "I attacked my own AWS account: what a red team exercise taught me about cloud detection.",
   "topic": "Cloud & Zero Trust",
