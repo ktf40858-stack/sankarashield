@@ -1,5 +1,25 @@
 [
  {
+  "slug": "i-built-a-soc-and-attacked-it-what-a-home-lab-taught-me-about-firewall",
+  "title": "I built a SOC and attacked it: what a home lab taught me about firewall, IDS and SIEM detection.",
+  "topic": "Security Operations",
+  "date": "2026-11-23",
+  "minutes": 7,
+  "excerpt": "Most SOC labs stop at the screenshot of a dashboard. This one started there. After building a segmented firewall, a network IDS and a SIEM on real virtual machines, I moved to the…",
+  "tags": [
+   "CyberSecurity",
+   "SOC",
+   "BlueTeam",
+   "Wazuh",
+   "Suricata",
+   "pfSense",
+   "DetectionEngineering",
+   "MITREATTACK"
+  ],
+  "image": "i-built-a-soc-and-attacked-it-what-a-home-lab-taught-me-about-firewall-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "one-router-grounded-every-flight-in-the-us-what-the-faa-ground-stop",
   "title": "One router grounded every flight in the US: what the FAA ground stop teaches network teams.",
   "topic": "Network Infrastructure",

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.sankarashield.com/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://www.sankarashield.com/solutions.html</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://www.sankarashield.com/about.html</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://www.sankarashield.com/contact.html</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://www.sankarashield.com/blog/index.html</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://www.sankarashield.com/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.sankarashield.com/solutions.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.sankarashield.com/about.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.sankarashield.com/contact.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.sankarashield.com/blog/index.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.sankarashield.com/blog/i-built-a-soc-and-attacked-it-what-a-home-lab-taught-me-about-firewall.html</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://www.sankarashield.com/blog/one-router-grounded-every-flight-in-the-us-what-the-faa-ground-stop.html</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://www.sankarashield.com/blog/i-attacked-my-own-aws-account-what-a-red-team-exercise-taught-me-about.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://www.sankarashield.com/blog/one-prompt-every-agent-inside-agentcorruption-on-aws-agentcore.html</loc><lastmod>2026-11-16</lastmod></url>
