@@ -1,5 +1,25 @@
 [
  {
+  "slug": "a-bot-can-call-itself-anything-why-ai-agent-names-are-not-identities",
+  "title": "A bot can call itself anything: why AI agent names are not identities, and what network teams should verify instead.",
+  "topic": "AI Security",
+  "date": "2026-11-25",
+  "minutes": 6,
+  "excerpt": "On November 23, 2026, two security reports landed on the same day and told the same story from opposite directions. The first, Cequence's Agentic AI Security Index, shows bots…",
+  "tags": [
+   "AIAgents",
+   "NetworkSecurity",
+   "WAF",
+   "BotManagement",
+   "APISecurity",
+   "MCP",
+   "ZeroTrust",
+   "CyberSecurity"
+  ],
+  "image": "a-bot-can-call-itself-anything-why-ai-agent-names-are-not-identities-thumb.jpg",
+  "date_approx": false
+ },
+ {
   "slug": "i-built-a-soc-and-attacked-it-what-a-home-lab-taught-me-about-firewall",
   "title": "I built a SOC and attacked it: what a home lab taught me about firewall, IDS and SIEM detection.",
   "topic": "Security Operations",
